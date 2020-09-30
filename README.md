@@ -67,7 +67,7 @@ Dask project | 6h | 27/01/2021 | [Dask](readings/dask.pdf)
 
 Databases | | | |
 --- | --- | --- | ---
-Databases overview | 2h | 03/02/2021 |
+Databases overview | 2h | 03/02/2021 | [Database Systems](readings/fntdb07-architecture.pdf)
 PostgeSQL TP | 3h | 08/02/2021 | [PostgeSQL](https://www.postgresql.org/docs/manuals/)
 Project overview | 2h | 15/02/2021 |
 Project presentations | 2h | 08/03/2021 |
