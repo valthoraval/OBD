@@ -48,9 +48,9 @@ Data Computation | | | |
 --- | --- | --- | ---
 [Introduction to data computation](1_introduction) | 2h | 29/09/2020 | [Global Datasphere](readings/idc_data.pdf)
 Cluster Computing | 2h | 07/10/2020 | [SLURM](readings/slurm.pdf)
-Cloud Computing | 2h | 07/10/2020 | [Cloud computing](readings/cloud_computing.pdf)
-Virtualisation & Containerisation | 4h | 14/10/2020 |
-Orchestration | 4h | 20/10/2020 |
+[Cloud Computing & Google Cloud Platform](2_data_computation#cloud-computing) | 2h <br />2h | 07/10/2020 <br /> 14/10/2020| [Readings](2_data_computation#about-cloud-computing)
+[Containers](2_data_computation#containers) | 2h <br /> 1h | 14/10/2020 <br /> 20/10/2020 | [Readings](2_data_computation#about-containers)
+[Orchestration](2_data_computation#orchestration) | 3h | 20/10/2020 | [Readings](2_data_computation#about-orchestration)
 GPU computing, part 1 | 3h | 01/12/2020 |
 GPU computing, part 2 | 3h | 02/12/2020 |
 
@@ -62,7 +62,7 @@ Functional programming | 4h | 06/01/2021 | [Julia](readings/julia.pdf)
 MapReduce and HDFS | 3h | 19/01/2021 | [MapReduce](readings/mapreduce.pdf)
 Spark | 3h | 19/01/2021 | [Spark](readings/spark.pdf)
 PySpark | 3h | 20/01/2021 | [PySpark](https://spark.apache.org/docs/latest/api/python/pyspark.html)
-Dask project | 6h | 27/01/2021 | [Dask](readings/dask.pdf)
+Dask project | 6h | 27/01/2021 | [Dask](readings/dask.pdf) <br> [Ray, a distributed computing alternative](https://docs.ray.io/en/latest/whitepaper.html)
 
 
 Databases | | | |
