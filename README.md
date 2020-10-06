@@ -47,10 +47,10 @@ Class dates are subject to change. Please refer to Hyerplng for detailed schedul
 Data Computation | | | |
 --- | --- | --- | ---
 [Introduction to data computation](1_introduction) | 2h | 29/09/2020 | [Global Datasphere](readings/idc_data.pdf)
-Cluster Computing | 2h | 07/10/2020 | [SLURM](readings/slurm.pdf)
 [Cloud Computing & Google Cloud Platform](2_data_computation#cloud-computing) | 2h <br />2h | 07/10/2020 <br /> 14/10/2020| [Readings](2_data_computation#about-cloud-computing)
 [Containers](2_data_computation#containers) | 2h <br /> 1h | 14/10/2020 <br /> 20/10/2020 | [Readings](2_data_computation#about-containers)
 [Orchestration](2_data_computation#orchestration) | 3h | 20/10/2020 | [Readings](2_data_computation#about-orchestration)
+Cluster Computing | 2h | 18/11/2020 | [SLURM](readings/slurm.pdf)
 GPU computing, part 1 | 3h | 01/12/2020 |
 GPU computing, part 2 | 3h | 02/12/2020 |
 

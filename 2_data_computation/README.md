@@ -2,7 +2,10 @@
 
 [back to home](../)
 
+
 ## Syllabus
+
+[all lectures](./lectures/)
 
 ### Cluster Computing (2h)
 
@@ -62,6 +65,10 @@
 
 - Buyya, R., Srirama, S. N., Casale, G., Calheiros, R., Simmhan, Y., Varghese, B., ... & Toosi, A. N. (2018). [A manifesto for future generation cloud computing: Research directions for the next decade](../readings/cloud_computing.pdf). ACM computing surveys (CSUR), 51(5), 1-38.
 
+- On [sustainable data centers](https://www.capgemini.com/2020/01/the-more-sustainable-data-center/) and energy use (intro)
+
+- [The NIST Definitions of Cloud Computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf)
+
 ### About Containers
 
 - [Docker whitepaper: Docker and the way of the Devops](https://www.docker.com/taxonomy/term/4955)
@@ -69,4 +76,3 @@
 ### About Orchestration
 
 - Verma, A., Pedrosa, L., Korupolu, M., Oppenheimer, D., Tune, E., & Wilkes, J. (2015, April). [Large-scale cluster management at Google with Borg](../readings/borg.pdf). In Proceedings of the Tenth European Conference on Computer Systems (pp. 1-17).
-
