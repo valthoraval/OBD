@@ -30,7 +30,8 @@ revealOptions:
 
 <!--v-->
 
-![](static/img/DarkPoster-hires.png)
+<img src="https://raw.githubusercontent.com/gregsramblings/google-cloud-4-words/master/Poster-medres.png" alt="" width="75%" height="75%" style="background:none; border:none; box-shadow:none;"/>
+
 
 <!--v-->
 
