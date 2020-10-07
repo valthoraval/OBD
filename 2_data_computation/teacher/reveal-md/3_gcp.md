@@ -87,6 +87,12 @@ revealOptions:
 
 <!--v-->
 
+### Interacting with GCP
+
+<img src="https://cloud.google.com/docs/images/overview/console.png" alt="" width="75%" height="75%" style="background:none; border:none; box-shadow:none;"/>
+
+<!--v-->
+
 ### Interacting with GCP:
 
 - Using the gcloud CLI: https://cloud.google.com/sdk/install
@@ -100,10 +106,11 @@ revealOptions:
 
 ### Objectives
 
-- Configure your GCP credentials / account
-- Connect to google cloud shell
-- Launch your firsts VMs
-- Connect to them via SSH & launch vs code from it
+- Create your GCP account, configure your credentials
+- Connect to google cloud shell and interact with it
+- Play a bit with google colab (useful for later)
+
+Next week we will do a lot more things with GCP !
 
 <!--v-->
 
@@ -111,3 +118,4 @@ revealOptions:
 
 - Google Compute Engine Interface
 - Google Cloud Shell
+- Google Colaboratory

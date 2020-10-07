@@ -160,9 +160,31 @@ http://highscalability.com/all-time-favorites
 
 [Netflix: What happens when you press play - 2017](http://highscalability.com/blog/2017/12/11/netflix-what-happens-when-you-press-play.html)
 
-[Mind boggling statistics on Amazon Prime Day](0_index.htmlhttps://aws.amazon.com/blogs/aws/amazon-prime-day-2019-powered-by-aws/
+[Mind boggling statistics on Amazon Prime Day](https://aws.amazon.com/blogs/aws/amazon-prime-day-2019-powered-by-aws/)
 
 <!--s-->
+
+## What does it mean for YOU ?
+
+![](https://media.giphy.com/media/cRKRlRJkEmoxglbufw/giphy.gif)
+
+<!--v-->
+![](static/img/mlroles2.png)
+
+<!--v-->
+
+![](static/img/mlroles.png)
+
+<!--v-->
+
+Your mileage may vary depending on :
+
+- Your company
+- Your role
+
+but you will "deal with" cloud computing one way or another !
+
+<!--v-->
 
 ## Personal experience
 

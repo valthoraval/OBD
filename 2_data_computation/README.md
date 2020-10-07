@@ -7,21 +7,20 @@
 
 [all lectures](./lectures/)
 
-### Cluster Computing (2h)
-
-*TODO*
 
 ### Cloud Computing (4h)
 
-**Lecture: Intro to Cloud Computing**
+**Lecture: [Intro](lectures/0_intro.html)**
+
+**Lecture: [Intro to Cloud Computing](lectures/1_cloud_computing.html)**
 
 *A lecture about an introduction to "what is the cloud"*
 
-**Lecture: Using Cloud Computing in your daily job**
+**Lecture: [Using Cloud Computing in your daily job](lectures/2_cloud_usage.html)**
 
 *What does it mean to "use the cloud" ?*
 
-**Lecture: Intro to Google Cloud Platform**
+**Lecture: [Intro to Google Cloud Platform](lectures/3_gcp.html)**
 
 *A quick intro to GCP*
 
@@ -29,7 +28,7 @@
 
 *My first steps with GCP, Google Cloud Shell*
 
-**Hands-on: [GCP Part 2: My first VMs, IAAS & PAAS, Google Collab](exercises/2_gcp_handson)**
+**Hands-on: GCP Part 2: My first VMs, IAAS & PAAS, Google Collab**
 
 *Here I will create a GCE, interact with GCS, discover managed products, and end with a very useful "SaaS" tool: Google Colab*
 
@@ -39,15 +38,15 @@
 
 *What are containers and why do we need them ? What is Docker ?*
 
-**Hands-on: [Docker part 1: the basics](exercises/3_docker_basics)**
+**Hands-on: Docker part 1: the basics**
 
 *Discover Docker*
 
-**Hands-on: [Docker part 2: packaging a development environment](exercises/4_docker_jupyter)**
+**Hands-on: Docker part 2: packaging a development environment**
 
 *Package & interact with a dev. enviromnent inside a docker container, learn about volumes and port forwarding*
 
-**Hands-on: [Docker part 3: packaging ML models](exercises/5_docker_ml)**
+**Hands-on: Docker part 3: packaging ML models]**
 
 *Package & interact with a machine learning model in a container, learn about REST APIs and docker-compose*
 
@@ -55,9 +54,9 @@
 
 **Lecture: Orchestrating containers, Kubernetes**
 
-**Hands-on: [My first kubernetes cluster for a development environment](exercises/6_zero_to_k8s)**
+**Hands-on: My first kubernetes cluster for a development environment**
 
-**Hands-on: [Deploying & Scaling ML models](exercises/7_scaling_ml)**
+**Hands-on: Deploying & Scaling ML models**
 
 ## Bibliography
 
