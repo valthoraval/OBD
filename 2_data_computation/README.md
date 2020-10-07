@@ -68,6 +68,8 @@
 
 - [The NIST Definitions of Cloud Computing](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf)
 
+- [Open Sentinel 2 archive on AWS](https://aws.amazon.com/blogs/publicsector/complete-sentinel-2-archives-freely-available-to-users/)
+
 ### About Containers
 
 - [Docker whitepaper: Docker and the way of the Devops](https://www.docker.com/taxonomy/term/4955)
