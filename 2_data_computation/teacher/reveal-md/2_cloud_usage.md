@@ -15,8 +15,7 @@ revealOptions:
 
 ## "Using" the Cloud
 
-![](static/img/comic.png)
-
+![datacenter lost](static/img/comic.png)
 
 <!--v-->
 
@@ -37,8 +36,8 @@ revealOptions:
 - Outsourcing infra, maintenance, security, development of new services
 - Pay-per-use with "Infinitely scalable" infrastructure
 - "No need to plan out" infrastructure
-    - Enabling innovation
-    - Power in the hands of developpers/builders
+  - Enabling innovation
+  - Power in the hands of developpers/builders
 
 <!--v-->
 
@@ -64,7 +63,7 @@ gcloud compute --project=deeplearningsps instances create ${INSTANCE_NAME} \
 
 Before...
 
-![](https://i.pinimg.com/originals/6b/92/a0/6b92a03c8b87aa448f8206ee57b5a4fc.jpg)
+![catcomputer](https://i.pinimg.com/originals/6b/92/a0/6b92a03c8b87aa448f8206ee57b5a4fc.jpg)
 
 <!--v-->
 
@@ -90,47 +89,47 @@ resources:
 
 <!--v-->
 
-Infrastructure as Code
+#### Infrastructure as Code
 
 - Infra is now managed via text files
 - Data is securely stored on storage
 - So we store code + urls on git... and everything is reproducible !
 - We use automated deployment tools (terraform, gcp deployment manager...)
 
-
 <!--v-->
 
-Pet vs Cattle
+#### Pet vs Cattle
 
-![](static/img/pet-vs-cattle.png)
+![petvscattle](static/img/pet-vs-cattle.png)
 
 <!--s-->
 
-### Food for though
+### Let's discuss
 
 <!--v-->
 
 **Is using cloud computing less expensive ?**
 
-- Depend on your normal / peak utilization
-- Access to latest hardware without investment
-- Fully utilized hardware is more expensive on the cloud
-- CLOUD HYGIENE !
+- 👍 Depend on your {normal / peak} utilization
+- 👍 Access to latest hardware without investment
+- 👎 Fully utilized hardware is more expensive on the cloud
+- 👎 CLOUD HYGIENE !
   - Watch for unused services / storage
   - Shutdown machines when not used
   - Services stack up...
+
+<!-- .element: class="fragment" -->
 
 <!--v-->
 
 **Is using cloud computing more secure / safer ?**
 
-- The best engineers in the world working on it
-- Secure regions / private cloud... 
+- 👍 The best engineers in the world working on it
+- 👍 Secure regions / private cloud...
+- 👎 Your data somewhere in some datacenter...
+- 👎 "Dependency" towards your cloud provider...
 
-or...
-
-- Your data somewhere in some datacenter...
-- "Dependency" towards your cloud provider...
+<!-- .element: class="fragment" -->
 
 <!--s-->
 
@@ -138,25 +137,27 @@ or...
 
 <!--v-->
 
-(from 2018)
+#### Big Tech public cloud bills
 
-- Apple: 350m$ on AWS / year
-- Spotify: 150m$ on GCP / year
-- Lyft: 100m$ on AWS / year
-
-<!--v-->
-
-Pokemon Go Launch (2016)
-
-![](https://storage.googleapis.com/gweb-cloudblog-publish/images/google-cloud-pokemon-go-1kwkj.max-700x700.PNG)
-
-https://cloud.google.com/blog/products/gcp/bringing-pokemon-go-to-life-on-google-cloud
+- Apple in 2019 [350m$ on AWS / year](https://www.theverge.com/2019/4/22/18511148/apple-icloud-cloud-services-amazon-aws-30-million-per-month)
+- Spotify in 2018 [150m$ on GCP / year](https://www.cnbc.com/2018/03/20/spotify-will-spend-nearly-450-million-on-google-cloud-over-3-years.html)
+- Lyft in 2019 [100m$ on AWS / year](https://www.cnbc.com/2019/03/01/lyft-plans-to-spend-300-million-on-aws-through-2021.html)
 
 <!--v-->
 
-http://highscalability.com
+#### Pokemon Go Launch (2016)
 
-http://highscalability.com/all-time-favorites
+![pokemon](https://storage.googleapis.com/gweb-cloudblog-publish/images/google-cloud-pokemon-go-1kwkj.max-700x700.PNG)
+
+[source](https://cloud.google.com/blog/products/gcp/bringing-pokemon-go-to-life-on-google-cloud)
+
+<!--v-->
+
+#### Links
+
+<http://highscalability.com>
+
+<http://highscalability.com/all-time-favorites>
 
 [Netflix: What happens when you press play - 2017](http://highscalability.com/blog/2017/12/11/netflix-what-happens-when-you-press-play.html)
 
@@ -164,20 +165,23 @@ http://highscalability.com/all-time-favorites
 
 <!--s-->
 
-## What does it mean for YOU ?
+### What does it mean for YOU ?
 
-![](https://media.giphy.com/media/cRKRlRJkEmoxglbufw/giphy.gif)
-
-<!--v-->
-![](static/img/mlroles2.png)
+![me](https://media.giphy.com/media/cRKRlRJkEmoxglbufw/giphy.gif)
 
 <!--v-->
 
-![](static/img/mlroles.png)
+<img src="static/img/mlroles2.png" alt="" width="50%" height="50%" style="background:none; border:none; box-shadow:none;"/>
 
 <!--v-->
 
-Your mileage may vary depending on :
+<img src="static/img/mlroles.png" alt="" width="50%" height="50%" style="background:none; border:none; box-shadow:none;"/>
+
+<!--v-->
+
+#### Your mileage may vary
+
+depending on:
 
 - Your company
 - Your role
@@ -186,8 +190,8 @@ but you will "deal with" cloud computing one way or another !
 
 <!--v-->
 
-## Personal experience
+#### Personal experience
 
 - What ?
-- Why ? 
+- Why ?
 - Alternatives ?

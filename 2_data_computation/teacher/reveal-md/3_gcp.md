@@ -15,14 +15,16 @@ revealOptions:
 
 ## Google Cloud Platform
 
-![](https://berlioz.cloud/blog/images/google-cloud-platform-and-applications/header.png)
+<img src="https://berlioz.cloud/blog/images/google-cloud-platform-and-applications/header.png" alt="" width="60%" height="60%" style="background:none; border:none; box-shadow:none;"/>
 
 <!--v-->
 
 - One of the main cloud provider
 - Behind AWS in SaaS (serverless...)
 - More "readable" product line (for a Cloud Provider...)
-- Very good "virtual machine" management (per second billing, fine-grained resource allocation)
+- Very good "virtual machine" management  
+  * per second billing
+  * fine-grained resource allocation
 
 <!--v-->
 
@@ -32,16 +34,19 @@ revealOptions:
 
 <img src="https://raw.githubusercontent.com/gregsramblings/google-cloud-4-words/master/Poster-medres.png" alt="" width="75%" height="75%" style="background:none; border:none; box-shadow:none;"/>
 
+<!--s-->
+
+### Concepts
 
 <!--v-->
 
-### Concepts: Zones and Regions
+#### Zones and Regions
 
 ![](https://cloud.google.com/docs/images/overview/regions-zones.svg)
 
 <!--v-->
 
-### Concepts: Projects
+#### Projects
 
 ![](https://cloud.google.com/docs/images/overview/console-ids.png)
 
@@ -52,20 +57,20 @@ revealOptions:
 
 <!--v-->
 
-### Concepts: Identity and Access Management
+#### Concepts: Identity and Access Management (IAM)
 
-![](https://miro.medium.com/max/638/0*kGyUfNWZCk78hmPU.)
+![iam](https://miro.medium.com/max/638/0*kGyUfNWZCk78hmPU.)
 
 <!--v-->
 
-### Main Products we are going to be looking at
+#### Main Products we are going to be looking at
 
 - Google Compute Engine (virtual machine solutions)
 - Google Cloud Storage (storage solutions)
 
 <!--v-->
 
-### GCE Basics:
+#### Google Compute Engine (GCE)
 
 - The VM solution for GCP
 - Images: Boot disks for VM instances
@@ -77,7 +82,7 @@ revealOptions:
 
 <!--v-->
 
-### GCS Basics:
+#### Google Cloud Storage (GCS)
 
 - Cheaper storage than persistent disks
 - Can be shared between multiple instances / zones
@@ -87,24 +92,28 @@ revealOptions:
 
 <!--v-->
 
-### Interacting with GCP
+#### Interacting with GCP: The Console
 
-<img src="https://cloud.google.com/docs/images/overview/console.png" alt="" width="75%" height="75%" style="background:none; border:none; box-shadow:none;"/>
+<img src="https://cloud.google.com/docs/images/overview/console.png" alt="" width="50%" height="50%" style="background:none; border:none; box-shadow:none;"/>
+
+<https://console.cloud.google.com>
 
 <!--v-->
 
-### Interacting with GCP:
+#### Interacting with GCP: SDK & Cloud Shell
 
 - Using the gcloud CLI: https://cloud.google.com/sdk/install
 - Using Google Cloud Shell: A small VM instance you can connect to with your browser
 
 <!--s-->
 
-## Self-paced Workshop
+### Self-paced hands-on
+
+![student](https://media.giphy.com/media/KCqO4k31TnkC2pT5LY/giphy.gif)
 
 <!--v-->
 
-### Objectives
+#### Objectives
 
 - Create your GCP account, configure your credentials
 - Connect to google cloud shell and interact with it
@@ -114,7 +123,7 @@ Next week we will do a lot more things with GCP !
 
 <!--v-->
 
-### Demo
+#### Demo
 
 - Google Compute Engine Interface
 - Google Cloud Shell

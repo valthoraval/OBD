@@ -24,18 +24,21 @@ classes.
 The class is structured in three parts:
 
 ### Data computation
+
   20 hours on the computing platforms used in the data ecosystem. We will
   briefly cover cluster computing and then go in depth on cloud computing, using
   Google Cloud Platform as an example. Finally, a class on GPU computing will be
   given in coordination with the deep learning section of the AML class.
 
 ### Data distribution
+
   20 hours on the distribution of data, with a focus on distributed programming
   models. We will introduce functional programming and MapReduce, then use these
   concepts in a practical session on Spark. Finally, students will do a graded
   exercise with Dask.
 
 ### Databases
+
   In the final 10 hours of the course, state-of-the-art databases will be
   presented. Students will install and demonstrate the advantages of different
   databases to their peers as a graded project.
@@ -44,16 +47,19 @@ The class is structured in three parts:
 
 Class dates are subject to change. Please refer to Hyerplng for detailed scheduling.
 
+Introduction | | | |
+--- | --- | --- | ---
+[Introduction to tools of Big Data](1_introduction) | 2h | 29/09/2020 | [Global Datasphere](readings/idc_data.pdf)
+
 Data Computation | | | |
 --- | --- | --- | ---
-[Introduction to data computation](1_introduction) | 2h | 29/09/2020 | [Global Datasphere](readings/idc_data.pdf)
-[Cloud Computing & Google Cloud Platform](2_data_computation#cloud-computing) | 2h <br />2h | 07/10/2020 <br /> 14/10/2020| [Readings](2_data_computation#about-cloud-computing)
-[Containers](2_data_computation#containers) | 2h <br /> 1h | 14/10/2020 <br /> 20/10/2020 | [Readings](2_data_computation#about-containers)
-[Orchestration](2_data_computation#orchestration) | 3h | 20/10/2020 | [Readings](2_data_computation#about-orchestration)
+[Cloud Computing & Google Cloud Platform](2_data_computation#cloud-computing-4h) | 2h <br />2h | 07/10/2020 <br /> 14/10/2020| [Readings](2_data_computation#about-cloud-computing)
+[Containers](2_data_computation#containers-2h) | 2h| 14/10/2020| [Readings](2_data_computation#about-containers)
+[Orchestration](2_data_computation#orchestration-2h) | 2h | 20/10/2020 | [Readings](2_data_computation#about-orchestration)
+[ML Model Deployment](2_data_computation#deployment-2h) | 2h | 20/10/2020 | *TBD*
 Cluster Computing | 2h | 18/11/2020 | [SLURM](readings/slurm.pdf)
 GPU computing, part 1 | 3h | 01/12/2020 |
 GPU computing, part 2 | 3h | 02/12/2020 |
-
 
 Data Distribution | | | |
 --- | --- | --- | ---
@@ -63,7 +69,6 @@ MapReduce and HDFS | 3h | 19/01/2021 | [MapReduce](readings/mapreduce.pdf)
 Spark | 3h | 19/01/2021 | [Spark](readings/spark.pdf)
 PySpark | 3h | 20/01/2021 | [PySpark](https://spark.apache.org/docs/latest/api/python/pyspark.html)
 Dask project | 6h | 27/01/2021 | [Dask](readings/dask.pdf) <br> [Ray, a distributed computing alternative](https://docs.ray.io/en/latest/whitepaper.html)
-
 
 Databases | | | |
 --- | --- | --- | ---

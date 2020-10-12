@@ -15,4 +15,439 @@ revealOptions:
 
 ## From virtualisation to Containerisation
 
-*WIP*
+<!--s-->
+
+### Outline
+
+- **Presentation** (30)
+- **Self-paced Workshop** (1h30)
+- **QCM/Evaluation** (15 minutes)
+
+To be continued with Orchestration & Deployment
+
+<!--v-->
+
+#### This class will be successful if you understand
+
+- why we need a tool like docker
+- the basics of docker (containers, images) <!-- .element: class="fragment" data-fragment-index="1" -->
+- the basics of a container registry <!-- .element: class="fragment" data-fragment-index="2" -->
+- how to pull an image and run a container <!-- .element: class="fragment" data-fragment-index="3" -->
+- what a Dockerfile looks like <!-- .element: class="fragment" data-fragment-index="4" -->
+
+<!--v-->
+
+#### As a bonus, you will
+
+- discover using gcp tools for docker <!-- .element: class="fragment" data-fragment-index="1" -->
+- package your first production ready Deep Learning model  <!-- .element: class="fragment" data-fragment-index="2" -->
+- deploy it on Google Cloud Run and we will try to scale it   <!-- .element: class="fragment" data-fragment-index="3" -->
+
+<!--s-->
+
+### The need for Containers in software
+
+![](https://miro.medium.com/max/400/1*qY9Mmc2k_agwALr2UGY-8g.png)
+
+<!--v-->
+
+#### IT Multimodality
+
+![](https://pointful.github.io/docker-intro/docker-img/the-challenge.png)
+
+<!--v-->
+
+#### The Matrix From Hell
+
+![](https://pointful.github.io/docker-intro/docker-img/the-matrix-from-hell.png)
+
+<!--v-->
+
+#### Analogy...
+
+![](https://pointful.github.io/docker-intro/docker-img/cargo-transport-pre-1960.png)
+
+<!--v-->
+
+#### Solution ?
+
+![](https://pointful.github.io/docker-intro/docker-img/intermodal-shipping-container.png)
+
+<!--v-->
+
+#### Solution !
+
+![](https://pointful.github.io/docker-intro/docker-img/shipping-container-for-code.png)
+
+<!--v-->
+
+![](https://www.docker.com/sites/default/files/social/docker_facebook_share.png)
+
+Docker is **a** solution that **standardizes** packaging and execution of software in isolated
+ environments
+ (**containers**) that can communicate
+
+> Build, Share, and Run Any App, Anywhere
+
+<!--v-->
+
+- Created in 2013
+- Open Source
+- Not a new idea but set a new standard
+
+<!--v-->
+
+Docker is not the only solution for containers...
+
+https://chimeracoder.github.io/docker-without-docker/#30
+
+<!--v-->
+
+![](https://lh5.googleusercontent.com/PwMu_wdvsJlgdNBg4YwDaZkRasjmkvnp3heWWeOR8-GGkrC-AFmcMOLIS-Dh04Qt9E_toSvZbZxXsVwvO_aMqiai6sVnA6L8MYcfL-Ov7pKvKwL4i8efODSCZv2wFz8WgA)
+
+<!--v-->
+
+![](https://pointful.github.io/docker-intro/docker-img/separation-of-concerns.png)
+
+<!--v-->
+
+![](https://image.slidesharecdn.com/docker101november2016-161205192653/95/docker-101-nov-2016-13-638.jpg)
+
+<!--s-->
+
+### Containers for Data Science ?
+
+<!--v-->
+
+#### Multiple People
+
+![](https://img.pngio.com/viewpoint-how-should-i-structure-my-data-science-team-science-teams-png-700_500.png)
+
+<!--v-->
+
+#### Complex Workflows
+
+![](https://miro.medium.com/max/1566/1*_EDimQP_2_sen1v3Xf3fpw.jpeg) <!-- .element: height="60%" width="60%" -->
+
+<!--v-->
+
+#### Data Science is about reproducibility
+
+- Communicating results
+- Experimental science
+- Hands-out
+
+<!--v-->
+
+#### So... containers ?
+
+- ... for deployment
+- ... for standardized development environments
+- ... dependency management
+- ... for complex / large scale workflows
+
+**it works on my notebook !**
+
+<!--v-->
+
+[Netflix and notebook scheduling](https://medium.com/netflix-techblog/scheduling-notebooks-348e6c14cfd6)
+
+<img src="https://miro.medium.com/max/1229/0*byeqo-pBXVPU6xjq" alt="" style="width: 60%; height: 60%; background:none; border:none; box-shadow:none;"/>
+
+<!--v-->
+
+https://www.kubeflow.org/
+![](https://miro.medium.com/max/2446/1*ZQsFV3o1c3Amu26Z-IEd7w.png)
+
+<!--s-->
+
+### Docker "in-depth"
+
+<!--v-->
+
+https://medium.com/swlh/what-exactly-is-docker-1dd62e1fde38
+
+<!--v-->
+
+#### Drawbacks of VMs
+
+- VM Contains full OS at each install => Install + Resource overhead
+- VM needs pre-allocation of resource for each VM (=> Waste if not used)
+- Communication between VM <=> Communication between computers
+
+<!--v-->
+
+#### Container vs Virtual Machine
+
+![](https://www.docker.com/sites/default/files/d8/2018-11/docker-containerized-and-vm-transparent-bg.png)
+
+<!--v-->
+
+#### Container vs Virtual Machine, an Analogy
+
+![](http://www.lukewilson.net/images/2017/02/apartment-house.png)
+
+<!--v-->
+
+#### Resources allocation in containers
+
+- Due to sharing underlying OS, the container manager can allocate resources (CPU, Storage, RAM) on the fly (!= VM)
+- GPU is way easier to manage / share with containers
+
+![](static/img/container.jpg)
+
+<!--v-->
+
+#### Some drawbacks of containers
+
+- Most containers solution are based on Linux (Docker makes Windows container possible though)
+- Isolation is not perfect since containers share underlying kernels (security and stability)
+
+<!--v-->
+
+#### Vocabulary of Docker
+
+- **Layer**: Set of read-only files to provision the system
+- **Image**: Read-Only layer "snapshot" of an environment. Can inherit from another **Image**
+- **Container**: Read-Write instance of an **Image**
+- **DockerFile**: Description of the process used to build an Image
+- **Hub**: Repository of Docker Images
+
+<!--v-->
+
+![](https://pointful.github.io/docker-intro/docker-img/basics-of-docker-system.png)
+
+<!--v-->
+
+#### Layers, Container, Image
+
+![](https://nvisium.com/articles/2014/2014-10-15-docker-cache-friend-or-foe/docker-filesystems-multilayer.png)
+
+<!--v-->
+
+#### Image vs Container
+
+Docker:
+```Dockerfile
+FROM python:3.6
+RUN pip install torch
+CMD ipython
+```
+
+```bash
+docker build -f Dockerfile -t my-image:1.0 .
+docker run my-image
+```
+
+Python:
+```python
+class BaseImage:
+    def __init__(self, a):
+       self.a = a
+
+class NewImage(BaseImage):
+    def __init__(self, a, b):
+       super(NewImage, self).__init__(a=a)
+       self.b = b
+
+container = NewImage(a=0,b=1)
+```
+
+<!--v-->
+
+#### Dockerfile
+
+```Dockerfile
+FROM python:3.7
+ENV MYVAR="HELLO"
+RUN pip install torch
+COPY my-conf.txt /app/my-conf.txt
+ADD my-file.txt /app/my-file.txt
+EXPOSE 9000
+WORKDIR "/WORKDIR"
+USER MYUSER
+ENTRYPOINT ["/BIN/BASH"]
+CMD ["ECHO” , "${MYVAR}"] 
+```
+
+```bash
+docker build -f Dockerfile -t my-image:1.0 .
+docker run my-image
+```
+
+- Reproducible (if you include static data)
+- Can be put under version control (simple text file)
+
+<!--v-->
+
+#### Architecture
+
+![](https://docs.docker.com/engine/images/architecture.svg)
+
+<!--v-->
+
+#### Registry
+
+- Local registry: All images/containers in your machine
+- https://hub.docker.com/
+- GCP Container Registry
+- Social Dimension (share docker images to speed up development/deployment)
+
+<!--v-->
+
+#### In practice
+
+<img src="static/img/docker_pratique.png" alt="" style="width: 50%; height: 50%; background:none; border:none; box-shadow:none;"/>
+
+<!--s-->
+
+### A bit about the ecosystem
+
+<!--v-->
+
+#### Docker Compose
+
+- Multi-containers application with networking
+
+![](https://code.scottshipp.com/wp-content/uploads/2019/06/docker-compose-logo.png)
+
+<!--v-->
+
+#### Docker Compose
+
+```yaml
+version: '3'
+
+services:
+  app:
+    build: .
+    image: takacsmark/flask-redis:1.0
+    environment:
+      - FLASK_ENV=development
+    ports:
+      - 5000:5000
+
+  redis:
+    image: redis:4.0.11-alpine
+```
+
+<!--v-->
+
+... and so many more !
+
+![](https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F996C7D4B5AF43B6C27)
+
+<!--s-->
+
+### Docker and GCP
+
+<!--v-->
+
+#### GCP & Docker
+
+- The per-project dockerhub is called [Container Registry](https://cloud.google.com/container-registry/) 
+- Your images look like this `eu.gcr.io/project-id/a/b/c:1.0`
+- You can use [Google Cloud Build](https://cloud.google.com/cloud-build/) to build dockerfiles remotely `gcloud builds submit --tag gcr.io/[PROJECT_ID]/quickstart-image .`
+- To use gcloud with docker: `gcloud auth configure-docker`
+
+<!--v-->
+
+#### GCP & Docker
+
+- Everything is container-based (virtualization...)
+- You can even deploy "virtual machines" with containers directly
+
+... Where's the boundary ?
+
+<!--s-->
+
+### Self-Paced Workshop
+
+<!--v-->
+
+#### Demo time
+
+<!--v-->
+
+#### play-with-docker
+
+- You need to have a docker hub account : https://hub.docker.com/
+- https://labs.play-with-docker.com/
+- Free, interactive, cluster of vms to experiment docker with
+- https://training.play-with-docker.com/ lots of resoures !
+
+<!--v-->
+
+[Go here](https://github.com/fchouteau/isae-practical-gcp/tree/master/2-docker)
+
+[If you have finished go here](https://github.com/fchouteau/isae-practical-gcp/tree/master/3-deploy-model-into-production)
+
+<!--s-->
+
+### Cheatsheets
+
+<!--v-->
+
+![](https://jrebel.com/wp-content/uploads/2016/03/Docker-cheat-sheet-by-RebelLabs.png)
+
+<!--v-->
+
+#### Dockerfile : Description d'une image
+
+```Dockerfile
+FROM python:3.7
+ENV MYVAR="HELLO"
+RUN pip install torch
+COPY my-conf.txt /app/my-conf.txt
+ADD my-file.txt /app/my-file.txt
+EXPOSE 9000
+WORKDIR "/WORKDIR"
+USER MYUSER
+ENTRYPOINT ["/BIN/BASH"]
+CMD ["ECHO” , "${MYVAR}"]
+```
+
+```bash
+docker build -f Dockerfile -t my-image:1.0 .
+docker run my-image
+```
+
+<!--v-->
+
+#### Images
+
+    "docker search" sur un registry
+        public (DokerHub)
+        privé (entreprise)
+    "docker build" à partir d'un Dockerfile
+    "docker commit" sur un conteneur modifié
+    "docker import" d'une arbo de base :
+    
+    cat centos6-base.tar | docker import - centos6-base
+
+<!--v-->
+
+#### Docker CLI
+
+    docker create   : crée un conteneur
+    docker run      : crée et démarre un conteneur
+    docker stop     : arrête un conteneur
+    docker start    : démarre un conteneur
+    docker restart  : redémarre un conteneur
+    docker rm       : supprime un conteneur
+    docker kill     : envoie un SIGKILL au conteneur
+    docker attach   : se connecte à un conteneur en exécution 
+    docker exec     : exécute une cmd dans un conteneur
+
+<!--v-->
+
+#### Docker run
+
+    -d, --detach       Run container in background and print ID
+    -e, --env=[]       Set environment variables
+    -i, --interactive  Keep STDIN open even if not attached
+    -p, --publish=[]   Publish a container's port(s) to the host
+    --rm               Automatically rm container when it exits
+    -t, --tty          Allocate a pseudo-TTY
+    -v, --volume=[]    Bind mount a volume
+    -w, --workdir      Working directory inside the container

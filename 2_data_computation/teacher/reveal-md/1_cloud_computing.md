@@ -15,21 +15,21 @@ revealOptions:
 
 ## Intro to Cloud Computing
 
-![](https://media.giphy.com/media/5wWf7H89PisM6An8UAU/giphy.gif)
+![the office](https://media.giphy.com/media/5wWf7H89PisM6An8UAU/giphy.gif)
 
 <!--s-->
 
 ### What is the Cloud ?
 
-![](https://imgs.xkcd.com/comics/the_cloud.png)
+![cloud](https://imgs.xkcd.com/comics/the_cloud.png)
 
 <!--v-->
 
-![](https://qph.fs.quoracdn.net/main-qimg-6a4c094bd9465389d35529b12b6caa77.webp)
+![cloud](https://qph.fs.quoracdn.net/main-qimg-6a4c094bd9465389d35529b12b6caa77.webp)
 
 <!--v-->
 
-But it's a bit bigger... 
+But it's a bit bigger...
 
 <img src="static/img/fb_datacenter.jpg" alt="" width="30%" height="30%" style="background:none; border:none; box-shadow:none; float:left;margin:0 10px 0 20px;"/>
 
@@ -45,7 +45,7 @@ But it's a bit bigger...
 
 <!--v-->
 
-![](https://cloud.google.com/images/locations/regions.png)
+![datacenters](https://cloud.google.com/images/locations/regions.png)
 
 Google Cloud Platform datacenters locations
 
@@ -66,7 +66,7 @@ which become increasingly "abstracted" from the hardware they run on...
 
 <!--v-->
 
-Services ?
+#### Services ?
 
 - "Renting a server" ... (this is pure "cloud computing")
 - "Replicated & Secure storage space" ...
@@ -80,7 +80,7 @@ Services ?
 
 <!--v-->
 
-### How is it possible ?
+#### How is it possible ?
 
 ![](https://blog.findthatlead.com/en/wp-content/uploads/2016/11/xmagic.jpg.pagespeed.ic.IbOWzrWHcR.jpg)
 
@@ -90,7 +90,7 @@ The magic of... virtualization !
 
 #### Virtualization ?
 
-> In computing, virtualization refers to the act of creating a virtual (rather than actual) version of something, including virtual computer hardware platforms, storage devices, and computer network resources. 
+> In computing, virtualization refers to the act of creating a virtual (rather than actual) version of something, including virtual computer hardware platforms, storage devices, and computer network resources.
 
 Wikipedia
 
@@ -98,7 +98,13 @@ Wikipedia
 
 <!--v-->
 
-![](https://fchouteau.github.io/isae-practical-gcp/static/img/evolution_of_virtualization.png)
+<img src="static/img/virtualization.png" alt="" width="75%" height="75%" style="background:none; border:none; box-shadow:none;"/>
+
+<!--v-->
+
+Hardware visualisation: Server Example
+
+<img src="static/img/virtualization2.png" alt="" width="50%" height="50%" style="background:none; border:none; box-shadow:none;"/>
 
 <!--v-->
 
@@ -106,7 +112,7 @@ Wikipedia
 
 <!--v-->
 
-Definitions 
+#### Definitions
 
 - Hypervisor (VMWare, Virtualbox, KVM): A hypervisor is a program for creating and running virtual machines.
 - Virtual Machine: A virtual machine is the emulated equivalent of a computer system that runs on top of another system
@@ -114,17 +120,17 @@ Definitions
 
 <!--v-->
 
-Consequence... 
+#### Consequence
 
-![](https://i.kym-cdn.com/photos/images/newsfeed/000/038/431/Technologically-Impaired-Duck-Where-can-I-download--More-RAM8.jpg)
+![more ram](https://i.kym-cdn.com/photos/images/newsfeed/000/038/431/Technologically-Impaired-Duck-Where-can-I-download--More-RAM8.jpg)
 
-> Any sufficiently advanced technology is indistinguishable from magic. 
+> Any sufficiently advanced technology is indistinguishable from magic.
 
 Clarke Third Law
 
 <!--v-->
 
-Hardware abstraction
+#### Hardware abstraction
 
 - Hardware Abstraction ("download more RAM")
 - Fine-grained resource allocation / sharing
@@ -132,19 +138,19 @@ Hardware abstraction
 
 <!--v-->
 
-Reliability, security...
+#### Reliability, security...
 
-![](https://yogeek.github.io/enseignement/Introduction_Virtualisation_CloudComputing/img/vm_charge_repartition.gif)
+![balancing](https://yogeek.github.io/enseignement/Introduction_Virtualisation_CloudComputing/img/vm_charge_repartition.gif)
 
 <!--s-->
 
-### Where does it come from ? 
+### Where does it come from ?
 
 ![](https://blog.scottlogic.com/dsmith/assets/featured/aws-logo.png)
 
 <!--v-->
 
-Once upon a time... 
+Once upon a time...
 
 Amazon (the e-commerce store) has "scaling" issues
 
@@ -167,7 +173,6 @@ And that infrastructure is often there to answer peak load...
 
 http://blog.b3k.us/2009/01/25/ec2-origins.html
 
-
 <!--v-->
 
 Let's sell it !
@@ -176,7 +181,7 @@ Let's sell it !
 
 <!--v-->
 
-How does Amazon can offer free shipping to everybody ?
+#### How does Amazon can offer free shipping to everybody
 
 ![](https://zdnet1.cbsistatic.com/hub/i/2019/01/31/90cc9931-483b-4512-b94c-20777c1e9694/122bf253e0610093f41ce36f3ce220e7/amazon2.png)
 
@@ -202,7 +207,7 @@ Cloud providers are offering services with increasing layers of abstraction...
 
 <!--v-->
 
-Examples:
+Examples
 
 - Renting a server with hard drive and storing data
 - Using data storage service like google cloud storage without managing the infrastructure
@@ -210,7 +215,7 @@ Examples:
 
 <!--v-->
 
-Examples:
+Examples
 
 - Renting a server with hard drive and storing data **IaaS**
 - Using data storage service like google cloud storage without managing the infrastructure **PaaS**
@@ -222,23 +227,31 @@ Examples:
 
 <!--s-->
 
-### Cloud Providers
+### Public Cloud Providers
 
 <!--v-->
 
-![](https://yogeek.github.io/enseignement/Introduction_Virtualisation_CloudComputing/img/cloud_vendors.jpg)
+![cloud_vendors](https://yogeek.github.io/enseignement/Introduction_Virtualisation_CloudComputing/img/cloud_vendors.jpg)
 
 <!--v-->
 
 🐓
 
-<img src="https://www.comptoir-hardware.com/images/stories/_logos/ovhcloud.png" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/>
+<img src="https://www.comptoir-hardware.com/images/stories/_logos/ovhcloud.png" alt="" width="20%" height="20%" style="background:none; border:none; box-shadow:none;"/>
 
-<img src="static/img/scaleway_logo_2018.png" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/>
+<img src="static/img/scaleway_logo_2018.png" alt="" width="20%" height="20%" style="background:none; border:none; box-shadow:none;"/>
 
-<img src="https://fr.outscale.com/wp-content/uploads/2018/08/3DS_OUTSCALE_Dark-Blue_RGB.png" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/>
+<img src="https://fr.outscale.com/wp-content/uploads/2018/08/3DS_OUTSCALE_Dark-Blue_RGB.png" alt="" width="20%" height="20%" style="background:none; border:none; box-shadow:none;"/>
 
-<img src="https://cloud.orange.com/ui/app/static/assets/brand/logo_header_login.png" alt="" width="25%" height="25%" style="background:none; border:none; box-shadow:none;"/>
+<img src="https://cloud.orange.com/ui/app/static/assets/brand/logo_header_login.png" alt="" width="20%" height="20%" style="background:none; border:none; box-shadow:none;"/>
+
+<!--v-->
+
+🇪🇺
+
+![gaiax](https://www.data-infrastructure.eu/GAIAX/Redaktion/EN/Bilder/gaia-x.jpg?__blob=normal&v=1&size=834w)
+
+https://www.data-infrastructure.eu/GAIAX/
 
 <!--v-->
 
@@ -246,6 +259,4 @@ Examples:
 
 <!--v-->
 
-https://www.data-infrastructure.eu/GAIAX/Navigation/EN/Home/home.html
-
-![](https://www.data-infrastructure.eu/GAIAX/Redaktion/EN/Bilder/gaia-x.jpg?__blob=normal&v=1&size=834w)
+![france](https://i2.wp.com/datacenter-magazine.fr/contenus/uploads/2020/03/CORE_MARKESS_PRG_OPE_19-20_COMPETITIVE_ENVIRONMENT_PRESSE_MARS-2020.png?resize=600%2C340&ssl=1)
