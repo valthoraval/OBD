@@ -34,8 +34,8 @@ Date | Type | Link | Description
 Date | Type | Link | Description
 | --- | --- | --- | ---
 14/10 | Lecture | [From virtualisation to Containerisation, Docker](lectures/4_containers.html) | *What are containers and why do we need them ? What is Docker ?*
-14/10 | Hands-on | Docker part 1: the basics | *Discover Docker*
-14/10 | Hands-on | Docker part 2: packaging a development environment | *Package & interact with a dev. enviromnent inside a docker container, learn about volumes and port forwarding*
+14/10 | Hands-on | [Docker part 1: the basics](https://github.com/SupaeroDataScience/OBD/tree/master/2_data_computation/exercises/3_docker_basics) | *Discover Docker*
+14/10 | Hands-on | [Docker part 2: packaging a development environment](https://github.com/SupaeroDataScience/OBD/tree/master/2_data_computation/exercises/4_docker_dev_env) | *Package & interact with a dev. enviromnent inside a docker container, learn about volumes and port forwarding*
 20/10 | Recap | Important notions about Docker | *A small summary of important notions about Docker*
 
 ### Orchestration (2h)
@@ -56,7 +56,6 @@ Date | Type | Link | Description
 20/10 | Lecture |  Webservices, RESTful APIs, Docker Compose | *Learn about webservices, microservices, restful apis, docker compose and all everything gets together to deploy a ML model into production*
 20/10 | Hands-on | Docker part 3: Packaging ML Models, Docker Compose, RESTful APIs | *Package & interact with a machine learning model in a container, learn about REST APIs and docker-compose*
 20/10 | Hands-on | Deploying & Scaling ML models with Kubernetes | *Deploy your model using Kubernetes, make it scale with a little help from your friends !*
-
 
 ### [Conclusion](lectures/7_conclusion.html)
 
@@ -88,13 +87,14 @@ Date | Duration | Title
 
 * [Paper from Natural Resources Defense Council on Cloud vs On-Premise](https://www.nrdc.org/sites/default/files/cloud-computing-efficiency-IB.pdf)
 
-* Anecdotes about Cloud Computing : http://highscalability.com
+* [Anecdotes about Cloud Computing](http://highscalability.com)
 
 ### About Containers
 
 * [Docker whitepaper: Docker and the way of the Devops](https://www.docker.com/taxonomy/term/4955)
 
 * [What exactly is Docker ?](https://medium.com/swlh/what-exactly-is-docker-1dd62e1fde38) Simple explanation from a medium blog post
+
 ### About Orchestration
 
 * Verma, A., Pedrosa, L., Korupolu, M., Oppenheimer, D., Tune, E., & Wilkes, J. (2015, April). [Large-scale cluster management at Google with Borg](../readings/borg.pdf). In Proceedings of the Tenth European Conference on Computer Systems (pp. 1-17).

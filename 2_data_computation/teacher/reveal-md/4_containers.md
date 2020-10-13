@@ -21,11 +21,9 @@ revealOptions:
 
 ### Outline
 
-* **Presentation** (30)
+* **Presentation** (30m)
 * **Self-paced Workshop** (1h30)
-* **QCM/Evaluation** (15 minutes)
-
-To be continued with Orchestration & Deployment
+* To be continued with Orchestration & Deployment (next Tuesday)
 
 <!--v-->
 
@@ -35,7 +33,7 @@ To be continued with Orchestration & Deployment
 * the basics of docker (containers, images) <!-- .element: class="fragment" data-fragment-index="1" -->
 * the basics of a container registry <!-- .element: class="fragment" data-fragment-index="2" -->
 * how to pull an image and run a container <!-- .element: class="fragment" data-fragment-index="3" -->
-* what a `Dockerfile` looks like <!-- .element: class="fragment" data-fragment-index="4" -->
+* what a Dockerfile looks like <!-- .element: class="fragment" data-fragment-index="4" -->
 
 <!--s-->
 
@@ -72,6 +70,14 @@ To be continued with Orchestration & Deployment
 #### Solution !
 
 ![](https://pointful.github.io/docker-intro/docker-img/shipping-container-for-code.png)
+
+<!--v-->
+
+![](https://pointful.github.io/docker-intro/docker-img/separation-of-concerns.png)
+
+<!--v-->
+
+![](https://image.slidesharecdn.com/docker101november2016-161205192653/95/docker-101-nov-2016-13-638.jpg)
 
 <!--s-->
 
@@ -119,7 +125,14 @@ But Docker is available on [Windows and MacOS](https://www.docker.com/products/d
 
 <!--s-->
 
-### Containers or VMs ?
+### Containers or Virtual Machines
+
+<!--v-->
+
+#### Similarities
+
+* Isolated environments for applications
+* Movable between hosts
 
 <!--v-->
 
@@ -161,50 +174,39 @@ But Docker is available on [Windows and MacOS](https://www.docker.com/products/d
 
 <!--s-->
 
-### Enabling "Devops" philosophy
-
-<!--v-->
-
-![](https://pointful.github.io/docker-intro/docker-img/separation-of-concerns.png)
-
-<!--v-->
-
-![](https://image.slidesharecdn.com/docker101november2016-161205192653/95/docker-101-nov-2016-13-638.jpg)
-
-<!--s-->
-
 ### Containers for Data Science
 
 <!--v-->
 
 #### Multiple People
 
-![](https://img.pngio.com/viewpoint-how-should-i-structure-my-data-science-team-science-teams-png-700_500.png)
+![people](https://img.pngio.com/viewpoint-how-should-i-structure-my-data-science-team-science-teams-png-700_500.png)
 
 <!--v-->
 
 #### Complex Workflows
 
-![](https://miro.medium.com/max/1566/1*_EDimQP_2_sen1v3Xf3fpw.jpeg) <!-- .element: height="60%" width="60%" -->
+![workflows](https://miro.medium.com/max/1566/1*_EDimQP_2_sen1v3Xf3fpw.jpeg) <!-- .element: height="40%" width="40%" -->
 
 <!--v-->
 
 #### Data Science is about reproducibility
 
-- Communicating results
-- Experimental science
-- Hands-out
+* Experimental science
+* Communicating results
+* Hands-out to other teams
+* Deployment and versioning of models
 
 <!--v-->
 
 #### So... containers ?
 
-- ... for deployment
-- ... for standardized development environments
-- ... dependency management
-- ... for complex / large scale workflows
+* ... for deployment
+* ... for standardized development environments
+* ... dependency management
+* ... for complex / large scale workflows
 
-**it works on my notebook !**
+~it works on my notebook !~ *here's the model ready to run !*
 
 <!--v-->
 
@@ -215,7 +217,8 @@ But Docker is available on [Windows and MacOS](https://www.docker.com/products/d
 <!--v-->
 
 https://www.kubeflow.org/
-![](https://miro.medium.com/max/2446/1*ZQsFV3o1c3Amu26Z-IEd7w.png)
+
+![kubeflow](https://miro.medium.com/max/2446/1*ZQsFV3o1c3Amu26Z-IEd7w.png) <!-- .element: height="55%" width="55%" -->
 
 <!--s-->
 
@@ -223,30 +226,32 @@ https://www.kubeflow.org/
 
 ![](static/img/docker-jworkflow.jpg)
 
-
 <!--v-->
 
 #### Vocabulary of Docker
 
-- **Layer**: Set of read-only files to provision the system
-- **Image**: Read-Only layer "snapshot" of an environment. Can inherit from another **Image**
-- **Container**: Read-Write instance of an **Image**
-- **DockerFile**: Description of the process used to build an Image
-- **Hub**: Repository of Docker Images
+* **Layer**: Set of read-only files to provision the system
+* **Image**: Read-Only layer "snapshot" (or blueprint) of an environment. Can inherit from another **Image**. Image have a *name* and a *tag*
+* **Container**: Read-Write instance of an **Image**
+* **DockerFile**: Description of the process used to build an Image
+* **Container Registry**: Repository of Docker Images
+* **Dockerhub**: The main container registry of docker.com
 
 <!--v-->
 
-![](https://pointful.github.io/docker-intro/docker-img/basics-of-docker-system.png)
+#### Workflow
+
+![workflow](https://pointful.github.io/docker-intro/docker-img/basics-of-docker-system.png) <!-- .element: height="55%" width="55%" -->
 
 <!--v-->
 
 #### Layers, Container, Image
 
-![](https://nvisium.com/articles/2014/2014-10-15-docker-cache-friend-or-foe/docker-filesystems-multilayer.png)
+![layers](https://jfrog--c.documentforce.com/servlet/servlet.ImageServer?id=0151r000006uDeN&oid=00D20000000M3v0&lastMod=1584629516000) <!-- .element: height="45%" width="45%" -->
 
 <!--v-->
 
-#### Image vs Container
+#### Layer / Image Analogy
 
 Docker:
 ```Dockerfile
@@ -278,6 +283,8 @@ container = NewImage(a=0,b=1)
 
 #### Dockerfile
 
+* Used to build Images
+
 ```Dockerfile
 FROM python:3.7
 ENV MYVAR="HELLO"
@@ -288,7 +295,7 @@ EXPOSE 9000
 WORKDIR "/WORKDIR"
 USER MYUSER
 ENTRYPOINT ["/BIN/BASH"]
-CMD ["ECHO” , "${MYVAR}"] 
+CMD ["ECHO” , "${MYVAR}"]
 ```
 
 ```bash
@@ -296,8 +303,8 @@ docker build -f Dockerfile -t my-image:1.0 .
 docker run my-image
 ```
 
-- Reproducible (if you include static data)
-- Can be put under version control (simple text file)
+* Reproducible (if you include static data)
+* Can be put under version control (simple text file)
 
 <!--v-->
 
@@ -309,10 +316,10 @@ docker run my-image
 
 #### Registry
 
-- Local registry: All images/containers in your machine
-- https://hub.docker.com/
-- GCP Container Registry
-- Social Dimension (share docker images to speed up development/deployment)
+* Local registry: All images/containers in your machine
+* https://hub.docker.com/
+* GCP Container Registry
+* Social Dimension (share docker images to speed up development/deployment)
 
 <!--v-->
 
@@ -322,25 +329,22 @@ docker run my-image
 
 <!--v-->
 
-#### REMEMBER THIS !!!
-
-![](static/img/docker-jworkflow.jpg)
-
-<!--s-->
-
-### A bit about the ecosystem
+### What about multi-applications containers ?
 
 <!--v-->
 
 #### Docker Compose
 
-- Multi-containers application with networking
+* Multi-containers application with networking (communication)
+* "Glue" for complex applications and microservices
 
-![](https://code.scottshipp.com/wp-content/uploads/2019/06/docker-compose-logo.png)
+![compose](https://lh3.googleusercontent.com/efcq_xUhGpF1Guqb5daiybmhMQL9Q_KzMtpmddPB2en0vrJzYlPqI1CAc3KDSjFSiBJApBYPfnmwlyrRAtzpIzHrDdpO-XhnWEmYKk4MP20zyq708-pvIxl-6MNbQACxe5nlwi2G)
 
 <!--v-->
 
-#### Docker Compose
+#### Docker Compose (example)
+
+A database and a webapp
 
 ```yaml
 version: '3'
@@ -358,11 +362,21 @@ services:
     image: redis:4.0.11-alpine
 ```
 
+`docker-compose up` starts both images (you will see that next week)
+
 <!--v-->
 
-... and so many more !
+#### REMEMBER THIS !!!
 
-![](https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F996C7D4B5AF43B6C27)
+![](static/img/docker-jworkflow.jpg)
+
+<!--v-->
+
+#### Next week
+
+* Microservices, communication between containers using HTTP (REST)
+* Container management and orchestration
+* Kubernetes
 
 <!--s-->
 
@@ -372,42 +386,29 @@ services:
 
 #### GCP & Docker
 
-- The per-project dockerhub is called [Container Registry](https://cloud.google.com/container-registry/) 
-- Your images look like this `eu.gcr.io/project-id/a/b/c:1.0`
-- You can use [Google Cloud Build](https://cloud.google.com/cloud-build/) to build dockerfiles remotely `gcloud builds submit --tag gcr.io/[PROJECT_ID]/quickstart-image .`
-- To use gcloud with docker: `gcloud auth configure-docker`
-
-<!--v-->
-
-#### GCP & Docker
-
-- Everything is container-based (virtualization...)
-- You can even deploy "virtual machines" with containers directly
-
-... Where's the boundary ?
+* The per-project dockerhub is called [Container Registry](https://cloud.google.com/container-registry/) 
+* Your images look like this `eu.gcr.io/project-id/a/b/c:1.0`
+* You can use [Google Cloud Build](https://cloud.google.com/cloud-build/) to build dockerfiles remotely 
+* `gcloud builds submit --tag gcr.io/[PROJECT_ID]/quickstart-image .`
+* To use gcloud with docker: `gcloud auth configure-docker`
+* You can even deploy ["virtual machines" with containers directly](https://cloud.google.com/compute/docs/containers)
 
 <!--s-->
 
-### Self-Paced Workshop
+### Demo time
 
 <!--v-->
 
-#### Demo time
+#### bonus : play-with-docker
+
+* You need to have a docker hub account : https://hub.docker.com/
+* https://labs.play-with-docker.com/
+* Free, interactive, cluster of vms to experiment docker with
+* https://training.play-with-docker.com/ lots of resoures !
 
 <!--v-->
 
-#### play-with-docker
-
-- You need to have a docker hub account : https://hub.docker.com/
-- https://labs.play-with-docker.com/
-- Free, interactive, cluster of vms to experiment docker with
-- https://training.play-with-docker.com/ lots of resoures !
-
-<!--v-->
-
-[Go here](https://github.com/fchouteau/isae-practical-gcp/tree/master/2-docker)
-
-[If you have finished go here](https://github.com/fchouteau/isae-practical-gcp/tree/master/3-deploy-model-into-production)
+![break](https://media.giphy.com/media/WSrMZn2cuMs2UQ6Rnq/giphy.gif)
 
 <!--s-->
 
@@ -415,7 +416,7 @@ services:
 
 <!--v-->
 
-![](https://jrebel.com/wp-content/uploads/2016/03/Docker-cheat-sheet-by-RebelLabs.png)
+![cheatsheet](https://jrebel.com/wp-content/uploads/2016/03/Docker-cheat-sheet-by-RebelLabs.png)
 
 <!--v-->
 
@@ -474,7 +475,7 @@ docker run my-image
     -e, --env=[]       Set environment variables
     -i, --interactive  Keep STDIN open even if not attached
     -p, --publish=[]   Publish a container's port(s) to the host
-    --rm               Automatically rm container when it exits
+    --rm        5_orchestration       Automatically rm container when it exits
     -t, --tty          Allocate a pseudo-TTY
     -v, --volume=[]    Bind mount a volume
     -w, --workdir      Working directory inside the container
