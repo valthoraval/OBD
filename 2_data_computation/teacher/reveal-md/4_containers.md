@@ -15,13 +15,15 @@ revealOptions:
 
 ## From virtualisation to Containerisation
 
+![](static/img/docker_meme.png)
+
 <!--s-->
 
 ### Outline
 
-- **Presentation** (30)
-- **Self-paced Workshop** (1h30)
-- **QCM/Evaluation** (15 minutes)
+* **Presentation** (30)
+* **Self-paced Workshop** (1h30)
+* **QCM/Evaluation** (15 minutes)
 
 To be continued with Orchestration & Deployment
 
@@ -29,19 +31,11 @@ To be continued with Orchestration & Deployment
 
 #### This class will be successful if you understand
 
-- why we need a tool like docker
-- the basics of docker (containers, images) <!-- .element: class="fragment" data-fragment-index="1" -->
-- the basics of a container registry <!-- .element: class="fragment" data-fragment-index="2" -->
-- how to pull an image and run a container <!-- .element: class="fragment" data-fragment-index="3" -->
-- what a Dockerfile looks like <!-- .element: class="fragment" data-fragment-index="4" -->
-
-<!--v-->
-
-#### As a bonus, you will
-
-- discover using gcp tools for docker <!-- .element: class="fragment" data-fragment-index="1" -->
-- package your first production ready Deep Learning model  <!-- .element: class="fragment" data-fragment-index="2" -->
-- deploy it on Google Cloud Run and we will try to scale it   <!-- .element: class="fragment" data-fragment-index="3" -->
+* why we need a tool like docker
+* the basics of docker (containers, images) <!-- .element: class="fragment" data-fragment-index="1" -->
+* the basics of a container registry <!-- .element: class="fragment" data-fragment-index="2" -->
+* how to pull an image and run a container <!-- .element: class="fragment" data-fragment-index="3" -->
+* what a `Dockerfile` looks like <!-- .element: class="fragment" data-fragment-index="4" -->
 
 <!--s-->
 
@@ -63,7 +57,7 @@ To be continued with Orchestration & Deployment
 
 <!--v-->
 
-#### Analogy...
+#### Analogy
 
 ![](https://pointful.github.io/docker-intro/docker-img/cargo-transport-pre-1960.png)
 
@@ -79,31 +73,95 @@ To be continued with Orchestration & Deployment
 
 ![](https://pointful.github.io/docker-intro/docker-img/shipping-container-for-code.png)
 
-<!--v-->
+<!--s-->
 
 ![](https://www.docker.com/sites/default/files/social/docker_facebook_share.png)
 
+<!--v-->
+
 Docker is **a** solution that **standardizes** packaging and execution of software in isolated
  environments
- (**containers**) that can communicate
+ (**containers**) that share resources and can communicate between themselves
 
 > Build, Share, and Run Any App, Anywhere
 
 <!--v-->
 
-- Created in 2013
-- Open Source
-- Not a new idea but set a new standard
+[Docker](https://www.docker.com/)
+
+* Created in 2013
+* Open Source
+* Not a new idea but set a new standard
+* Docker is a company built around its main product (Docker Engine)
+* in charge of dev of everything docker + additional paid services (Docker hub...)
 
 <!--v-->
 
-Docker is not the only solution for containers...
+Docker is not the only solution for containers
 
-https://chimeracoder.github.io/docker-without-docker/#30
+<https://chimeracoder.github.io/docker-without-docker/#30>
+
+<https://podman.io/>
 
 <!--v-->
 
-![](https://lh5.googleusercontent.com/PwMu_wdvsJlgdNBg4YwDaZkRasjmkvnp3heWWeOR8-GGkrC-AFmcMOLIS-Dh04Qt9E_toSvZbZxXsVwvO_aMqiai6sVnA6L8MYcfL-Ov7pKvKwL4i8efODSCZv2wFz8WgA)
+Docker is some fancy tech over linux kernel capabilities (containers)
+
+![](https://miro.medium.com/max/700/1*4dxszUyIznfjjzSNgpI0nw.png)
+
+[more info](https://medium.com/@goyalsaurabh66/docker-basics-cb006b9be243)
+
+<!--v-->
+
+But Docker is available on [Windows and MacOS](https://www.docker.com/products/docker-desktop) !
+
+![desktop](https://www.docker.com/sites/default/files/d8/styles/role_icon/public/2020-01/DesktopAction%402.png?itok=fSjduwO7)
+
+<!--s-->
+
+### Containers or VMs ?
+
+<!--v-->
+
+#### Drawbacks of VMs
+
+* VM Contains full OS at each install => Install + Resource overhead
+* VM needs pre-allocation of resource for each VM (=> Waste if not used)
+* Communication between VM <=> Communication between computers
+
+<!--v-->
+
+#### Container vs Virtual Machine
+
+![](https://www.docker.com/sites/default/files/d8/2018-11/docker-containerized-and-vm-transparent-bg.png)
+
+<!--v-->
+
+#### Container vs Virtual Machine, an Analogy
+
+![](http://www.lukewilson.net/images/2017/02/apartment-house.png)
+
+<!--v-->
+
+#### Resources allocation in containers
+
+* Containers share underlying OS / Kernels
+* The container engine can allocate resources (CPU, Storage, RAM) on the fly (!= VM)
+* GPU is way easier to manage / share with containers
+
+![](static/img/containers_vs_vm.png)
+
+<!--v-->
+
+#### Some drawbacks of containers
+
+* Containers are based on linux tech  
+  (Docker makes Windows container possible though)
+* Isolation is not perfect since containers share underlying kernels (security and stability)
+
+<!--s-->
+
+### Enabling "Devops" philosophy
 
 <!--v-->
 
@@ -115,7 +173,7 @@ https://chimeracoder.github.io/docker-without-docker/#30
 
 <!--s-->
 
-### Containers for Data Science ?
+### Containers for Data Science
 
 <!--v-->
 
@@ -161,47 +219,10 @@ https://www.kubeflow.org/
 
 <!--s-->
 
-### Docker "in-depth"
+### Using Docker in practice
 
-<!--v-->
+![](static/img/docker-jworkflow.jpg)
 
-https://medium.com/swlh/what-exactly-is-docker-1dd62e1fde38
-
-<!--v-->
-
-#### Drawbacks of VMs
-
-- VM Contains full OS at each install => Install + Resource overhead
-- VM needs pre-allocation of resource for each VM (=> Waste if not used)
-- Communication between VM <=> Communication between computers
-
-<!--v-->
-
-#### Container vs Virtual Machine
-
-![](https://www.docker.com/sites/default/files/d8/2018-11/docker-containerized-and-vm-transparent-bg.png)
-
-<!--v-->
-
-#### Container vs Virtual Machine, an Analogy
-
-![](http://www.lukewilson.net/images/2017/02/apartment-house.png)
-
-<!--v-->
-
-#### Resources allocation in containers
-
-- Due to sharing underlying OS, the container manager can allocate resources (CPU, Storage, RAM) on the fly (!= VM)
-- GPU is way easier to manage / share with containers
-
-![](static/img/container.jpg)
-
-<!--v-->
-
-#### Some drawbacks of containers
-
-- Most containers solution are based on Linux (Docker makes Windows container possible though)
-- Isolation is not perfect since containers share underlying kernels (security and stability)
 
 <!--v-->
 
@@ -298,6 +319,12 @@ docker run my-image
 #### In practice
 
 <img src="static/img/docker_pratique.png" alt="" style="width: 50%; height: 50%; background:none; border:none; box-shadow:none;"/>
+
+<!--v-->
+
+#### REMEMBER THIS !!!
+
+![](static/img/docker-jworkflow.jpg)
 
 <!--s-->
 

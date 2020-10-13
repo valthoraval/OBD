@@ -94,6 +94,7 @@ Date | Duration | Title
 
 * [Docker whitepaper: Docker and the way of the Devops](https://www.docker.com/taxonomy/term/4955)
 
+* [What exactly is Docker ?](https://medium.com/swlh/what-exactly-is-docker-1dd62e1fde38) Simple explanation from a medium blog post
 ### About Orchestration
 
 * Verma, A., Pedrosa, L., Korupolu, M., Oppenheimer, D., Tune, E., & Wilkes, J. (2015, April). [Large-scale cluster management at Google with Borg](../readings/borg.pdf). In Proceedings of the Tenth European Conference on Computer Systems (pp. 1-17).
