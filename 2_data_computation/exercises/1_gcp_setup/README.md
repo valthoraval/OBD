@@ -152,6 +152,5 @@ Here, you will look at Google Colaboratory, which is a very handy tool for doing
 
 Other references:
 
-* [Writing markdown to generate reports](https://colab.research.google.com/notebooks/markdown_guide.
-ipynb)
+* [Writing markdown to generate reports](https://colab.research.google.com/notebooks/markdown_guide.ipynb)
 * [Installing custom dependencies](https://colab.research.google.com/notebooks/snippets/importing_libraries.ipynb)
