@@ -166,6 +166,7 @@ gcloud compute instances create $INSTANCE_NAME \
         --image-project=deeplearning-platform-release \
         --maintenance-policy=TERMINATE \
         --accelerator="type=nvidia-tesla-p100,count=1" \
+        --scopes="storage-rw" \
         --machine-type="n1-standard-8" \
         --boot-disk-size=120GB \
         --metadata="install-nvidia-driver=True"
@@ -189,37 +190,48 @@ In that case, change `common-cu-100` for `common-cpu` and remove the metadata li
 
 This time you have to EDIT the VM and remove the GPU instead of resizing the number of CPUs
 
-### Install code-server (like last time) & launch the pre-installed jupyter
+### Connect back to the VM
 
 * Relaunch the previous VM and connect to it using ssh
 * This time, you will [forward some ports](https://cloud.google.com/ai-platform/deep-learning-vm/docs) as well
   <details><summary>Solution</summary>
 
-    `gcloud compute ssh user@machine-name --zone europe-west4-a -- -L 8080:localhost:8080 -L 8081:localhost:8081`
+    `gcloud compute ssh user@machine-name --zone europe-west4-a -- -L 8080:localhost:8080
 
   </details>
 
-* Download code-server `wget https://github.com/cdr/code-server/releases/download/v3.5.0/code-server-3.5.0-linux-x86_64.tar.gz`
-* Unzip it `tar -xzvf code-server-3.5.0-linux-x86_64.tar.gz`
-* Launch code server `code-server-3.5.0-linux-x86_64/bin`, `./code-server --port=8081` 
-* Your password is stored on your instance... quit cloud server, find it (`cat ~/.config/code-server/config.yaml`) and relaunch cloud server
-
 * Go to your local browser and type `http://localhost:8080`, you should be in a jupyter notebook under the user `jupyter`
 
-* Go to your local browser type `http://localhost:8081`, you should be inside code server under your user
-
-You can try to play with the jupyter notebook and/or the code editor to get a feel of manipulating a remote instance
+You can try to play with the jupyter lab (that has a code editor and terminal capabilities) to get a feel of manipulating a remote instance
 
 Try to `pip3 list` to check all dependencies installed !
 
-**You will use code-server and its terminal later :)**
-
 **DO NOT DELETE THE INSTANCE FOR NOW YOU WILL NEED IT LATER**
 
-## 4. BONUS: Introduction to infrastructure as code
+## 4. BONUS Introduction to infrastructure as code
 
 If you have finished,
 
 * [This tutorial](https://cloud.google.com/deployment-manager/docs/quickstart) will guide you through google cloud deployment manager, which is a way to deploy google compute engine instances using configuration files
 
 * Don't forget to adapt machine configurations and zone to your use case (see above)
+
+## 5. BONUS - Persistent sessions with TMUX
+
+https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
+
+* Connect to your instance using SSH
+* Question: What happens if you start a long computation and disconnect ? 
+* Check that tmux is installed on the remote instance (run `tmux`). if not [install it](https://computingforgeeks.com/linux-tmux-cheat-sheet/)
+* Follow this tutorial: https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
+* To check you have understood you should be able to:
+  * Connect to your remote instance with ssh
+  * Start a tmux session
+  * Launch a process (for example `top`) inside it
+  * Detach from the session (`CTRL+B :detach`)
+  * Kill the ssh connection
+  * Connect again
+  * `tmux attach` to your session
+  * Your process should still be here !
+
+Congratulations :)

@@ -34,8 +34,7 @@ Date | Type | Link | Description
 Date | Type | Link | Description
 | --- | --- | --- | ---
 14/10 | Lecture | [From virtualisation to Containerisation, Docker](lectures/4_containers.html) | *What are containers and why do we need them ? What is Docker ?*
-14/10 | Hands-on | [Docker part 1: the basics](https://github.com/SupaeroDataScience/OBD/tree/master/2_data_computation/exercises/3_docker_basics) | *Discover Docker*
-14/10 | Hands-on | [Docker part 2: packaging a development environment](https://github.com/SupaeroDataScience/OBD/tree/master/2_data_computation/exercises/4_docker_dev_env) | *Package & interact with a dev. enviromnent inside a docker container, learn about volumes and port forwarding*
+14/10 | Hands-on | [Docker](https://github.com/SupaeroDataScience/OBD/tree/master/2_data_computation/exercises/3_docker) | *Discover Docker*
 20/10 | Recap | Important notions about Docker | *A small summary of important notions about Docker*
 
 ### Orchestration (2h)
