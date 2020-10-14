@@ -15,21 +15,40 @@ revealOptions:
 
 ## Miscellaneous slides
 
+<!--v-->
+
+### Purpose of this class
+
+"Classes about tooling are hard" especially at the beginning of the year
+
+* "General Knowledge"
+* "Pointers"
+* "First experience" in manipulation
+
 <!--s-->
 
-## Take-away for Cloud Computing
+### Take-away for Cloud Computing
 
 <!--v-->
 
-*WIP*
-
-<!--s-->
-
-## Take-away for Containers
+* Cloud Computing is a set of cloud providers renting infrastructure from datacenters
+* They also rent more and more complex services that range from infrastructure to platform
+* "Cloud computing" will be part of your job independently of your role in the data science field
+* Cloud computing can offer flexibility and scalability at the cost of "price" and "security"
 
 <!--v-->
 
-### What we have learned
+* Virtualisation is the concept of "abstracting" and "slicing" hardware to run OSs and software on
+* This was an enabler of cloud computer to divide datacenters resources according to demand
+* However cloud computing led to a revolution in "usage" rather than "tech"
+
+<!--s-->
+
+### Take-away for Containers
+
+<!--v-->
+
+#### What we have learned
 
 * Containerisation is the step beyond virtualization
 * Containers are used to package software in a standardized way
@@ -40,7 +59,7 @@ revealOptions:
 
 <!--v-->
 
-### What we haven't touched
+#### What we haven't touched
 
 * Containers really shine when you are deploying multi-containers applications
   *[This tutorial on microservices w/ Compose](https://training.play-with-docker.com/microservice-orchestration/)
@@ -51,7 +70,7 @@ revealOptions:
 
 <!--s-->
 
-## Take-away for Orchestration
+### Take-away for Orchestration
 
 <!--v-->
 
