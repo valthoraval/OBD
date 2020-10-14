@@ -216,7 +216,7 @@ You can also run a second webserver at the same time, specifying a custom host p
 $ docker run --name static-site-2 -e AUTHOR="Your Name" -d -p 8888:80 dockersamples/static-site
 ```
 
-<img src="../images/static.png" title="static">
+<img src="https://raw.githubusercontent.com/docker/labs/master/beginner/images/static.png" title="static">
 
 To deploy this on a real server you would just need to install Docker, and run the above `docker` command(as in this case you can see the `AUTHOR` is Docker which we passed as an environment variable).
 
