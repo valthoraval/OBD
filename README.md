@@ -51,15 +51,15 @@ Introduction | | | |
 --- | --- | --- | ---
 [Introduction to tools of Big Data](1_introduction) | 2h | 29/09/2020 | [Global Datasphere](readings/idc_data.pdf)
 
-Data Computation | | | |
+[Data Computation](2_data_computation) | | | |
 --- | --- | --- | ---
-[Cloud Computing & Google Cloud Platform](2_data_computation#cloud-computing-4h) | 2h <br />2h | 07/10/2020 <br /> 14/10/2020| [Readings](2_data_computation#about-cloud-computing)
-[Containers](2_data_computation#containers-2h) | 2h| 14/10/2020| [Readings](2_data_computation#about-containers)
-[Orchestration](2_data_computation#orchestration-2h) | 2h | 20/10/2020 | [Readings](2_data_computation#about-orchestration)
-[ML Model Deployment](2_data_computation#deployment-2h) | 2h | 20/10/2020 | *TBD*
+[Cloud Computing & Google Cloud Platform](2_data_computation/site/#cloud-computing-4h) | 2h <br />2h | 07/10/2020 <br /> 14/10/2020| [Readings](2_data_computation/site/7_readings/#about-cloud-computing)
+[Containers](2_data_computation/site/#containers-2h) | 2h| 14/10/2020| [Readings](2_data_computation/site/7_readings/#about-orchestration)
+[Orchestration](2_data_computation#orchestration-deployment-1h) | 1h | 20/10/2020 | [Readings](2_data_computation/site/7_readings/#about-containers) |
+[BE](2_data_computation/site/#final-be-3h) | 3h | 20/10/2020 | *TBD*
 Cluster Computing | 2h | 18/11/2020 | [SLURM](readings/slurm.pdf)
-GPU computing, part 1 | 3h | 01/12/2020 |
-GPU computing, part 2 | 3h | 02/12/2020 |
+GPU computing, part 1 | 3h | 01/12/2020 | *TBD* |
+GPU computing, part 2 | 3h | 02/12/2020 | *TBD* |
 
 Data Distribution | | | |
 --- | --- | --- | ---
