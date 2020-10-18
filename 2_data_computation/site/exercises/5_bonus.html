@@ -9,7 +9,7 @@
         <meta name="description" content="Cloud Computing, Virtualisation, Containers & Orchestration">
       
       
-        <link rel="canonical" href="https://supaerodatascience.github.io/OBD/2_data_computation/index.html">
+        <link rel="canonical" href="https://supaerodatascience.github.io/OBD/2_data_computation/exercises/5_bonus.html">
       
       
       <link rel="shortcut icon" href="https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/favicon.ico">
@@ -17,14 +17,14 @@
     
     
       
-        <title>Overview - Data Computation Part 1</title>
+        <title>TP - Data Computation Part 1</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
         
           
           
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#data-computation-part-1-cloud-computing-containers-orchestration" class="md-skip">
+        <a href="#kubernetes-zero-to-jupyterhub-using-google-kubernetes-engine" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Overview
+              TP
             
           </span>
         </div>
@@ -190,104 +190,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Overview
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="index.html" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../index.html" class="md-nav__link">
       Overview
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#syllabus" class="md-nav__link">
-    Syllabus
-  </a>
-  
-    <nav class="md-nav" aria-label="Syllabus">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cloud-computing-4h" class="md-nav__link">
-    Cloud Computing (4h)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#containers-2h" class="md-nav__link">
-    Containers (2h)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#orchestration-deployment-1h" class="md-nav__link">
-    Orchestration &amp; Deployment (1h)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#final-be-3h" class="md-nav__link">
-    Final BE (3h)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    Conclusion
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#whats-next" class="md-nav__link">
-    What's next ?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
     
@@ -297,7 +204,7 @@
 
 
   <li class="md-nav__item">
-    <a href="1_intro.html" class="md-nav__link">
+    <a href="../1_intro.html" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -330,7 +237,7 @@
 
 
   <li class="md-nav__item">
-    <a href="2_cloud.html" class="md-nav__link">
+    <a href="../2_cloud.html" class="md-nav__link">
       Lectures
     </a>
   </li>
@@ -342,7 +249,7 @@
 
 
   <li class="md-nav__item">
-    <a href="exercises/1_gcp_setup.html" class="md-nav__link">
+    <a href="1_gcp_setup.html" class="md-nav__link">
       TP 1 GCP Initial Setup & First Steps
     </a>
   </li>
@@ -354,7 +261,7 @@
 
 
   <li class="md-nav__item">
-    <a href="exercises/2_gcp_handson.html" class="md-nav__link">
+    <a href="2_gcp_handson.html" class="md-nav__link">
       TP 2 GCP Hands On
     </a>
   </li>
@@ -392,7 +299,7 @@
 
 
   <li class="md-nav__item">
-    <a href="3_containers.html" class="md-nav__link">
+    <a href="../3_containers.html" class="md-nav__link">
       Lecture
     </a>
   </li>
@@ -404,7 +311,7 @@
 
 
   <li class="md-nav__item">
-    <a href="exercises/3_docker.html" class="md-nav__link">
+    <a href="3_docker.html" class="md-nav__link">
       TP
     </a>
   </li>
@@ -419,10 +326,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
     
     <label class="md-nav__link" for="nav-5">
       Orchestration, Deployment, Kubernetes
@@ -442,7 +351,7 @@
 
 
   <li class="md-nav__item">
-    <a href="4_orchestration.html" class="md-nav__link">
+    <a href="../4_orchestration.html" class="md-nav__link">
       Lecture
     </a>
   </li>
@@ -454,7 +363,7 @@
 
 
   <li class="md-nav__item">
-    <a href="5_deployment.html" class="md-nav__link">
+    <a href="../5_deployment.html" class="md-nav__link">
       Interactive Hands On
     </a>
   </li>
@@ -464,11 +373,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="exercises/5_bonus.html" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="5_bonus.html" class="md-nav__link md-nav__link--active">
       TP
     </a>
+    
   </li>
 
         
@@ -483,7 +401,7 @@
 
 
   <li class="md-nav__item">
-    <a href="exercises/4_be.html" class="md-nav__link">
+    <a href="4_be.html" class="md-nav__link">
       Bureau d'Etudes
     </a>
   </li>
@@ -495,7 +413,7 @@
 
 
   <li class="md-nav__item">
-    <a href="6_conclusion.html" class="md-nav__link">
+    <a href="../6_conclusion.html" class="md-nav__link">
       Conclusion
     </a>
   </li>
@@ -507,7 +425,7 @@
 
 
   <li class="md-nav__item">
-    <a href="7_readings.html" class="md-nav__link">
+    <a href="../7_readings.html" class="md-nav__link">
       Reading List
     </a>
   </li>
@@ -530,76 +448,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#syllabus" class="md-nav__link">
-    Syllabus
-  </a>
-  
-    <nav class="md-nav" aria-label="Syllabus">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cloud-computing-4h" class="md-nav__link">
-    Cloud Computing (4h)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#containers-2h" class="md-nav__link">
-    Containers (2h)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#orchestration-deployment-1h" class="md-nav__link">
-    Orchestration &amp; Deployment (1h)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#final-be-3h" class="md-nav__link">
-    Final BE (3h)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#conclusion" class="md-nav__link">
-    Conclusion
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#whats-next" class="md-nav__link">
-    What's next ?
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -610,188 +458,13 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/SupaeroDataScience/OBD/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/SupaeroDataScience/OBD/edit/master/docs/exercises/5_bonus.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="data-computation-part-1-cloud-computing-containers-orchestration">Data Computation Part 1: Cloud Computing, Containers &amp; Orchestration<a class="headerlink" href="#data-computation-part-1-cloud-computing-containers-orchestration" title="Permanent link">🔗</a></h1>
-<ul>
-<li><a href="https://supaerodatascience.github.io/OBD/">Back to home</a></li>
-<li><a href="lectures/index.html">All slides</a></li>
-</ul>
-<h2 id="syllabus">Syllabus<a class="headerlink" href="#syllabus" title="Permanent link">🔗</a></h2>
-<h3 id="introduction"><a href="lectures/0_intro.html">Introduction</a><a class="headerlink" href="#introduction" title="Permanent link">🔗</a></h3>
-<p><em>Introduction to data computation module</em></p>
-<h3 id="cloud-computing-4h">Cloud Computing (4h)<a class="headerlink" href="#cloud-computing-4h" title="Permanent link">🔗</a></h3>
-<p><em>Intro to cloud computing &amp; google cloud platform</em></p>
-<table>
-<thead>
-<tr>
-<th>Date</th>
-<th>Type</th>
-<th>Link</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>07/10</td>
-<td>Lecture</td>
-<td><a href="lectures/1_cloud_computing.html">Intro to Cloud Computing</a></td>
-<td><em>A lecture about an introduction to "what is the cloud"</em></td>
-</tr>
-<tr>
-<td>07/10</td>
-<td>Lecture</td>
-<td><a href="lectures/2_cloud_usage.html">Using Cloud Computing in your daily job</a></td>
-<td><em>What does it mean to "use the cloud" ?</em></td>
-</tr>
-<tr>
-<td>07/10</td>
-<td>Lecture</td>
-<td><a href="lectures/3_gcp.html">Intro to Google Cloud Platform</a></td>
-<td><em>A quick intro to GCP</em></td>
-</tr>
-<tr>
-<td>07/10   14/10</td>
-<td>Hands-on</td>
-<td><a href="exercises/1_gcp_setup/">GCP Part 1: The Basics</a></td>
-<td><em>My first steps with GCP, Google Cloud Shell</em></td>
-</tr>
-<tr>
-<td>14/10</td>
-<td>Hands-on</td>
-<td><a href="exercises/2_gcp_handson/">GCP Part 2: My first VMs, Storage, IAAS &amp; PAAS</a></td>
-<td><em>Here I will create a GCE instance, interact with GCS, discover managed products</em></td>
-</tr>
-<tr>
-<td>20/10</td>
-<td>Recap</td>
-<td><a href="lectures/7_conclusion.html#/1">Important notions about Cloud Computing</a></td>
-<td><em>A recap of important notions</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="containers-2h">Containers (2h)<a class="headerlink" href="#containers-2h" title="Permanent link">🔗</a></h3>
-<p><em>Intro to containers &amp; docker</em></p>
-<table>
-<thead>
-<tr>
-<th>Date</th>
-<th>Type</th>
-<th>Link</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>14/10</td>
-<td>Lecture</td>
-<td><a href="lectures/4_containers.html">From virtualisation to Containerisation, Docker</a></td>
-<td><em>What are containers and why do we need them ? What is Docker ?</em></td>
-</tr>
-<tr>
-<td>14/10</td>
-<td>Hands-on</td>
-<td><a href="exercises/3_docker/">Docker</a></td>
-<td><em>Discover Docker</em></td>
-</tr>
-<tr>
-<td>20/10</td>
-<td>Recap</td>
-<td><a href="lectures/7_conclusion.html#/2">Important notions about Docker</a></td>
-<td><em>A recap of important notions</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="orchestration-deployment-1h">Orchestration &amp; Deployment (1h)<a class="headerlink" href="#orchestration-deployment-1h" title="Permanent link">🔗</a></h3>
-<p><em>Intro to container orchestra  features</em></p>
-<table>
-<thead>
-<tr>
-<th>Date</th>
-<th>Type</th>
-<th>Link</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>20/10</td>
-<td>Lecture</td>
-<td><a href="lectures/5_orchestration.html">Microservices, Orchestration, Kubernetes</a></td>
-<td><em>Learn about webservices, microservices, restful apis, docker compose, container orchestration and kubernetes</em></td>
-</tr>
-<tr>
-<td>20/10</td>
-<td>Interactive</td>
-<td><a href="lectures/6_deployment.html">A development env on Kubernetes</a> and <a href="lectures/6_deployment.html">Deploying ML models into production</a></td>
-<td><em>Interactive demos of deployment &amp; scalability with Docker and Kubernetes</em></td>
-</tr>
-<tr>
-<td>At Home</td>
-<td>Bonus Hands-on</td>
-<td><a href="exercises/5_bonus/">My first kubernetes cluster for a development environment</a></td>
-<td><em>Where we deploy a development environment on Kubernetes</em></td>
-</tr>
-<tr>
-<td>20/10</td>
-<td>Recap</td>
-<td><a href="lectures/7_conclusion.html#/3">Important notions about Orchestration</a></td>
-<td><em>A recap of important notions</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="final-be-3h">Final BE (3h)<a class="headerlink" href="#final-be-3h" title="Permanent link">🔗</a></h3>
-<p><em>A small workshop that puts everything together: Docker, Kubernetes, to deploy an image classifier in a scalable fashion</em></p>
-<table>
-<thead>
-<tr>
-<th>Date</th>
-<th>Type</th>
-<th>Link</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>20/10</td>
-<td>BE</td>
-<td><a href="lectures/7_conclusion.html#/4">Explanations</a> <br/> <a href="exercises/4_be/">Walkthrough</a></td>
-<td><em>A final Bureau d'études to wrap everything together</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="conclusion"><a href="lectures/7_conclusion.html">Conclusion</a><a class="headerlink" href="#conclusion" title="Permanent link">🔗</a></h3>
-<p><em>Finally it's over !!!!</em></p>
-<h3 id="whats-next">What's next ?<a class="headerlink" href="#whats-next" title="Permanent link">🔗</a></h3>
-<table>
-<thead>
-<tr>
-<th>Date</th>
-<th>Duration</th>
-<th>Title</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>18/11</td>
-<td>2h</td>
-<td>Cluster Compute</td>
-</tr>
-<tr>
-<td>01/12</td>
-<td>3h</td>
-<td>GPU</td>
-</tr>
-<tr>
-<td>02/12</td>
-<td>3h</td>
-<td>GPU</td>
-</tr>
-</tbody>
-</table>
+                <h1 id="kubernetes-zero-to-jupyterhub-using-google-kubernetes-engine">Kubernetes: Zero to Jupyterhub using Google Kubernetes Engine<a class="headerlink" href="#kubernetes-zero-to-jupyterhub-using-google-kubernetes-engine" title="Permanent link">🔗</a></h1>
+<p><em>WIP</em></p>
                 
               
               
@@ -810,14 +483,28 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
+          <a href="../5_deployment.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Interactive Hands On
+              </div>
+            </div>
+          </a>
         
-          <a href="1_intro.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+        
+          <a href="4_be.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Introduction
+                Bureau d'Etudes
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -844,15 +531,15 @@
       
     </div>
     
-      <script src="assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
-          base: ".",
+          base: "..",
           features: ['toc.autohide'],
           search: Object.assign({
-            worker: "assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

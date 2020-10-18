@@ -9,7 +9,7 @@
         <meta name="description" content="Cloud Computing, Virtualisation, Containers & Orchestration">
       
       
-        <link rel="canonical" href="https://supaerodatascience.github.io/OBD/2_data_computation/4_orchestration/">
+        <link rel="canonical" href="https://supaerodatascience.github.io/OBD/2_data_computation/2_cloud.html">
       
       
       <link rel="shortcut icon" href="https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/favicon.ico">
@@ -17,14 +17,14 @@
     
     
       
-        <title>Lecture - Data Computation Part 1</title>
+        <title>Lectures - Data Computation Part 1</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="assets/stylesheets/main.bc7e593a.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="assets/stylesheets/palette.ab28b872.min.css">
         
           
           
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#orchestration-kubernetes" class="md-skip">
+        <a href="#cloud-computing" class="md-skip">
           Skip to content
         </a>
       
@@ -93,7 +93,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Lecture
+              Lectures
             
           </span>
         </div>
@@ -192,7 +192,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." class="md-nav__link">
+    <a href="index.html" class="md-nav__link">
       Overview
     </a>
   </li>
@@ -204,7 +204,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../1_intro/" class="md-nav__link">
+    <a href="1_intro.html" class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -214,10 +214,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Cloud Computing
@@ -235,11 +237,63 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../2_cloud/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Lectures
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="2_cloud.html" class="md-nav__link md-nav__link--active">
       Lectures
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intro-to-cloud-computing" class="md-nav__link">
+    Intro to cloud computing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-cloud-computing" class="md-nav__link">
+    Using Cloud Computing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-cloud-platform" class="md-nav__link">
+    Google Cloud Platform
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -249,7 +303,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../exercises/1_gcp_setup/" class="md-nav__link">
+    <a href="exercises/1_gcp_setup.html" class="md-nav__link">
       TP 1 GCP Initial Setup & First Steps
     </a>
   </li>
@@ -261,7 +315,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../exercises/2_gcp_handson/" class="md-nav__link">
+    <a href="exercises/2_gcp_handson.html" class="md-nav__link">
       TP 2 GCP Hands On
     </a>
   </li>
@@ -299,7 +353,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../3_containers/" class="md-nav__link">
+    <a href="3_containers.html" class="md-nav__link">
       Lecture
     </a>
   </li>
@@ -311,7 +365,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../exercises/3_docker/" class="md-nav__link">
+    <a href="exercises/3_docker.html" class="md-nav__link">
       TP
     </a>
   </li>
@@ -326,12 +380,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Orchestration, Deployment, Kubernetes
@@ -349,20 +401,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="4_orchestration.html" class="md-nav__link">
       Lecture
     </a>
-    
   </li>
 
         
@@ -372,7 +415,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../5_deployment/" class="md-nav__link">
+    <a href="5_deployment.html" class="md-nav__link">
       Interactive Hands On
     </a>
   </li>
@@ -384,7 +427,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../exercises/5_bonus/" class="md-nav__link">
+    <a href="exercises/5_bonus.html" class="md-nav__link">
       TP
     </a>
   </li>
@@ -401,7 +444,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../exercises/4_be/" class="md-nav__link">
+    <a href="exercises/4_be.html" class="md-nav__link">
       Bureau d'Etudes
     </a>
   </li>
@@ -413,7 +456,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../6_conclusion/" class="md-nav__link">
+    <a href="6_conclusion.html" class="md-nav__link">
       Conclusion
     </a>
   </li>
@@ -425,7 +468,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../7_readings/" class="md-nav__link">
+    <a href="7_readings.html" class="md-nav__link">
       Reading List
     </a>
   </li>
@@ -448,6 +491,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#intro-to-cloud-computing" class="md-nav__link">
+    Intro to cloud computing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-cloud-computing" class="md-nav__link">
+    Using Cloud Computing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#google-cloud-platform" class="md-nav__link">
+    Google Cloud Platform
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -458,15 +530,30 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/SupaeroDataScience/OBD/edit/master/docs/4_orchestration.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/SupaeroDataScience/OBD/edit/master/docs/2_cloud.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="orchestration-kubernetes">Orchestration &amp; Kubernetes<a class="headerlink" href="#orchestration-kubernetes" title="Permanent link">🔗</a></h1>
-<p><a href="../lectures/5_orchestration.html">Link to slides</a></p>
+                <h1 id="cloud-computing">Cloud Computing<a class="headerlink" href="#cloud-computing" title="Permanent link">🔗</a></h1>
+<h2 id="intro-to-cloud-computing">Intro to cloud computing<a class="headerlink" href="#intro-to-cloud-computing" title="Permanent link">🔗</a></h2>
+<p><a href="lectures/1_cloud_computing.html">Link to slides</a></p>
 <p><iframe
-  src="../lectures/5_orchestration.html"
+  src="lectures/1_cloud_computing.html"
+  style="width:100%; height:600px;"
+></iframe>
+</p>
+<h2 id="using-cloud-computing">Using Cloud Computing<a class="headerlink" href="#using-cloud-computing" title="Permanent link">🔗</a></h2>
+<p><a href="lectures/2_cloud_usage.html">Link to slides</a></p>
+<p><iframe
+  src="lectures/2_cloud_usage.html"
+  style="width:100%; height:600px;"
+></iframe>
+</p>
+<h2 id="google-cloud-platform">Google Cloud Platform<a class="headerlink" href="#google-cloud-platform" title="Permanent link">🔗</a></h2>
+<p><a href="lectures/3_gcp.html">Link to slides</a></p>
+<p><iframe
+  src="lectures/3_gcp.html"
   style="width:100%; height:600px;"
 ></iframe>
 </p>
@@ -488,7 +575,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../exercises/3_docker/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="1_intro.html" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -497,19 +584,19 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                TP
+                Introduction
               </div>
             </div>
           </a>
         
         
-          <a href="../5_deployment/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="exercises/1_gcp_setup.html" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Interactive Hands On
+                TP 1 GCP Initial Setup & First Steps
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -536,15 +623,15 @@
       
     </div>
     
-      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
-          base: "..",
+          base: ".",
           features: ['toc.autohide'],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

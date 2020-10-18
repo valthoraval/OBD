@@ -15,7 +15,7 @@ theme:
 
 repo_name: SupaeroDataScience/OBD
 repo_url: https://github.com/SupaeroDataScience/OBD
-
+use_directory_urls: false
 site_dir: ../site/
 
 nav:

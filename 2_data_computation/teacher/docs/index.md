@@ -1,7 +1,7 @@
 # Data Computation Part 1: Cloud Computing, Containers & Orchestration
 
 * [Back to home](https://supaerodatascience.github.io/OBD/)
-* [All slides](./lectures/)
+* [All slides](./lectures/index.html)
 
 ## Syllabus
 
