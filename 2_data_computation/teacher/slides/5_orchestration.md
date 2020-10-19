@@ -17,7 +17,7 @@ Today
 
 - **Recap**
 - **Class about Containers Orchestration**
-- **Interactive Demo**
+- **Interactive Demo** (maybe ?)
 - **BE** (3h)
 
 <!--s-->

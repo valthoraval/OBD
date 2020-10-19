@@ -18,3 +18,4 @@ cd ..
 mkdocs build
 
 rm -r docs/lectures
+
