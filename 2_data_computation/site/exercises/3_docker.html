@@ -489,29 +489,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#intro" class="md-nav__link">
-    Intro
+  <a href="#41-intro" class="md-nav__link">
+    4.1 Intro
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#kaggle-docker-image" class="md-nav__link">
-    Kaggle Docker Image
+  <a href="#42-kaggle-docker-image" class="md-nav__link">
+    4.2 Kaggle Docker Image
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#get-the-algorithm-in-ml-git-in-your-virtual-machine" class="md-nav__link">
-    Get the algorithm in ML git in your Virtual Machine
+  <a href="#43-get-the-algorithm-in-ml-git-in-your-virtual-machine" class="md-nav__link">
+    4.3 Get the algorithm in ML git in your Virtual Machine
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mounting-volumes-and-ports" class="md-nav__link">
-    Mounting volumes and ports
+  <a href="#44-mounting-volumes-and-ports" class="md-nav__link">
+    4.4 Mounting volumes and ports
   </a>
   
 </li>
@@ -821,29 +821,29 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#intro" class="md-nav__link">
-    Intro
+  <a href="#41-intro" class="md-nav__link">
+    4.1 Intro
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#kaggle-docker-image" class="md-nav__link">
-    Kaggle Docker Image
+  <a href="#42-kaggle-docker-image" class="md-nav__link">
+    4.2 Kaggle Docker Image
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#get-the-algorithm-in-ml-git-in-your-virtual-machine" class="md-nav__link">
-    Get the algorithm in ML git in your Virtual Machine
+  <a href="#43-get-the-algorithm-in-ml-git-in-your-virtual-machine" class="md-nav__link">
+    4.3 Get the algorithm in ML git in your Virtual Machine
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mounting-volumes-and-ports" class="md-nav__link">
-    Mounting volumes and ports
+  <a href="#44-mounting-volumes-and-ports" class="md-nav__link">
+    4.4 Mounting volumes and ports
   </a>
   
 </li>
@@ -908,31 +908,28 @@
   </details>
 
 <h2 id="1-manipulating-docker-for-the-1st-time">1. Manipulating docker for the 1st time<a class="headerlink" href="#1-manipulating-docker-for-the-1st-time" title="Permanent link">🔗</a></h2>
-<p>Source: https://github.com/docker/labs</p>
+<p>Source: <a href="https://github.com/docker/labs">https://github.com/docker/labs</a></p>
 <p>To get started, let's run the following in our terminal:</p>
-<div class="codehilite"><pre><span></span><code>$ docker pull alpine
+<div class="highlight"><pre><span></span><code>$ docker pull alpine
 </code></pre></div>
-
-<p>The <code>pull</code> command fetches the alpine <strong>image</strong> from the <strong>Docker registry</strong> and saves it in our system. You can use the <code>docker images</code> command to see a list of all images on your system.</p>
-<div class="codehilite"><pre><span></span><code>$ docker images
+<p>The <code>pull</code> command fetches the alpine <strong>image</strong> from the <strong>Docker registry</strong> and saves it in our system. You can use the <code>docker images</code> command to see a list of all images on your system.
+<div class="highlight"><pre><span></span><code>$ docker images
 REPOSITORY              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
-alpine                 latest              c51f86c28340        <span class="m">4</span> weeks ago         <span class="m">1</span>.109 MB
-hello-world             latest              690ed74de00f        <span class="m">5</span> months ago        <span class="m">960</span> B
-</code></pre></div>
-
+alpine                 latest              c51f86c28340        4 weeks ago         1.109 MB
+hello-world             latest              690ed74de00f        5 months ago        960 B
+</code></pre></div></p>
 <h3 id="11-docker-run">1.1 Docker Run<a class="headerlink" href="#11-docker-run" title="Permanent link">🔗</a></h3>
 <p>Great! Let's now run a Docker <strong>container</strong> based on this image. To do that you are going to use the <code>docker run</code> command.</p>
-<div class="codehilite"><pre><span></span><code>$ docker run alpine ls -l
-total <span class="m">48</span>
-drwxr-xr-x    <span class="m">2</span> root     root          <span class="m">4096</span> Mar  <span class="m">2</span> <span class="m">16</span>:20 bin
-drwxr-xr-x    <span class="m">5</span> root     root           <span class="m">360</span> Mar <span class="m">18</span> <span class="m">09</span>:47 dev
-drwxr-xr-x   <span class="m">13</span> root     root          <span class="m">4096</span> Mar <span class="m">18</span> <span class="m">09</span>:47 etc
-drwxr-xr-x    <span class="m">2</span> root     root          <span class="m">4096</span> Mar  <span class="m">2</span> <span class="m">16</span>:20 home
-drwxr-xr-x    <span class="m">5</span> root     root          <span class="m">4096</span> Mar  <span class="m">2</span> <span class="m">16</span>:20 lib
+<div class="highlight"><pre><span></span><code>$ docker run alpine ls -l
+total 48
+drwxr-xr-x    2 root     root          4096 Mar  2 16:20 bin
+drwxr-xr-x    5 root     root           360 Mar 18 09:47 dev
+drwxr-xr-x   13 root     root          4096 Mar 18 09:47 etc
+drwxr-xr-x    2 root     root          4096 Mar  2 16:20 home
+drwxr-xr-x    5 root     root          4096 Mar  2 16:20 lib
 ......
 ......
 </code></pre></div>
-
 <p>What happened? Behind the scenes, a lot of stuff happened. When you call <code>run</code>,</p>
 <ol>
 <li>The Docker client contacts the Docker daemon</li>
@@ -942,40 +939,35 @@ drwxr-xr-x    <span class="m">5</span> root     root          <span class="m">40
 </ol>
 <p>When you run <code>docker run alpine</code>, you provided a command (<code>ls -l</code>), so Docker started the command specified and you saw the listing.</p>
 <p>Let's try something more exciting.</p>
-<div class="codehilite"><pre><span></span><code>$ docker run alpine <span class="nb">echo</span> <span class="s2">&quot;hello from alpine&quot;</span>
+<p><div class="highlight"><pre><span></span><code>$ docker run alpine echo &quot;hello from alpine&quot;
 hello from alpine
 </code></pre></div>
-
-<p>OK, that's some actual output. In this case, the Docker client dutifully ran the <code>echo</code> command in our alpine container and then exited it. If you've noticed, all of that happened pretty quickly. Imagine booting up a virtual machine, running a command and then killing it. Now you know why they say containers are fast!</p>
+OK, that's some actual output. In this case, the Docker client dutifully ran the <code>echo</code> command in our alpine container and then exited it. If you've noticed, all of that happened pretty quickly. Imagine booting up a virtual machine, running a command and then killing it. Now you know why they say containers are fast!</p>
 <p>Try another command.</p>
-<div class="codehilite"><pre><span></span><code>$ docker run alpine /bin/sh
+<div class="highlight"><pre><span></span><code>docker run alpine /bin/sh
 </code></pre></div>
-
 <p>Wait, nothing happened! Is that a bug? Well, no. These interactive shells will exit after running any scripted commands, unless they are run in an interactive terminal - so for this example to not exit, you need to <code>docker run -it alpine /bin/sh</code>.</p>
 <p>You are now inside the container shell and you can try out a few commands like <code>ls -l</code>, <code>uname -a</code> and others. Exit out of the container by giving the <code>exit</code> command.</p>
 <p>Ok, now it's time to see the <code>docker ps</code> command. The <code>docker ps</code> command shows you all containers that are currently running.</p>
-<div class="codehilite"><pre><span></span><code>$ docker ps
+<div class="highlight"><pre><span></span><code>$ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 </code></pre></div>
-
 <p>Since no containers are running, you see a blank line. Let's try a more useful variant: <code>docker ps -a</code></p>
-<div class="codehilite"><pre><span></span><code>$ docker ps -a
+<div class="highlight"><pre><span></span><code>$ docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                      PORTS               NAMES
-36171a5da744        alpine              <span class="s2">&quot;/bin/sh&quot;</span>                <span class="m">5</span> minutes ago       Exited <span class="o">(</span><span class="m">0</span><span class="o">)</span> <span class="m">2</span> minutes ago                        fervent_newton
-a6a9d46d0b2f        alpine             <span class="s2">&quot;echo &#39;hello from alp&quot;</span>    <span class="m">6</span> minutes ago       Exited <span class="o">(</span><span class="m">0</span><span class="o">)</span> <span class="m">6</span> minutes ago                        lonely_kilby
-ff0a5c3750b9        alpine             <span class="s2">&quot;ls -l&quot;</span>                   <span class="m">8</span> minutes ago       Exited <span class="o">(</span><span class="m">0</span><span class="o">)</span> <span class="m">8</span> minutes ago                        elated_ramanujan
-c317d0a9e3d2        hello-world         <span class="s2">&quot;/hello&quot;</span>                 <span class="m">34</span> seconds ago      Exited <span class="o">(</span><span class="m">0</span><span class="o">)</span> <span class="m">12</span> minutes ago                       stupefied_mcclintock
+36171a5da744        alpine              &quot;/bin/sh&quot;                5 minutes ago       Exited (0) 2 minutes ago                        fervent_newton
+a6a9d46d0b2f        alpine             &quot;echo &#39;hello from alp&quot;    6 minutes ago       Exited (0) 6 minutes ago                        lonely_kilby
+ff0a5c3750b9        alpine             &quot;ls -l&quot;                   8 minutes ago       Exited (0) 8 minutes ago                        elated_ramanujan
+c317d0a9e3d2        hello-world         &quot;/hello&quot;                 34 seconds ago      Exited (0) 12 minutes ago                       stupefied_mcclintock
 </code></pre></div>
-
 <p>What you see above is a list of all containers that you ran. Notice that the <code>STATUS</code> column shows that these containers exited a few minutes ago. You're probably wondering if there is a way to run more than just one command in a container. Let's try that now:</p>
-<div class="codehilite"><pre><span></span><code>$ docker run -it alpine /bin/sh
-/ <span class="c1"># ls</span>
+<p><div class="highlight"><pre><span></span><code>$ docker run -it alpine /bin/sh
+/ # ls
 bin      dev      etc      home     lib      linuxrc  media    mnt      proc     root     run      sbin     sys      tmp      usr      var
-/ <span class="c1"># uname -a</span>
-Linux 97916e8cb5dc <span class="m">4</span>.4.27-moby <span class="c1">#1 SMP Wed Oct 26 14:01:48 UTC 2016 x86_64 Linux</span>
+/ # uname -a
+Linux 97916e8cb5dc 4.4.27-moby #1 SMP Wed Oct 26 14:01:48 UTC 2016 x86_64 Linux
 </code></pre></div>
-
-<p>Running the <code>run</code> command with the <code>-it</code> flags attaches us to an interactive tty in the container. Now you can run as many commands in the container as you want. Take some time to run your favorite commands.</p>
+Running the <code>run</code> command with the <code>-it</code> flags attaches us to an interactive tty in the container. Now you can run as many commands in the container as you want. Take some time to run your favorite commands.</p>
 <p>That concludes a whirlwind tour of the <code>docker run</code> command which would most likely be the command you'll use most often. It makes sense to spend some time getting comfortable with it. To find out more about <code>run</code>, use <code>docker run --help</code> to see a list of all flags it supports. As you proceed further, we'll see a few more variants of <code>docker run</code>.</p>
 <h3 id="12-terminology">1.2 Terminology<a class="headerlink" href="#12-terminology" title="Permanent link">🔗</a></h3>
 <p>In the last section, you saw a lot of Docker-specific jargon which might be confusing to some. So before you go further, let's clarify some terminology that is used frequently in the Docker ecosystem.</p>
@@ -987,7 +979,7 @@ Linux 97916e8cb5dc <span class="m">4</span>.4.27-moby <span class="c1">#1 SMP We
 <li><em>Docker Store</em> - A <a href="https://store.docker.com/">registry</a> of Docker images, where you can find trusted and enterprise ready containers, plugins, and Docker editions. You'll be using this later in this tutorial.</li>
 </ul>
 <h2 id="20-webapps-with-docker">2.0 Webapps with Docker<a class="headerlink" href="#20-webapps-with-docker" title="Permanent link">🔗</a></h2>
-<p>Source: https://github.com/docker/labs</p>
+<p>Source: <a href="https://github.com/docker/labs">https://github.com/docker/labs</a></p>
 <p>Great! So you have now looked at <code>docker run</code>, played with a Docker container and also got the hang of some terminology. Armed with all this knowledge, you are now ready to get to the real stuff &#8212; deploying web applications with Docker.</p>
 <h3 id="21-run-a-static-website-in-a-container">2.1 Run a static website in a container<a class="headerlink" href="#21-run-a-static-website-in-a-container" title="Permanent link">🔗</a></h3>
 <blockquote>
@@ -995,673 +987,13 @@ Linux 97916e8cb5dc <span class="m">4</span>.4.27-moby <span class="c1">#1 SMP We
 </blockquote>
 <p>Let's start by taking baby-steps. First, we'll use Docker to run a static website in a container. The website is based on an existing image. We'll pull a Docker image from Docker Store, run the container, and see how easy it is to set up a web server.</p>
 <p>The image that you are going to use is a single-page website that was already created for this demo and is available on the Docker Store as <a href="https://store.docker.com/community/images/dockersamples/static-site"><code>dockersamples/static-site</code></a>. You can download and run the image directly in one go using <code>docker run</code> as follows.</p>
-<div class="codehilite"><pre><span></span><code>$ docker run -d dockersamples/static-site
+<div class="highlight"><pre><span></span><code>docker run -d dockersamples/static-site
 </code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="k">FROM</span> <span class="s">nginx</span>
-<span class="k">ENV</span> <span class="nv">AUTHOR</span><span class="o">=</span>Docker
-
-<span class="k">WORKDIR</span><span class="s"> /usr/share/nginx/html</span>
-<span class="k">COPY</span> Hello_docker.html /usr/share/nginx/html
-
-<span class="k">CMD</span> <span class="nb">cd</span> /usr/share/nginx/html <span class="o">&amp;&amp;</span> sed -e s/Docker/<span class="s2">&quot;</span><span class="nv">$AUTHOR</span><span class="s2">&quot;</span>/ Hello_docker.html &gt; index.html <span class="p">;</span> nginx -g <span class="s1">&#39;daemon off;&#39;</span>
-</code></pre></div>
-
-<div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
-<span class="nt">body</span> <span class="p">{</span>
-  <span class="k">font-family</span><span class="p">:</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">arial</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">line-height</span><span class="p">:</span> <span class="mf">1.6</span><span class="p">;</span>
-  <span class="k">padding-top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">padding-bottom</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">background-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">body</span> <span class="o">&gt;</span> <span class="o">*</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">body</span> <span class="o">&gt;</span> <span class="o">*</span><span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
-  <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">a</span> <span class="p">{</span>
-  <span class="k">color</span><span class="p">:</span> <span class="mh">#4183C4</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">a</span><span class="p">.</span><span class="nc">absent</span> <span class="p">{</span>
-  <span class="k">color</span><span class="p">:</span> <span class="mh">#cc0000</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">a</span><span class="p">.</span><span class="nc">anchor</span> <span class="p">{</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-  <span class="k">padding-left</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">margin-left</span><span class="p">:</span> <span class="mi">-30</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span><span class="p">;</span>
-  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
-  <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span> <span class="p">{</span>
-  <span class="k">margin</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
-  <span class="kp">-webkit-</span><span class="n">font-smoothing</span><span class="p">:</span> <span class="n">antialiased</span><span class="p">;</span>
-  <span class="k">cursor</span><span class="p">:</span> <span class="kc">text</span><span class="p">;</span>
-  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h1</span><span class="p">:</span><span class="nd">hover</span> <span class="nt">a</span><span class="p">.</span><span class="nc">anchor</span><span class="o">,</span> <span class="nt">h2</span><span class="p">:</span><span class="nd">hover</span> <span class="nt">a</span><span class="p">.</span><span class="nc">anchor</span><span class="o">,</span> <span class="nt">h3</span><span class="p">:</span><span class="nd">hover</span> <span class="nt">a</span><span class="p">.</span><span class="nc">anchor</span><span class="o">,</span> <span class="nt">h4</span><span class="p">:</span><span class="nd">hover</span> <span class="nt">a</span><span class="p">.</span><span class="nc">anchor</span><span class="o">,</span> <span class="nt">h5</span><span class="p">:</span><span class="nd">hover</span> <span class="nt">a</span><span class="p">.</span><span class="nc">anchor</span><span class="o">,</span> <span class="nt">h6</span><span class="p">:</span><span class="nd">hover</span> <span class="nt">a</span><span class="p">.</span><span class="nc">anchor</span> <span class="p">{</span>
-  <span class="k">background</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==</span><span class="p">)</span> <span class="kc">no-repeat</span> <span class="mi">10</span><span class="kt">px</span> <span class="kc">center</span><span class="p">;</span>
-  <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h1</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">h1</span> <span class="nt">code</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h2</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">h2</span> <span class="nt">code</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h3</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">h3</span> <span class="nt">code</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h4</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">h4</span> <span class="nt">code</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h5</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">h5</span> <span class="nt">code</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h6</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">h6</span> <span class="nt">code</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h1</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">28</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">color</span><span class="p">:</span> <span class="kc">black</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h2</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">border-bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#cccccc</span><span class="p">;</span>
-  <span class="k">color</span><span class="p">:</span> <span class="kc">black</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h3</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h4</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h5</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h6</span> <span class="p">{</span>
-  <span class="k">color</span><span class="p">:</span> <span class="mh">#777777</span><span class="p">;</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">p</span><span class="o">,</span> <span class="nt">blockquote</span><span class="o">,</span> <span class="nt">ul</span><span class="o">,</span> <span class="nt">ol</span><span class="o">,</span> <span class="nt">dl</span><span class="o">,</span> <span class="nt">li</span><span class="o">,</span> <span class="nt">table</span><span class="o">,</span> <span class="nt">pre</span> <span class="p">{</span>
-  <span class="k">margin</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">hr</span> <span class="p">{</span>
-  <span class="k">background</span><span class="p">:</span> <span class="kc">transparent</span> <span class="nb">url</span><span class="p">(</span><span class="sx">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC</span><span class="p">)</span> <span class="kc">repeat-x</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">border</span><span class="p">:</span> <span class="mi">0</span> <span class="kc">none</span><span class="p">;</span>
-  <span class="k">color</span><span class="p">:</span> <span class="mh">#cccccc</span><span class="p">;</span>
-  <span class="k">height</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">h2</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">padding-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">h1</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">padding-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">h1</span><span class="p">:</span><span class="nd">first-child</span> <span class="o">+</span> <span class="nt">h2</span> <span class="p">{</span>
-    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">padding-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">h3</span><span class="p">:</span><span class="nd">first-child</span><span class="o">,</span> <span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">h4</span><span class="p">:</span><span class="nd">first-child</span><span class="o">,</span> <span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">h5</span><span class="p">:</span><span class="nd">first-child</span><span class="o">,</span> <span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">h6</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">padding-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">a</span><span class="p">:</span><span class="nd">first-child</span> <span class="nt">h1</span><span class="o">,</span> <span class="nt">a</span><span class="p">:</span><span class="nd">first-child</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">a</span><span class="p">:</span><span class="nd">first-child</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">a</span><span class="p">:</span><span class="nd">first-child</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">a</span><span class="p">:</span><span class="nd">first-child</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">a</span><span class="p">:</span><span class="nd">first-child</span> <span class="nt">h6</span> <span class="p">{</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">padding-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h1</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">h2</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">h3</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">h4</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">h5</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">h6</span> <span class="nt">p</span> <span class="p">{</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">li</span> <span class="nt">p</span><span class="p">.</span><span class="nc">first</span> <span class="p">{</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">li</span> <span class="p">{</span>
-  <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">ul</span><span class="o">,</span> <span class="nt">ol</span> <span class="p">{</span>
-  <span class="k">padding-left</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">ul</span> <span class="p">:</span><span class="nd">first-child</span><span class="o">,</span> <span class="nt">ol</span> <span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">dl</span> <span class="p">{</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">dl</span> <span class="nt">dt</span> <span class="p">{</span>
-    <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
-    <span class="k">font-style</span><span class="p">:</span> <span class="kc">italic</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">dl</span> <span class="nt">dt</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-      <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">dl</span> <span class="nt">dt</span> <span class="o">&gt;</span> <span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-      <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">dl</span> <span class="nt">dt</span> <span class="o">&gt;</span> <span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
-      <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">dl</span> <span class="nt">dd</span> <span class="p">{</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">dl</span> <span class="nt">dd</span> <span class="o">&gt;</span> <span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-      <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">dl</span> <span class="nt">dd</span> <span class="o">&gt;</span> <span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
-      <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">blockquote</span> <span class="p">{</span>
-  <span class="k">border-left</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#dddddd</span><span class="p">;</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">color</span><span class="p">:</span> <span class="mh">#777777</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">blockquote</span> <span class="o">&gt;</span> <span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">blockquote</span> <span class="o">&gt;</span> <span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
-    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">table</span> <span class="p">{</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span><span class="k">border-collapse</span><span class="p">:</span> <span class="kc">collapse</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">table</span> <span class="nt">tr</span> <span class="p">{</span>
-    <span class="k">border-top</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#cccccc</span><span class="p">;</span>
-    <span class="k">background-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">table</span> <span class="nt">tr</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">2n</span><span class="o">)</span> <span class="p">{</span>
-      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f8f8f8</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">table</span> <span class="nt">tr</span> <span class="nt">th</span> <span class="p">{</span>
-      <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
-      <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#cccccc</span><span class="p">;</span>
-      <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-      <span class="k">padding</span><span class="p">:</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">13</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">table</span> <span class="nt">tr</span> <span class="nt">td</span> <span class="p">{</span>
-      <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#cccccc</span><span class="p">;</span>
-      <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-      <span class="k">padding</span><span class="p">:</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">13</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">table</span> <span class="nt">tr</span> <span class="nt">th</span> <span class="p">:</span><span class="nd">first-child</span><span class="o">,</span> <span class="nt">table</span> <span class="nt">tr</span> <span class="nt">td</span> <span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-      <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">table</span> <span class="nt">tr</span> <span class="nt">th</span> <span class="p">:</span><span class="nd">last-child</span><span class="o">,</span> <span class="nt">table</span> <span class="nt">tr</span> <span class="nt">td</span> <span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
-      <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">img</span> <span class="p">{</span>
-  <span class="k">max-width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">span</span><span class="p">.</span><span class="nc">frame</span> <span class="p">{</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-  <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">span</span><span class="p">.</span><span class="nc">frame</span> <span class="o">&gt;</span> <span class="nt">span</span> <span class="p">{</span>
-    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#dddddd</span><span class="p">;</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
-    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">13</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="mi">7</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">width</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">span</span><span class="p">.</span><span class="nc">frame</span> <span class="nt">span</span> <span class="nt">img</span> <span class="p">{</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">span</span><span class="p">.</span><span class="nc">frame</span> <span class="nt">span</span> <span class="nt">span</span> <span class="p">{</span>
-    <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span>
-    <span class="k">color</span><span class="p">:</span> <span class="mh">#333333</span><span class="p">;</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">span</span><span class="p">.</span><span class="nc">align-center</span> <span class="p">{</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-  <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-  <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">span</span><span class="p">.</span><span class="nc">align-center</span> <span class="o">&gt;</span> <span class="nt">span</span> <span class="p">{</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">13</span><span class="kt">px</span> <span class="o">&lt;!</span><span class="n">DOCTYPE</span> <span class="n">html</span><span class="o">&gt;&lt;</span><span class="n">html</span><span class="o">&gt;</span>
-
-<span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="n">meta</span> <span class="n">charset</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="o">&gt;</span>
-<span class="o">&lt;</span><span class="kc">style</span> <span class="n">type</span><span class="o">=</span><span class="s2">&quot;text/css&quot;</span><span class="o">&gt;</span>
-<span class="n">body</span> <span class="err">{</span>
-  <span class="k">font-family</span><span class="o">:</span> <span class="n">Helvetica</span><span class="p">,</span> <span class="n">arial</span><span class="p">,</span> <span class="kc">sans-serif</span><span class="p">;</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">line-height</span><span class="p">:</span> <span class="mf">1.6</span><span class="p">;</span>
-  <span class="k">padding-top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">padding-bottom</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">background-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">body</span> <span class="o">&gt;</span> <span class="o">*</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">body</span> <span class="o">&gt;</span> <span class="o">*</span><span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
-  <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span> <span class="cp">!important</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">a</span> <span class="p">{</span>
-  <span class="k">color</span><span class="p">:</span> <span class="mh">#4183C4</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">a</span><span class="p">.</span><span class="nc">absent</span> <span class="p">{</span>
-  <span class="k">color</span><span class="p">:</span> <span class="mh">#cc0000</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">a</span><span class="p">.</span><span class="nc">anchor</span> <span class="p">{</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-  <span class="k">padding-left</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">margin-left</span><span class="p">:</span> <span class="mi">-30</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span><span class="p">;</span>
-  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
-  <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h1</span><span class="o">,</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">h6</span> <span class="p">{</span>
-  <span class="k">margin</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
-  <span class="kp">-webkit-</span><span class="n">font-smoothing</span><span class="p">:</span> <span class="n">antialiased</span><span class="p">;</span>
-  <span class="k">cursor</span><span class="p">:</span> <span class="kc">text</span><span class="p">;</span>
-  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h1</span><span class="p">:</span><span class="nd">hover</span> <span class="nt">a</span><span class="p">.</span><span class="nc">anchor</span><span class="o">,</span> <span class="nt">h2</span><span class="p">:</span><span class="nd">hover</span> <span class="nt">a</span><span class="p">.</span><span class="nc">anchor</span><span class="o">,</span> <span class="nt">h3</span><span class="p">:</span><span class="nd">hover</span> <span class="nt">a</span><span class="p">.</span><span class="nc">anchor</span><span class="o">,</span> <span class="nt">h4</span><span class="p">:</span><span class="nd">hover</span> <span class="nt">a</span><span class="p">.</span><span class="nc">anchor</span><span class="o">,</span> <span class="nt">h5</span><span class="p">:</span><span class="nd">hover</span> <span class="nt">a</span><span class="p">.</span><span class="nc">anchor</span><span class="o">,</span> <span class="nt">h6</span><span class="p">:</span><span class="nd">hover</span> <span class="nt">a</span><span class="p">.</span><span class="nc">anchor</span> <span class="p">{</span>
-  <span class="k">background</span><span class="p">:</span> <span class="nb">url</span><span class="p">(</span><span class="sx">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==</span><span class="p">)</span> <span class="kc">no-repeat</span> <span class="mi">10</span><span class="kt">px</span> <span class="kc">center</span><span class="p">;</span>
-  <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h1</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">h1</span> <span class="nt">code</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h2</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">h2</span> <span class="nt">code</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h3</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">h3</span> <span class="nt">code</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h4</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">h4</span> <span class="nt">code</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h5</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">h5</span> <span class="nt">code</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h6</span> <span class="nt">tt</span><span class="o">,</span> <span class="nt">h6</span> <span class="nt">code</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="kc">inherit</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h1</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">28</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">color</span><span class="p">:</span> <span class="kc">black</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h2</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">border-bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#cccccc</span><span class="p">;</span>
-  <span class="k">color</span><span class="p">:</span> <span class="kc">black</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h3</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h4</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h5</span> <span class="p">{</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h6</span> <span class="p">{</span>
-  <span class="k">color</span><span class="p">:</span> <span class="mh">#777777</span><span class="p">;</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">p</span><span class="o">,</span> <span class="nt">blockquote</span><span class="o">,</span> <span class="nt">ul</span><span class="o">,</span> <span class="nt">ol</span><span class="o">,</span> <span class="nt">dl</span><span class="o">,</span> <span class="nt">li</span><span class="o">,</span> <span class="nt">table</span><span class="o">,</span> <span class="nt">pre</span> <span class="p">{</span>
-  <span class="k">margin</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">hr</span> <span class="p">{</span>
-  <span class="k">background</span><span class="p">:</span> <span class="kc">transparent</span> <span class="nb">url</span><span class="p">(</span><span class="sx">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC</span><span class="p">)</span> <span class="kc">repeat-x</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">border</span><span class="p">:</span> <span class="mi">0</span> <span class="kc">none</span><span class="p">;</span>
-  <span class="k">color</span><span class="p">:</span> <span class="mh">#cccccc</span><span class="p">;</span>
-  <span class="k">height</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">h2</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">padding-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">h1</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">padding-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">h1</span><span class="p">:</span><span class="nd">first-child</span> <span class="o">+</span> <span class="nt">h2</span> <span class="p">{</span>
-    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">padding-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">h3</span><span class="p">:</span><span class="nd">first-child</span><span class="o">,</span> <span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">h4</span><span class="p">:</span><span class="nd">first-child</span><span class="o">,</span> <span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">h5</span><span class="p">:</span><span class="nd">first-child</span><span class="o">,</span> <span class="nt">body</span> <span class="o">&gt;</span> <span class="nt">h6</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">padding-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">a</span><span class="p">:</span><span class="nd">first-child</span> <span class="nt">h1</span><span class="o">,</span> <span class="nt">a</span><span class="p">:</span><span class="nd">first-child</span> <span class="nt">h2</span><span class="o">,</span> <span class="nt">a</span><span class="p">:</span><span class="nd">first-child</span> <span class="nt">h3</span><span class="o">,</span> <span class="nt">a</span><span class="p">:</span><span class="nd">first-child</span> <span class="nt">h4</span><span class="o">,</span> <span class="nt">a</span><span class="p">:</span><span class="nd">first-child</span> <span class="nt">h5</span><span class="o">,</span> <span class="nt">a</span><span class="p">:</span><span class="nd">first-child</span> <span class="nt">h6</span> <span class="p">{</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">padding-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">h1</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">h2</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">h3</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">h4</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">h5</span> <span class="nt">p</span><span class="o">,</span> <span class="nt">h6</span> <span class="nt">p</span> <span class="p">{</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">li</span> <span class="nt">p</span><span class="p">.</span><span class="nc">first</span> <span class="p">{</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">li</span> <span class="p">{</span>
-  <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">ul</span><span class="o">,</span> <span class="nt">ol</span> <span class="p">{</span>
-  <span class="k">padding-left</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">ul</span> <span class="p">:</span><span class="nd">first-child</span><span class="o">,</span> <span class="nt">ol</span> <span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">dl</span> <span class="p">{</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">dl</span> <span class="nt">dt</span> <span class="p">{</span>
-    <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
-    <span class="k">font-style</span><span class="p">:</span> <span class="kc">italic</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">dl</span> <span class="nt">dt</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-      <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">dl</span> <span class="nt">dt</span> <span class="o">&gt;</span> <span class="p">:</span><span class="nd">first-ch</span>
-<span class="o">*</span> <span class="nt">TOC</span>
-<span class="p">{</span><span class="err">:toc</span><span class="p">}</span>
-
-<span class="nt">ild</span> <span class="p">{</span>
-      <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">dl</span> <span class="nt">dt</span> <span class="o">&gt;</span> <span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
-      <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">dl</span> <span class="nt">dd</span> <span class="p">{</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">dl</span> <span class="nt">dd</span> <span class="o">&gt;</span> <span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-      <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">dl</span> <span class="nt">dd</span> <span class="o">&gt;</span> <span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
-      <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">blockquote</span> <span class="p">{</span>
-  <span class="k">border-left</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#dddddd</span><span class="p">;</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">color</span><span class="p">:</span> <span class="mh">#777777</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">blockquote</span> <span class="o">&gt;</span> <span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">blockquote</span> <span class="o">&gt;</span> <span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
-    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">table</span> <span class="p">{</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span><span class="k">border-collapse</span><span class="p">:</span> <span class="kc">collapse</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">table</span> <span class="nt">tr</span> <span class="p">{</span>
-    <span class="k">border-top</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#cccccc</span><span class="p">;</span>
-    <span class="k">background-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">table</span> <span class="nt">tr</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">2n</span><span class="o">)</span> <span class="p">{</span>
-      <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f8f8f8</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">table</span> <span class="nt">tr</span> <span class="nt">th</span> <span class="p">{</span>
-      <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bold</span><span class="p">;</span>
-      <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#cccccc</span><span class="p">;</span>
-      <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-      <span class="k">padding</span><span class="p">:</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">13</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">table</span> <span class="nt">tr</span> <span class="nt">td</span> <span class="p">{</span>
-      <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#cccccc</span><span class="p">;</span>
-      <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-      <span class="k">padding</span><span class="p">:</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">13</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">table</span> <span class="nt">tr</span> <span class="nt">th</span> <span class="p">:</span><span class="nd">first-child</span><span class="o">,</span> <span class="nt">table</span> <span class="nt">tr</span> <span class="nt">td</span> <span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
-      <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-    <span class="nt">table</span> <span class="nt">tr</span> <span class="nt">th</span> <span class="p">:</span><span class="nd">last-child</span><span class="o">,</span> <span class="nt">table</span> <span class="nt">tr</span> <span class="nt">td</span> <span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
-      <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">img</span> <span class="p">{</span>
-  <span class="k">max-width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">span</span><span class="p">.</span><span class="nc">frame</span> <span class="p">{</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-  <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">span</span><span class="p">.</span><span class="nc">frame</span> <span class="o">&gt;</span> <span class="nt">span</span> <span class="p">{</span>
-    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#dddddd</span><span class="p">;</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
-    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">13</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="mi">7</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">width</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">span</span><span class="p">.</span><span class="nc">frame</span> <span class="nt">span</span> <span class="nt">img</span> <span class="p">{</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">span</span><span class="p">.</span><span class="nc">frame</span> <span class="nt">span</span> <span class="nt">span</span> <span class="p">{</span>
-    <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span>
-    <span class="k">color</span><span class="p">:</span> <span class="mh">#333333</span><span class="p">;</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">span</span><span class="p">.</span><span class="nc">align-center</span> <span class="p">{</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-  <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-  <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">span</span><span class="p">.</span><span class="nc">align-center</span> <span class="o">&gt;</span> <span class="nt">span</span> <span class="p">{</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">13</span><span class="kt">px</span> <span class="kc">auto</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">span</span><span class="p">.</span><span class="nc">align-center</span> <span class="nt">span</span> <span class="nt">img</span> <span class="p">{</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="kc">auto</span><span class="p">;</span>
-    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">span</span><span class="p">.</span><span class="nc">align-right</span> <span class="p">{</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-  <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-  <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">span</span><span class="p">.</span><span class="nc">align-right</span> <span class="o">&gt;</span> <span class="nt">span</span> <span class="p">{</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">13</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">text-align</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">span</span><span class="p">.</span><span class="nc">align-right</span> <span class="nt">span</span> <span class="nt">img</span> <span class="p">{</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">text-align</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">span</span><span class="p">.</span><span class="nc">float-left</span> <span class="p">{</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-  <span class="k">margin-right</span><span class="p">:</span> <span class="mi">13</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-  <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">span</span><span class="p">.</span><span class="nc">float-left</span> <span class="nt">span</span> <span class="p">{</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">13</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">0</span><span class="p">;</span> <span class="p">}</span>
-<span class="nt">span</span><span class="p">.</span><span class="nc">float-right</span> <span class="p">{</span>
-  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-  <span class="k">margin-left</span><span class="p">:</span> <span class="mi">13</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-  <span class="k">float</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">span</span><span class="p">.</span><span class="nc">float-right</span> <span class="o">&gt;</span> <span class="nt">span</span> <span class="p">{</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">13</span><span class="kt">px</span> <span class="kc">auto</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">text-align</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">code</span><span class="o">,</span> <span class="nt">tt</span> <span class="p">{</span>
-  <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">white-space</span><span class="p">:</span> <span class="kc">nowrap</span><span class="p">;</span>
-  <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#eaeaea</span><span class="p">;</span>
-  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f8f8f8</span><span class="p">;</span>
-  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">pre</span> <span class="nt">code</span> <span class="p">{</span>
-  <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-  <span class="k">white-space</span><span class="p">:</span> <span class="kc">pre</span><span class="p">;</span>
-  <span class="k">border</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-  <span class="k">background</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="p">.</span><span class="nc">highlight</span> <span class="nt">pre</span> <span class="p">{</span>
-  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f8f8f8</span><span class="p">;</span>
-  <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#cccccc</span><span class="p">;</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">13</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">line-height</span><span class="p">:</span> <span class="mi">19</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">overflow</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">pre</span> <span class="p">{</span>
-  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f8f8f8</span><span class="p">;</span>
-  <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#cccccc</span><span class="p">;</span>
-  <span class="k">font-size</span><span class="p">:</span> <span class="mi">13</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">line-height</span><span class="p">:</span> <span class="mi">19</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">overflow</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
-  <span class="k">padding</span><span class="p">:</span> <span class="mi">6</span><span class="kt">px</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span> <span class="p">}</span>
-  <span class="nt">pre</span> <span class="nt">code</span><span class="o">,</span> <span class="nt">pre</span> <span class="nt">tt</span> <span class="p">{</span>
-    <span class="k">background-color</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
-    <span class="k">border</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span> <span class="p">}</span>
-
-<span class="nt">sup</span> <span class="p">{</span>
-    <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.83</span><span class="kt">em</span><span class="p">;</span>
-    <span class="k">vertical-align</span><span class="p">:</span> <span class="kc">super</span><span class="p">;</span>
-    <span class="k">line-height</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="o">*</span> <span class="p">{</span>
-    <span class="kp">-webkit-</span><span class="n">print-color-adjust</span><span class="p">:</span> <span class="n">exact</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="p">@</span><span class="k">media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">914px</span><span class="o">)</span> <span class="p">{</span>
-    <span class="nt">body</span> <span class="p">{</span>
-        <span class="k">width</span><span class="p">:</span> <span class="mi">854</span><span class="kt">px</span><span class="p">;</span>
-        <span class="k">margin</span><span class="p">:</span><span class="mi">0</span> <span class="kc">auto</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="p">@</span><span class="k">media</span> <span class="nt">print</span> <span class="p">{</span>
-    <span class="nt">table</span><span class="o">,</span> <span class="nt">pre</span> <span class="p">{</span>
-        <span class="k">page-break-inside</span><span class="p">:</span> <span class="kc">avoid</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="nt">pre</span> <span class="p">{</span>
-        <span class="k">word-wrap</span><span class="p">:</span> <span class="kc">break-word</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;toc_0&quot;</span><span class="p">&gt;</span>Hello Docker!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is being served from a <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>docker<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-container running Nginx.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-
-
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-enter; }
-  span.align-center span img {
-    margin: 0 auto;
-    text-align: center; }
-span.align-right {
-  display: block;
-  overflow: hidden;
-  clear: both; }
-  span.align-right &gt; span {
-    display: block;
-    overflow: hidden;
-    margin: 13px 0 0;
-    text-align: right; }
-  span.align-right span img {
-    margin: 0;
-    text-align: right; }
-span.float-left {
-  display: block;
-  margin-right: 13px;
-  overflow: hidden;
-  float: left; }
-  span.float-left span {
-    margin: 13px 0 0; }
-span.float-right {
-  display: block;
-  margin-left: 13px;
-  overflow: hidden;
-  float: right; }
-  span.float-right &gt; span {
-    display: block;
-    overflow: hidden;
-    margin: 13px auto 0;
-    text-align: right; }
-
-code, tt {
-  margin: 0 2px;
-  padding: 0 5px;
-  white-space: nowrap;
-  border: 1px solid #eaeaea;
-  background-color: #f8f8f8;
-  border-radius: 3px; }
-
-pre code {
-  margin: 0;
-  padding: 0;
-  white-space: pre;
-  border: none;
-  background: transparent; }
-
-.highlight pre {
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
-  font-size: 13px;
-  line-height: 19px;
-  overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px; }
-
-pre {
-  background-color: #f8f8f8;
-  border: 1px solid #cccccc;
-  font-size: 13px;
-  line-height: 19px;
-  overflow: auto;
-  padding: 6px 10px;
-  border-radius: 3px; }
-  pre code, pre tt {
-    background-color: transparent;
-    border: none; }
-
-sup {
-    font-size: 0.83em;
-    vertical-align: super;
-    line-height: 0;
-}
-* {
-    -webkit-print-color-adjust: exact;
-}
-@media screen and (min-width: 914px) {
-    body {
-        width: 854px;
-        margin:0 auto;
-    }
-}
-@media print {
-    table, pre {
-        page-break-inside: avoid;
-    }
-    pre {
-        word-wrap: break-word;
-    }
-}
-<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">h1</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;toc_0&quot;</span><span class="p">&gt;</span>Hello Docker!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-
-<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>This is being served from a <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>docker<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
-container running Nginx.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
-
-
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
-
+<p>Files:</p>
+<ul>
+<li><a href="resources/Dockerfile">Dockerfile</a></li>
+<li><a href="resources/hello_docker.html">hello_docker.html</a></li>
+</ul>
 <blockquote>
 <p><strong>Note:</strong> The current version of this image doesn't run without the <code>-d</code> flag. The <code>-d</code> flag enables <strong>detached mode</strong>, which detaches the running container from the terminal/shell and returns your prompt after the container starts. We are debugging the problem with this image but for now, use <code>-d</code> even for this first example.</p>
 </blockquote>
@@ -1672,24 +1004,21 @@ container running Nginx.<span class="p">&lt;/</span><span class="nt">p</span><sp
 <p>Let's re-run the command with some new flags to publish ports and pass your name to the container to customize the message displayed. We'll use the <em>-d</em> option again to run the container in detached mode.</p>
 <p>First, stop the container that you have just launched. In order to do this, we need the container ID.</p>
 <p>Since we ran the container in detached mode, we don't have to launch another terminal to do this. Run <code>docker ps</code> to view the running containers.</p>
-<div class="codehilite"><pre><span></span><code>$ docker ps
+<div class="highlight"><pre><span></span><code>$ docker ps
 CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS               NAMES
 a7a0e504ca3e        dockersamples/static-site   <span class="s2">&quot;/bin/sh -c &#39;cd /usr/&quot;</span>   <span class="m">28</span> seconds ago      Up <span class="m">26</span> seconds       <span class="m">80</span>/tcp, <span class="m">443</span>/tcp     stupefied_mahavira
 </code></pre></div>
-
 <p>Check out the <code>CONTAINER ID</code> column. You will need to use this <code>CONTAINER ID</code> value, a long sequence of characters, to identify the container you want to stop, and then to remove it. The example below provides the <code>CONTAINER ID</code> on our system; you should use the value that you see in your terminal.</p>
-<div class="codehilite"><pre><span></span><code>$ docker stop a7a0e504ca3e
+<div class="highlight"><pre><span></span><code>$ docker stop a7a0e504ca3e
 $ docker rm   a7a0e504ca3e
 </code></pre></div>
-
 <blockquote>
 <p><strong>Note:</strong> A cool feature is that you do not need to specify the entire <code>CONTAINER ID</code>. You can just specify a few starting characters and if it is unique among all the containers that you have launched, the Docker client will intelligently pick it up.</p>
 </blockquote>
 <p>Now, let's launch a container in <strong>detached</strong> mode as shown below:</p>
-<div class="codehilite"><pre><span></span><code>$ docker run --name static-site -e <span class="nv">AUTHOR</span><span class="o">=</span><span class="s2">&quot;Your Name&quot;</span> -d -P dockersamples/static-site
+<div class="highlight"><pre><span></span><code>$ docker run --name static-site -e <span class="nv">AUTHOR</span><span class="o">=</span><span class="s2">&quot;Your Name&quot;</span> -d -P dockersamples/static-site
 e61d12292d69556eabe2a44c16cbd54486b2527e2ce4f95438e504afb7b02810
 </code></pre></div>
-
 <p>In the above command:</p>
 <ul>
 <li><code>-d</code> will create a container with the process detached from our terminal</li>
@@ -1699,43 +1028,37 @@ e61d12292d69556eabe2a44c16cbd54486b2527e2ce4f95438e504afb7b02810
 <li><code>AUTHOR</code> is the environment variable name and <code>Your Name</code> is the value that you can pass</li>
 </ul>
 <p>Now you can see the ports by running the <code>docker port</code> command.</p>
-<div class="codehilite"><pre><span></span><code>$ docker port static-site
+<div class="highlight"><pre><span></span><code>$ docker port static-site
 <span class="m">443</span>/tcp -&gt; <span class="m">0</span>.0.0.0:32772
 <span class="m">80</span>/tcp -&gt; <span class="m">0</span>.0.0.0:32773
 </code></pre></div>
-
 <p>If you are running <a href="https://docs.docker.com/docker-for-mac/">Docker for Mac</a>, <a href="https://docs.docker.com/docker-for-windows/">Docker for Windows</a>, or Docker on Linux, you can open <code>http://localhost:[YOUR_PORT_FOR 80/tcp]</code>. For our example this is <code>http://localhost:32773</code>.</p>
 <p>If you are using Docker Machine on Mac or Windows, you can find the hostname on the command line using <code>docker-machine</code> as follows (assuming you are using the <code>default</code> machine).</p>
-<div class="codehilite"><pre><span></span><code>$ docker-machine ip default
+<p><div class="highlight"><pre><span></span><code>$ docker-machine ip default
 <span class="m">192</span>.168.99.100
 </code></pre></div>
-
-<p>You can now open <code>http://&lt;YOUR_IPADDRESS&gt;:[YOUR_PORT_FOR 80/tcp]</code> to see your site live! For our example, this is: <code>http://192.168.99.100:32773</code>.</p>
+You can now open <code>http://&lt;YOUR_IPADDRESS&gt;:[YOUR_PORT_FOR 80/tcp]</code> to see your site live! For our example, this is: <code>http://192.168.99.100:32773</code>.</p>
 <p>You can also run a second webserver at the same time, specifying a custom host port mapping to the container's webserver.</p>
-<div class="codehilite"><pre><span></span><code>$ docker run --name static-site-2 -e <span class="nv">AUTHOR</span><span class="o">=</span><span class="s2">&quot;Your Name&quot;</span> -d -p <span class="m">8888</span>:80 dockersamples/static-site
+<div class="highlight"><pre><span></span><code>$ docker run --name static-site-2 -e <span class="nv">AUTHOR</span><span class="o">=</span><span class="s2">&quot;Your Name&quot;</span> -d -p <span class="m">8888</span>:80 dockersamples/static-site
 </code></pre></div>
-
 <p><img src="https://raw.githubusercontent.com/docker/labs/master/beginner/images/static.png" title="static"></p>
 <p>To deploy this on a real server you would just need to install Docker, and run the above <code>docker</code> command(as in this case you can see the <code>AUTHOR</code> is Docker which we passed as an environment variable).</p>
 <p>Now that you've seen how to run a webserver inside a Docker container, how do you create your own Docker image? This is the question we'll explore in the next section.</p>
 <p>But first, let's stop and remove the containers since you won't be using them anymore.</p>
-<div class="codehilite"><pre><span></span><code>$ docker stop static-site
+<div class="highlight"><pre><span></span><code>$ docker stop static-site
 $ docker rm static-site
 </code></pre></div>
-
 <p>Let's use a shortcut to remove the second site:</p>
-<div class="codehilite"><pre><span></span><code>$ docker rm -f static-site-2
+<div class="highlight"><pre><span></span><code>$ docker rm -f static-site-2
 </code></pre></div>
-
 <p>Run <code>docker ps</code> to make sure the containers are gone.</p>
-<div class="codehilite"><pre><span></span><code>$ docker ps
+<div class="highlight"><pre><span></span><code>$ docker ps
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
 </code></pre></div>
-
 <h3 id="22-docker-images">2.2 Docker Images<a class="headerlink" href="#22-docker-images" title="Permanent link">🔗</a></h3>
 <p>In this section, let's dive deeper into what Docker images are. You will build your own image, use that image to run an application locally.</p>
 <p>Docker images are the basis of containers. In the previous example, you <strong>pulled</strong> the <em>dockersamples/static-site</em> image from the registry and asked the Docker client to run a container <strong>based</strong> on that image. To see the list of images that are available locally on your system, run the <code>docker images</code> command.</p>
-<div class="codehilite"><pre><span></span><code>$ docker images
+<div class="highlight"><pre><span></span><code>$ docker images
 REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
 dockersamples/static-site   latest              92a386b6e686        <span class="m">2</span> hours ago        <span class="m">190</span>.5 MB
 nginx                  latest              af4b3d7d5401        <span class="m">3</span> hours ago        <span class="m">190</span>.5 MB
@@ -1748,18 +1071,15 @@ mongo                  latest              467eb21035a8        <span class="m">7
 alpine                 <span class="m">3</span>.3                 70c557e50ed6        <span class="m">8</span> days ago          <span class="m">4</span>.794 MB
 java                   <span class="m">7</span>                   21f6ce84e43c        <span class="m">8</span> days ago          <span class="m">587</span>.7 MB
 </code></pre></div>
-
 <p>Above is a list of images that I've pulled from the registry and those I've created myself (we'll shortly see how). You will have a different list of images on your machine. The <code>TAG</code> refers to a particular snapshot of the image and the <code>ID</code> is the corresponding unique identifier for that image.</p>
 <p>For simplicity, you can think of an image akin to a git repository - images can be <a href="https://docs.docker.com/engine/reference/commandline/commit/">committed</a> with changes and have multiple versions. When you do not provide a specific version number, the client defaults to <code>latest</code>.</p>
 <p>For example you could pull a specific version of <code>ubuntu</code> image as follows:</p>
-<div class="codehilite"><pre><span></span><code>$ docker pull ubuntu:12.04
+<div class="highlight"><pre><span></span><code>$ docker pull ubuntu:12.04
 </code></pre></div>
-
 <p>If you do not specify the version number of the image then, as mentioned, the Docker client will default to a version named <code>latest</code>.</p>
 <p>So for example, the <code>docker pull</code> command given below will pull an image named <code>ubuntu:latest</code>:</p>
-<div class="codehilite"><pre><span></span><code>$ docker pull ubuntu
+<div class="highlight"><pre><span></span><code>$ docker pull ubuntu
 </code></pre></div>
-
 <p>To get a new Docker image you can either get it from a registry (such as the Docker Store) or create your own. There are hundreds of thousands of images available on <a href="https://store.docker.com">Docker Store</a>. You can also search for images directly from the command line using <code>docker search</code>.</p>
 <p>An important distinction with regard to images is between <em>base images</em> and <em>child images</em>.</p>
 <ul>
@@ -1805,7 +1125,7 @@ java                   <span class="m">7</span>                   21f6ce84e43c  
 <p>Make sure to <code>cd flask-app</code> before you start creating the files, because you don't want to start adding a whole bunch of other random files to your image.</p>
 <h4 id="apppy">app.py<a class="headerlink" href="#apppy" title="Permanent link">🔗</a></h4>
 <p>Create the <strong>app.py</strong> with the following content:</p>
-<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
 <span class="kn">import</span> <span class="nn">random</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
@@ -1834,15 +1154,13 @@ java                   <span class="m">7</span>                   21f6ce84e43c  
 <span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
     <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s2">&quot;0.0.0.0&quot;</span><span class="p">)</span>
 </code></pre></div>
-
 <h4 id="requirementstxt">requirements.txt<a class="headerlink" href="#requirementstxt" title="Permanent link">🔗</a></h4>
 <p>In order to install the Python modules required for our app, we need to create a file called <strong>requirements.txt</strong> and add the following line to that file:</p>
-<div class="codehilite"><pre><span></span><code><span class="err">Flask==0.10.1</span>
+<div class="highlight"><pre><span></span><code>Flask==0.10.1
 </code></pre></div>
-
 <h4 id="templatesindexhtml">templates/index.html<a class="headerlink" href="#templatesindexhtml" title="Permanent link">🔗</a></h4>
 <p>Create a directory called <code>templates</code> and create an <strong>index.html</strong> file in that directory with the following content in it:</p>
-<div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">style</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text/css&quot;</span><span class="p">&gt;</span>
       <span class="nt">body</span> <span class="p">{</span>
@@ -1870,7 +1188,6 @@ java                   <span class="m">7</span>                   21f6ce84e43c  
   <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
-
 <h3 id="232-write-a-dockerfile">2.3.2 Write a Dockerfile<a class="headerlink" href="#232-write-a-dockerfile" title="Permanent link">🔗</a></h3>
 <p>We want to create a Docker image with this web app. As mentioned above, all user images are based on a <em>base image</em>. Since our application is written in Python, we will build our own Python image based on <a href="https://store.docker.com/images/alpine">Alpine</a>. We'll do that using a <strong>Dockerfile</strong>.</p>
 <p>A <a href="https://docs.docker.com/engine/reference/builder/">Dockerfile</a> is a text file that contains a list of commands that the Docker daemon calls while creating an image. The Dockerfile contains all the information that Docker needs to know to run the app &#8212; a base Docker image to run from, location of your project code, any dependencies it has, and what commands to run at start-up. It is a simple way to automate the image creation process. The best part is that the <a href="https://docs.docker.com/engine/reference/builder/">commands</a> you write in a Dockerfile are <em>almost</em> identical to their equivalent Linux commands. This means you don't really have to learn new syntax to create your own Dockerfiles.</p>
@@ -1878,127 +1195,135 @@ java                   <span class="m">7</span>                   21f6ce84e43c  
 <li>Create a file called <strong>Dockerfile</strong>, and add content to it as described below.</li>
 </ol>
 <p>We'll start by specifying our base image, using the <code>FROM</code> keyword:</p>
-<p><code>FROM alpine:3.5</code></p>
+<div class="highlight"><pre><span></span><code>FROM alpine:3.5
+</code></pre></div>
 <ol>
 <li>The next step usually is to write the commands of copying the files and installing the dependencies. But first we will install the Python pip package to the alpine linux distribution. This will not just install the pip package but any other dependencies too, which includes the python interpreter. Add the following <a href="https://docs.docker.com/engine/reference/builder/#run">RUN</a> command next:</li>
 </ol>
-<p><code>RUN apk add --update py2-pip</code></p>
+<div class="highlight"><pre><span></span><code>RUN apk add --update py2-pip
+</code></pre></div>
 <ol>
 <li>Let's add the files that make up the Flask Application.</li>
 </ol>
 <p>Install all Python requirements for our app to run. This will be accomplished by adding the lines:</p>
-<p><code>COPY requirements.txt /usr/src/app/
-  RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt</code></p>
+<div class="highlight"><pre><span></span><code>COPY requirements.txt /usr/src/app/
+RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt
+</code></pre></div>
 <p>Copy the files you have created earlier into our image by using <a href="https://docs.docker.com/engine/reference/builder/#copy">COPY</a>  command.</p>
-<p><code>COPY app.py /usr/src/app/
-  COPY templates/index.html /usr/src/app/templates/</code></p>
+<div class="highlight"><pre><span></span><code>COPY app.py /usr/src/app/
+COPY templates/index.html /usr/src/app/templates/
+</code></pre></div>
 <ol>
 <li>Specify the port number which needs to be exposed. Since our flask app is running on <code>5000</code> that's what we'll expose.</li>
 </ol>
-<p><code>EXPOSE 5000</code></p>
+<div class="highlight"><pre><span></span><code>EXPOSE 5000
+</code></pre></div>
 <ol>
 <li>The last step is the command for running the application which is simply - <code>python ./app.py</code>. Use the <a href="https://docs.docker.com/engine/reference/builder/#cmd">CMD</a> command to do that:</li>
 </ol>
-<p><code>CMD ["python", "/usr/src/app/app.py"]</code></p>
+<div class="highlight"><pre><span></span><code>CMD [&quot;python&quot;, &quot;/usr/src/app/app.py&quot;]
+</code></pre></div>
 <p>The primary purpose of <code>CMD</code> is to tell the container which command it should run by default when it is started.</p>
 <ol>
 <li>Verify your Dockerfile.</li>
 </ol>
 <p>Our <code>Dockerfile</code> is now ready. This is how it looks:</p>
-<p>```
-  # our base image
-  FROM alpine:3.5</p>
-<p># Install python and pip
-  RUN apk add --update py2-pip</p>
-<p># install Python modules needed by the Python app
-  COPY requirements.txt /usr/src/app/
-  RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt</p>
-<p># copy files required for the app to run
-  COPY app.py /usr/src/app/
-  COPY templates/index.html /usr/src/app/templates/</p>
-<p># tell the port number the container should expose
-  EXPOSE 5000</p>
-<p># run the application
-  CMD ["python", "/usr/src/app/app.py"]
-  ```</p>
+<div class="highlight"><pre><span></span><code># our base image
+FROM alpine:3.5
+
+# Install python and pip
+RUN apk add --update py2-pip
+
+# install Python modules needed by the Python app
+COPY requirements.txt /usr/src/app/
+RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt
+
+# copy files required for the app to run
+COPY app.py /usr/src/app/
+COPY templates/index.html /usr/src/app/templates/
+
+# tell the port number the container should expose
+EXPOSE 5000
+
+# run the application
+CMD [&quot;python&quot;, &quot;/usr/src/app/app.py&quot;]
+</code></pre></div>
 <h3 id="233-build-the-image">2.3.3 Build the image<a class="headerlink" href="#233-build-the-image" title="Permanent link">🔗</a></h3>
 <p>Now that you have your <code>Dockerfile</code>, you can build your image. The <code>docker build</code> command does the heavy-lifting of creating a docker image from a <code>Dockerfile</code>.</p>
 <p>The <code>docker build</code> command is quite simple - it takes an optional tag name with the <code>-t</code> flag, and the location of the directory containing the <code>Dockerfile</code> - the <code>.</code> indicates the current directory:</p>
 <p><code>docker build -t myfirstapp:1.0</code></p>
-<div class="codehilite"><pre><span></span><code><span class="o">$</span> <span class="n">docker</span> <span class="n">build</span> <span class="o">-</span><span class="n">t</span> <span class="n">myfirstapp</span><span class="p">:</span><span class="mf">1.0</span> <span class="o">.</span>
-<span class="n">Sending</span> <span class="n">build</span> <span class="n">context</span> <span class="n">to</span> <span class="n">Docker</span> <span class="n">daemon</span> <span class="mf">9.728</span> <span class="n">kB</span>
-<span class="n">Step</span> <span class="mi">1</span> <span class="p">:</span> <span class="n">FROM</span> <span class="n">alpine</span><span class="p">:</span><span class="n">latest</span>
- <span class="o">---&gt;</span> <span class="mi">0</span><span class="n">d81fc72e790</span>
-<span class="n">Step</span> <span class="mi">2</span> <span class="p">:</span> <span class="n">RUN</span> <span class="n">apk</span> <span class="n">add</span> <span class="o">--</span><span class="n">update</span> <span class="n">py</span><span class="o">-</span><span class="n">pip</span>
- <span class="o">---&gt;</span> <span class="n">Running</span> <span class="ow">in</span> <span class="mi">8</span><span class="n">abd4091b5f5</span>
-<span class="n">fetch</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">dl</span><span class="o">-</span><span class="mf">4.</span><span class="n">alpinelinux</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">alpine</span><span class="o">/</span><span class="n">v3</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span><span class="n">main</span><span class="o">/</span><span class="n">x86_64</span><span class="o">/</span><span class="n">APKINDEX</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">fetch</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">dl</span><span class="o">-</span><span class="mf">4.</span><span class="n">alpinelinux</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">alpine</span><span class="o">/</span><span class="n">v3</span><span class="o">.</span><span class="mi">3</span><span class="o">/</span><span class="n">community</span><span class="o">/</span><span class="n">x86_64</span><span class="o">/</span><span class="n">APKINDEX</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-<span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span> <span class="n">Installing</span> <span class="n">libbz2</span> <span class="p">(</span><span class="mf">1.0</span><span class="o">.</span><span class="mi">6</span><span class="o">-</span><span class="n">r4</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">2</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span> <span class="n">Installing</span> <span class="n">expat</span> <span class="p">(</span><span class="mf">2.1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">r2</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">3</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span> <span class="n">Installing</span> <span class="n">libffi</span> <span class="p">(</span><span class="mf">3.2</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">r2</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">4</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span> <span class="n">Installing</span> <span class="n">gdbm</span> <span class="p">(</span><span class="mf">1.11</span><span class="o">-</span><span class="n">r1</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">5</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span> <span class="n">Installing</span> <span class="n">ncurses</span><span class="o">-</span><span class="n">terminfo</span><span class="o">-</span><span class="n">base</span> <span class="p">(</span><span class="mf">6.0</span><span class="o">-</span><span class="n">r6</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">6</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span> <span class="n">Installing</span> <span class="n">ncurses</span><span class="o">-</span><span class="n">terminfo</span> <span class="p">(</span><span class="mf">6.0</span><span class="o">-</span><span class="n">r6</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">7</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span> <span class="n">Installing</span> <span class="n">ncurses</span><span class="o">-</span><span class="n">libs</span> <span class="p">(</span><span class="mf">6.0</span><span class="o">-</span><span class="n">r6</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">8</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span> <span class="n">Installing</span> <span class="n">readline</span> <span class="p">(</span><span class="mf">6.3</span><span class="o">.</span><span class="mi">008</span><span class="o">-</span><span class="n">r4</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">9</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span> <span class="n">Installing</span> <span class="n">sqlite</span><span class="o">-</span><span class="n">libs</span> <span class="p">(</span><span class="mf">3.9</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">r0</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">10</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span> <span class="n">Installing</span> <span class="n">python</span> <span class="p">(</span><span class="mf">2.7</span><span class="o">.</span><span class="mi">11</span><span class="o">-</span><span class="n">r3</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">11</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span> <span class="n">Installing</span> <span class="n">py</span><span class="o">-</span><span class="n">setuptools</span> <span class="p">(</span><span class="mf">18.8</span><span class="o">-</span><span class="n">r0</span><span class="p">)</span>
-<span class="p">(</span><span class="mi">12</span><span class="o">/</span><span class="mi">12</span><span class="p">)</span> <span class="n">Installing</span> <span class="n">py</span><span class="o">-</span><span class="n">pip</span> <span class="p">(</span><span class="mf">7.1</span><span class="o">.</span><span class="mi">2</span><span class="o">-</span><span class="n">r0</span><span class="p">)</span>
-<span class="n">Executing</span> <span class="n">busybox</span><span class="o">-</span><span class="mf">1.24</span><span class="o">.</span><span class="mi">1</span><span class="o">-</span><span class="n">r7</span><span class="o">.</span><span class="n">trigger</span>
-<span class="n">OK</span><span class="p">:</span> <span class="mi">59</span> <span class="n">MiB</span> <span class="ow">in</span> <span class="mi">23</span> <span class="n">packages</span>
- <span class="o">---&gt;</span> <span class="mi">976</span><span class="n">a232ac4ad</span>
-<span class="n">Removing</span> <span class="n">intermediate</span> <span class="n">container</span> <span class="mi">8</span><span class="n">abd4091b5f5</span>
-<span class="n">Step</span> <span class="mi">3</span> <span class="p">:</span> <span class="n">COPY</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span>
- <span class="o">---&gt;</span> <span class="mi">65</span><span class="n">b4be05340c</span>
-<span class="n">Removing</span> <span class="n">intermediate</span> <span class="n">container</span> <span class="mi">29</span><span class="n">ef53b58e0f</span>
-<span class="n">Step</span> <span class="mi">4</span> <span class="p">:</span> <span class="n">RUN</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">cache</span><span class="o">-</span><span class="n">dir</span> <span class="o">-</span><span class="n">r</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
- <span class="o">---&gt;</span> <span class="n">Running</span> <span class="ow">in</span> <span class="n">a1f26ded28e7</span>
-<span class="n">Collecting</span> <span class="n">Flask</span><span class="o">==</span><span class="mf">0.10</span><span class="o">.</span><span class="mi">1</span> <span class="p">(</span><span class="n">from</span> <span class="o">-</span><span class="n">r</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span> <span class="p">(</span><span class="n">line</span> <span class="mi">1</span><span class="p">))</span>
-  <span class="n">Downloading</span> <span class="n">Flask</span><span class="o">-</span><span class="mf">0.10</span><span class="o">.</span><span class="mf">1.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="p">(</span><span class="mi">544</span><span class="n">kB</span><span class="p">)</span>
-<span class="n">Collecting</span> <span class="n">Werkzeug</span><span class="o">&gt;=</span><span class="mf">0.7</span> <span class="p">(</span><span class="n">from</span> <span class="n">Flask</span><span class="o">==</span><span class="mf">0.10</span><span class="o">.</span><span class="mi">1</span><span class="o">-&gt;-</span><span class="n">r</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span> <span class="p">(</span><span class="n">line</span> <span class="mi">1</span><span class="p">))</span>
-  <span class="n">Downloading</span> <span class="n">Werkzeug</span><span class="o">-</span><span class="mf">0.11</span><span class="o">.</span><span class="mi">4</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span> <span class="p">(</span><span class="mi">305</span><span class="n">kB</span><span class="p">)</span>
-<span class="n">Collecting</span> <span class="n">Jinja2</span><span class="o">&gt;=</span><span class="mf">2.4</span> <span class="p">(</span><span class="n">from</span> <span class="n">Flask</span><span class="o">==</span><span class="mf">0.10</span><span class="o">.</span><span class="mi">1</span><span class="o">-&gt;-</span><span class="n">r</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span> <span class="p">(</span><span class="n">line</span> <span class="mi">1</span><span class="p">))</span>
-  <span class="n">Downloading</span> <span class="n">Jinja2</span><span class="o">-</span><span class="mf">2.8</span><span class="o">-</span><span class="n">py2</span><span class="o">.</span><span class="n">py3</span><span class="o">-</span><span class="n">none</span><span class="o">-</span><span class="n">any</span><span class="o">.</span><span class="n">whl</span> <span class="p">(</span><span class="mi">263</span><span class="n">kB</span><span class="p">)</span>
-<span class="n">Collecting</span> <span class="n">itsdangerous</span><span class="o">&gt;=</span><span class="mf">0.21</span> <span class="p">(</span><span class="n">from</span> <span class="n">Flask</span><span class="o">==</span><span class="mf">0.10</span><span class="o">.</span><span class="mi">1</span><span class="o">-&gt;-</span><span class="n">r</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span> <span class="p">(</span><span class="n">line</span> <span class="mi">1</span><span class="p">))</span>
-  <span class="n">Downloading</span> <span class="n">itsdangerous</span><span class="o">-</span><span class="mf">0.24</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span> <span class="p">(</span><span class="mi">46</span><span class="n">kB</span><span class="p">)</span>
-<span class="n">Collecting</span> <span class="n">MarkupSafe</span> <span class="p">(</span><span class="n">from</span> <span class="n">Jinja2</span><span class="o">&gt;=</span><span class="mf">2.4</span><span class="o">-&gt;</span><span class="n">Flask</span><span class="o">==</span><span class="mf">0.10</span><span class="o">.</span><span class="mi">1</span><span class="o">-&gt;-</span><span class="n">r</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">requirements</span><span class="o">.</span><span class="n">txt</span> <span class="p">(</span><span class="n">line</span> <span class="mi">1</span><span class="p">))</span>
-  <span class="n">Downloading</span> <span class="n">MarkupSafe</span><span class="o">-</span><span class="mf">0.23</span><span class="o">.</span><span class="n">tar</span><span class="o">.</span><span class="n">gz</span>
-<span class="n">Installing</span> <span class="n">collected</span> <span class="n">packages</span><span class="p">:</span> <span class="n">Werkzeug</span><span class="p">,</span> <span class="n">MarkupSafe</span><span class="p">,</span> <span class="n">Jinja2</span><span class="p">,</span> <span class="n">itsdangerous</span><span class="p">,</span> <span class="n">Flask</span>
-  <span class="n">Running</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span> <span class="k">for</span> <span class="n">MarkupSafe</span>
-  <span class="n">Running</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span> <span class="k">for</span> <span class="n">itsdangerous</span>
-  <span class="n">Running</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">install</span> <span class="k">for</span> <span class="n">Flask</span>
-<span class="n">Successfully</span> <span class="n">installed</span> <span class="n">Flask</span><span class="o">-</span><span class="mf">0.10</span><span class="o">.</span><span class="mi">1</span> <span class="n">Jinja2</span><span class="o">-</span><span class="mf">2.8</span> <span class="n">MarkupSafe</span><span class="o">-</span><span class="mf">0.23</span> <span class="n">Werkzeug</span><span class="o">-</span><span class="mf">0.11</span><span class="o">.</span><span class="mi">4</span> <span class="n">itsdangerous</span><span class="o">-</span><span class="mf">0.24</span>
-<span class="n">You</span> <span class="n">are</span> <span class="n">using</span> <span class="n">pip</span> <span class="n">version</span> <span class="mf">7.1</span><span class="o">.</span><span class="mi">2</span><span class="p">,</span> <span class="n">however</span> <span class="n">version</span> <span class="mf">8.1</span><span class="o">.</span><span class="mi">1</span> <span class="k">is</span> <span class="n">available</span><span class="o">.</span>
-<span class="n">You</span> <span class="n">should</span> <span class="n">consider</span> <span class="n">upgrading</span> <span class="n">via</span> <span class="n">the</span> <span class="s1">&#39;pip install --upgrade pip&#39;</span> <span class="n">command</span><span class="o">.</span>
- <span class="o">---&gt;</span> <span class="mi">8</span><span class="n">de73b0730c2</span>
-<span class="n">Removing</span> <span class="n">intermediate</span> <span class="n">container</span> <span class="n">a1f26ded28e7</span>
-<span class="n">Step</span> <span class="mi">5</span> <span class="p">:</span> <span class="n">COPY</span> <span class="n">app</span><span class="o">.</span><span class="n">py</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span>
- <span class="o">---&gt;</span> <span class="mi">6</span><span class="n">a3436fca83e</span>
-<span class="n">Removing</span> <span class="n">intermediate</span> <span class="n">container</span> <span class="n">d51b81a8b698</span>
-<span class="n">Step</span> <span class="mi">6</span> <span class="p">:</span> <span class="n">COPY</span> <span class="n">templates</span><span class="o">/</span><span class="n">index</span><span class="o">.</span><span class="n">html</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">templates</span><span class="o">/</span>
- <span class="o">---&gt;</span> <span class="mi">8098386</span><span class="n">bee99</span>
-<span class="n">Removing</span> <span class="n">intermediate</span> <span class="n">container</span> <span class="n">b783d7646f83</span>
-<span class="n">Step</span> <span class="mi">7</span> <span class="p">:</span> <span class="n">EXPOSE</span> <span class="mi">5000</span>
- <span class="o">---&gt;</span> <span class="n">Running</span> <span class="ow">in</span> <span class="mi">31401</span><span class="n">b7dea40</span>
- <span class="o">---&gt;</span> <span class="mf">5e9988</span><span class="n">d87da7</span>
-<span class="n">Removing</span> <span class="n">intermediate</span> <span class="n">container</span> <span class="mi">31401</span><span class="n">b7dea40</span>
-<span class="n">Step</span> <span class="mi">8</span> <span class="p">:</span> <span class="n">CMD</span> <span class="n">python</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">app</span><span class="o">/</span><span class="n">app</span><span class="o">.</span><span class="n">py</span>
- <span class="o">---&gt;</span> <span class="n">Running</span> <span class="ow">in</span> <span class="mf">78e324</span><span class="n">d26576</span>
- <span class="o">---&gt;</span> <span class="mi">2</span><span class="n">f7357a0805d</span>
-<span class="n">Removing</span> <span class="n">intermediate</span> <span class="n">container</span> <span class="mf">78e324</span><span class="n">d26576</span>
-<span class="n">Successfully</span> <span class="n">built</span> <span class="mi">2</span><span class="n">f7357a0805d</span>
+<div class="highlight"><pre><span></span><code>$ docker build -t myfirstapp:1.0 .
+Sending build context to Docker daemon 9.728 kB
+Step 1 : FROM alpine:latest
+ ---&gt; 0d81fc72e790
+Step 2 : RUN apk add --update py-pip
+ ---&gt; Running in 8abd4091b5f5
+fetch http://dl-4.alpinelinux.org/alpine/v3.3/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-4.alpinelinux.org/alpine/v3.3/community/x86_64/APKINDEX.tar.gz
+(1/12) Installing libbz2 (1.0.6-r4)
+(2/12) Installing expat (2.1.0-r2)
+(3/12) Installing libffi (3.2.1-r2)
+(4/12) Installing gdbm (1.11-r1)
+(5/12) Installing ncurses-terminfo-base (6.0-r6)
+(6/12) Installing ncurses-terminfo (6.0-r6)
+(7/12) Installing ncurses-libs (6.0-r6)
+(8/12) Installing readline (6.3.008-r4)
+(9/12) Installing sqlite-libs (3.9.2-r0)
+(10/12) Installing python (2.7.11-r3)
+(11/12) Installing py-setuptools (18.8-r0)
+(12/12) Installing py-pip (7.1.2-r0)
+Executing busybox-1.24.1-r7.trigger
+OK: 59 MiB in 23 packages
+ ---&gt; 976a232ac4ad
+Removing intermediate container 8abd4091b5f5
+Step 3 : COPY requirements.txt /usr/src/app/
+ ---&gt; 65b4be05340c
+Removing intermediate container 29ef53b58e0f
+Step 4 : RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt
+ ---&gt; Running in a1f26ded28e7
+Collecting Flask==0.10.1 (from -r /usr/src/app/requirements.txt (line 1))
+  Downloading Flask-0.10.1.tar.gz (544kB)
+Collecting Werkzeug&gt;=0.7 (from Flask==0.10.1-&gt;-r /usr/src/app/requirements.txt (line 1))
+  Downloading Werkzeug-0.11.4-py2.py3-none-any.whl (305kB)
+Collecting Jinja2&gt;=2.4 (from Flask==0.10.1-&gt;-r /usr/src/app/requirements.txt (line 1))
+  Downloading Jinja2-2.8-py2.py3-none-any.whl (263kB)
+Collecting itsdangerous&gt;=0.21 (from Flask==0.10.1-&gt;-r /usr/src/app/requirements.txt (line 1))
+  Downloading itsdangerous-0.24.tar.gz (46kB)
+Collecting MarkupSafe (from Jinja2&gt;=2.4-&gt;Flask==0.10.1-&gt;-r /usr/src/app/requirements.txt (line 1))
+  Downloading MarkupSafe-0.23.tar.gz
+Installing collected packages: Werkzeug, MarkupSafe, Jinja2, itsdangerous, Flask
+  Running setup.py install for MarkupSafe
+  Running setup.py install for itsdangerous
+  Running setup.py install for Flask
+Successfully installed Flask-0.10.1 Jinja2-2.8 MarkupSafe-0.23 Werkzeug-0.11.4 itsdangerous-0.24
+You are using pip version 7.1.2, however version 8.1.1 is available.
+You should consider upgrading via the &#39;pip install --upgrade pip&#39; command.
+ ---&gt; 8de73b0730c2
+Removing intermediate container a1f26ded28e7
+Step 5 : COPY app.py /usr/src/app/
+ ---&gt; 6a3436fca83e
+Removing intermediate container d51b81a8b698
+Step 6 : COPY templates/index.html /usr/src/app/templates/
+ ---&gt; 8098386bee99
+Removing intermediate container b783d7646f83
+Step 7 : EXPOSE 5000
+ ---&gt; Running in 31401b7dea40
+ ---&gt; 5e9988d87da7
+Removing intermediate container 31401b7dea40
+Step 8 : CMD python /usr/src/app/app.py
+ ---&gt; Running in 78e324d26576
+ ---&gt; 2f7357a0805d
+Removing intermediate container 78e324d26576
+Successfully built 2f7357a0805d
 </code></pre></div>
-
 <p>If you don't have the <code>alpine:3.5</code> image, the client will first pull the image and then create your image. Therefore, your output on running the command will look different from mine. If everything went well, your image should be ready! Run <code>docker images</code> and see if your image (<code>&lt;YOUR_USERNAME&gt;/myfirstapp</code>) shows.</p>
 <h3 id="234-run-your-image">2.3.4 Run your image<a class="headerlink" href="#234-run-your-image" title="Permanent link">🔗</a></h3>
 <p>The next step in this section is to run the image and see if it actually works.</p>
-<div class="codehilite"><pre><span></span><code>$ docker run -p <span class="m">8888</span>:5000 --name myfirstapp myfirstapp:1.0
+<div class="highlight"><pre><span></span><code>$ docker run -p <span class="m">8888</span>:5000 --name myfirstapp myfirstapp:1.0
  * Running on http://0.0.0.0:5000/ <span class="o">(</span>Press CTRL+C to quit<span class="o">)</span>
 </code></pre></div>
-
 <p>Head over to <code>http://localhost:8888</code> and your app should be live. <strong>Note</strong> If you are using Docker Machine, you may need to open up another terminal and determine the container ip address using <code>docker-machine ip default</code>.</p>
-<p><img src="../images/catgif.png" title="static"></p>
+<p><img alt="catgif" src="https://raw.githubusercontent.com/docker/labs/master/beginner/images/catgif.png" /></p>
 <p>Hit the Refresh button in the web browser to see a few more cat images.</p>
 <h3 id="235-dockerfile-commands-summary">2.3.5 Dockerfile commands summary<a class="headerlink" href="#235-dockerfile-commands-summary" title="Permanent link">🔗</a></h3>
 <p>Here's a quick summary of the few basic commands we used in our Dockerfile.</p>
@@ -2016,11 +1341,10 @@ java                   <span class="m">7</span>                   21f6ce84e43c  
 <p><code>CMD</code> defines the commands that will run on the Image at start-up. Unlike a <code>RUN</code>, this does not create a new layer for the Image, but simply runs the command. There can only be one <code>CMD</code> per a Dockerfile/Image. If you need to run multiple commands, the best way to do that is to have the <code>CMD</code> run a script. <code>CMD</code> requires that you tell it where to run the command, unlike <code>RUN</code>. So example <code>CMD</code> commands would be:</p>
 </li>
 </ul>
-<div class="codehilite"><pre><span></span><code>  <span class="n">CMD</span> <span class="p">[</span><span class="ss">&quot;python&quot;</span><span class="p">,</span> <span class="ss">&quot;./app.py&quot;</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code>  CMD [&quot;python&quot;, &quot;./app.py&quot;]
 
-  <span class="n">CMD</span> <span class="p">[</span><span class="ss">&quot;/bin/bash&quot;</span><span class="p">,</span> <span class="ss">&quot;echo&quot;</span><span class="p">,</span> <span class="ss">&quot;Hello World&quot;</span><span class="p">]</span>
+  CMD [&quot;/bin/bash&quot;, &quot;echo&quot;, &quot;Hello World&quot;]
 </code></pre></div>
-
 <ul>
 <li><code>EXPOSE</code> creates a hint for users of an image which ports provide services. It is included in the information which
  can be retrieved via <code>$ docker inspect &lt;container-id&gt;</code>.     </li>
@@ -2054,12 +1378,15 @@ publishing ports by means of the <code>-p</code> flag when using <code>$ docker 
 <p>If you have a problem of authentification, <code>gcloud auth configure-docker</code></p>
 </li>
 </ul>
-<p>Helping: to get your project id: <code>PROJECT_ID=$(gcloud config get-value project 2&gt; /dev/null)</code></p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>to get your project id: <code>PROJECT_ID=$(gcloud config get-value project 2&gt; /dev/null)</code></p>
+</div>
 <ul>
 <li>Go to container registry https://console.cloud.google.com/gcr, you should see your docker image :)</li>
 </ul>
 <h2 id="4-data-science-standardized-environment">4.  Data Science Standardized Environment<a class="headerlink" href="#4-data-science-standardized-environment" title="Permanent link">🔗</a></h2>
-<h3 id="intro">Intro<a class="headerlink" href="#intro" title="Permanent link">🔗</a></h3>
+<h3 id="41-intro">4.1 Intro<a class="headerlink" href="#41-intro" title="Permanent link">🔗</a></h3>
 <p>Those of us who work on a team know how hard it is to create a standardize development environment. Or if you have ever updated a dependency and had everything break, you understand the importance of keeping development environments isolated.</p>
 <p>Using Docker, we can create a project / team image with our development environment and mount a volume with our notebooks and data.</p>
 <p>The benefits of this workflow are that we can:</p>
@@ -2068,10 +1395,10 @@ publishing ports by means of the <code>-p</code> flag when using <code>$ docker 
 <li>Spin up a container to onboard new employees</li>
 <li>Build an automated testing pipeline to confirm upgrade dependencies do not break code</li>
 </ul>
-<h3 id="kaggle-docker-image">Kaggle Docker Image<a class="headerlink" href="#kaggle-docker-image" title="Permanent link">🔗</a></h3>
+<h3 id="42-kaggle-docker-image">4.2 Kaggle Docker Image<a class="headerlink" href="#42-kaggle-docker-image" title="Permanent link">🔗</a></h3>
 <p>For this exercise we will use <a href="https://medium.com/@kaggleteam/how-to-get-started-with-data-science-in-containers-6ed48cb08266">Kaggle Docker Image</a> which is a fully configured docker image that can be used as a data science container</p>
 <p>Take a look at the documentation and <a href="https://github.com/Kaggle/docker-python">the repository</a></p>
-<h3 id="get-the-algorithm-in-ml-git-in-your-virtual-machine">Get the algorithm in ML git in your Virtual Machine<a class="headerlink" href="#get-the-algorithm-in-ml-git-in-your-virtual-machine" title="Permanent link">🔗</a></h3>
+<h3 id="43-get-the-algorithm-in-ml-git-in-your-virtual-machine">4.3 Get the algorithm in ML git in your Virtual Machine<a class="headerlink" href="#43-get-the-algorithm-in-ml-git-in-your-virtual-machine" title="Permanent link">🔗</a></h3>
 <ul>
 <li>
 <p>From your vm, run <code>git clone https://github.com/erachelson/MLclass.git</code>, this should setup your AML class inside your VM</p>
@@ -2080,35 +1407,36 @@ publishing ports by means of the <code>-p</code> flag when using <code>$ docker 
 <p>Using code-server is not mandatory now</p>
 </li>
 </ul>
-<h3 id="mounting-volumes-and-ports">Mounting volumes and ports<a class="headerlink" href="#mounting-volumes-and-ports" title="Permanent link">🔗</a></h3>
+<h3 id="44-mounting-volumes-and-ports">4.4 Mounting volumes and ports<a class="headerlink" href="#44-mounting-volumes-and-ports" title="Permanent link">🔗</a></h3>
 <p>Now let's run the image. This container has a jupyter notebook accessible from port 8080 so we will need to map the host port 8888 (the one accessible from the ssh tunnel) to the docker port 8080, we will use <a href="https://docs.docker.com/config/containers/container-networking/">port forwarding</a></p>
 <p>We will also need to make available the notebooks on the VM to the container... we will <a href="https://docs.docker.com/storage/volumes/">mount volumes</a>. Your data is located in <code>/home/${USER}/MLClass</code> and we want to miunt it in <code>/tmp/workdir</code></p>
-<div class="codehilite"><pre><span></span><code>docker run --rm -it <span class="se">\</span>
+<div class="highlight"><pre><span></span><code>docker run --rm -it <span class="se">\</span>
   -p <span class="m">8888</span>:8080 <span class="se">\</span>
   -v /home/<span class="si">${</span><span class="nv">USER</span><span class="si">}</span>/MLclass:/home/Mlclass <span class="se">\</span>
   --workdir /home/ <span class="se">\</span>
   gcr.io/kaggle-images/python <span class="se">\</span>
   /bin/bash /run_jupyter.sh
 </code></pre></div>
-
 <p>Note: this image is very large !</p>
 <p>Options breakdown:
-- <code>--rm</code> remove the container when we stop it
-- <code>-it</code> run the container in interactive mode
-- <code>-p</code> forward port from host:container
-- other: options from the kaggle container</p>
+* <code>--rm</code> remove the container when we stop it
+* <code>-it</code> run the container in interactive mode
+* <code>-p</code> forward port from host:container
+* other: options from the kaggle container</p>
 <p>You should now see a jupyter lab with mlclass accessible if you connect your browser (in your laptop) to port 8888 (localhost:8888)</p>
 <p>So basically, we mapped the ports local 8888 to vm 8888 and vm 8888 to docker 8080</p>
 <h2 id="5-bonus-using-google-cloud-tools-for-docker">5. Bonus - Using Google Cloud Tools for Docker<a class="headerlink" href="#5-bonus-using-google-cloud-tools-for-docker" title="Permanent link">🔗</a></h2>
-<ul>
-<li>Using cloud shell you should be able to do the Hello World Dockerfile exercise except that instead of using docker build you use Google Cloud Build</li>
-</ul>
-<p>Tutorial: https://cloud.google.com/cloud-build/docs/quickstart-docker 
-Example command :<code>gcloud builds submit --tag eu.gcr.io/$PROJECT_ID/{image}:{tag} .</code>
-Helping: to get your project id: <code>PROJECT_ID=$(gcloud config get-value project 2&gt; /dev/null)</code></p>
-<ul>
-<li>Try to build the hello world app</li>
-</ul>
+<p>Using cloud shell you should be able to do the Hello World Dockerfile exercise except that instead of using docker build you use Google Cloud Build</p>
+<p>Tutorial: <a href="https://cloud.google.com/cloud-build/docs/quickstart-docker">https://cloud.google.com/cloud-build/docs/quickstart-docker</a></p>
+<p>Example command :<code>gcloud builds submit --tag eu.gcr.io/$PROJECT_ID/{image}:{tag} .</code></p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>to get your project id: <code>PROJECT_ID=$(gcloud config get-value project 2&gt; /dev/null)</code></p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Try to build the hello world app</p>
+</div>
 <h2 id="6-bonus-docker-compose">6. Bonus - Docker Compose<a class="headerlink" href="#6-bonus-docker-compose" title="Permanent link">🔗</a></h2>
 <p><a href="https://hackernoon.com/practical-introduction-to-docker-compose-d34e79c4c2b6">https://hackernoon.com/practical-introduction-to-docker-compose-d34e79c4c2b6</a></p>
 <p><a href="https://github.com/docker/labs/blob/master/beginner/chapters/votingapp.md">https://github.com/docker/labs/blob/master/beginner/chapters/votingapp.md</a></p>

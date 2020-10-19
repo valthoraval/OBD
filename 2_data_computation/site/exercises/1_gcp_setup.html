@@ -318,15 +318,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exploring-google-cloud-shell" class="md-nav__link">
-    Exploring google cloud shell
+  <a href="#explore-google-cloud-shell" class="md-nav__link">
+    Explore google cloud shell
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#google-cloud-shell-web-preview-magic" class="md-nav__link">
-    Google Cloud Shell web preview "magic"
+  <a href="#a-demo-of-cloud-shell-web-preview" class="md-nav__link">
+    A demo of cloud shell web preview
   </a>
   
 </li>
@@ -354,6 +354,13 @@
           <li class="md-nav__item">
   <a href="#loading-jupyter-notebooks-interacting-with-google-drive" class="md-nav__link">
     Loading jupyter notebooks, interacting with google drive
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-nice-usages-of-google-colab" class="md-nav__link">
+    Other nice usages of Google Colab
   </a>
   
 </li>
@@ -595,15 +602,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#exploring-google-cloud-shell" class="md-nav__link">
-    Exploring google cloud shell
+  <a href="#explore-google-cloud-shell" class="md-nav__link">
+    Explore google cloud shell
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#google-cloud-shell-web-preview-magic" class="md-nav__link">
-    Google Cloud Shell web preview "magic"
+  <a href="#a-demo-of-cloud-shell-web-preview" class="md-nav__link">
+    A demo of cloud shell web preview
   </a>
   
 </li>
@@ -635,6 +642,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#other-nice-usages-of-google-colab" class="md-nav__link">
+    Other nice usages of Google Colab
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -658,7 +672,11 @@
                 
                 
                 <h1 id="gcp-initial-setup-first-steps">GCP Initial Setup &amp; First Steps<a class="headerlink" href="#gcp-initial-setup-first-steps" title="Permanent link">🔗</a></h1>
-<p><img alt="" src="https://cloud.google.com/docs/overview" /></p>
+<div class="admonition abstract">
+<p class="admonition-title">Abstract</p>
+<p>In this hands on you will configure your GCP account, the google cloud SDK and access the cloud console using Google Cloud Shell,
+You will also discover a very useful tool, a managed jupyter notebook service from google named Google Colab which may be very important for your future developments this year</p>
+</div>
 <h2 id="1-create-your-gcp-account">1. Create your GCP Account<a class="headerlink" href="#1-create-your-gcp-account" title="Permanent link">🔗</a></h2>
 <p><a href="https://cloud.google.com/docs/overview">Overview link</a></p>
 <ul>
@@ -672,10 +690,10 @@
 <p>If you don't, you will have to do everything from google cloud shell (it's not as easy), so I recommend installing the SDK.</p>
 <p>The best ways to interact with google cloud SDK is with a terminal so in that order:</p>
 <ul>
-<li>Linux (either VM or native): https://cloud.google.com/sdk/docs/install#linux</li>
-<li>MacOS: https://cloud.google.com/sdk/docs/install#mac</li>
+<li>Linux (either VM or native): <a href="https://cloud.google.com/sdk/docs/install#linux">https://cloud.google.com/sdk/docs/install#linux</a></li>
+<li>MacOS: <a href="https://cloud.google.com/sdk/docs/install#mac">https://cloud.google.com/sdk/docs/install#mac</a></li>
 <li>Windows Subsystem for Linux: see Linux</li>
-<li>Windows: https://cloud.google.com/sdk/docs/install#windows</li>
+<li>Windows: <a href="https://cloud.google.com/sdk/docs/install#windows">https://cloud.google.com/sdk/docs/install#windows</a></li>
 </ul>
 <p>If you are on windows, you should launch the google cloud sdk shell now,</p>
 <p>Then you can configure the <a href="https://cloud.google.com/sdk/docs/initializing">google cloud sdk</a> with your account</p>
@@ -686,81 +704,61 @@
 <li>Compared to configured a VM by yourself, this one comes loaded with developer tools and gcp authentification correctly set up, and thus is faster to use,</li>
 <li>However the main drawback to using it as a development machine is the available disk space limited to 5 Gb (not enough to build docker images for example)</li>
 <li>Here is the <a href="https://cloud.google.com/shell">description of Google Cloud Shell</a></li>
-<li>
-<p>Look at the <a href="https://cloud.google.com/shell/docs/how-cloud-shell-works">documentation</a></p>
-</li>
-<li>
-<p>Can you describe it with your own words ?</p>
-</li>
+<li>Look at the <a href="https://cloud.google.com/shell/docs/how-cloud-shell-works">documentation</a></li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<ul>
+<li>Can you describe it with your own words ?</li>
 <li>What would be the closest service that you can find on GCP that is similar to cloud shell ?</li>
 </ul>
+</div>
 <h3 id="connect-to-google-cloud-shell">Connect to google cloud shell<a class="headerlink" href="#connect-to-google-cloud-shell" title="Permanent link">🔗</a></h3>
 <ul>
 <li>Follow <a href="https://cloud.google.com/shell/docs/using-cloud-shell">this guide</a> for connecting to google cloud shell using the browser</li>
-<li>If this doesn't work on your machine for whichever reason, there is a workaround which requires having installed the <code>google-cloud-sdk</code></li>
+<li>If this doesn't work on your machine for whichever reason, there is a workaround which requires having installed the <code>google-cloud-sdOther references:k</code></li>
 </ul>
-<h3 id="exploring-google-cloud-shell">Exploring google cloud shell<a class="headerlink" href="#exploring-google-cloud-shell" title="Permanent link">🔗</a></h3>
+<h3 id="explore-google-cloud-shell">Explore google cloud shell<a class="headerlink" href="#explore-google-cloud-shell" title="Permanent link">🔗</a></h3>
 <ul>
 <li>Check available disk space</li>
 </ul>
-<details><summary>Bash command to run</summary>
-
-    `df -h`
-
-  </details>
-
+<details class="note"><summary>Bash command to run</summary><p><code>df -h</code></p>
+</details>
 <ul>
 <li>Check the OS name</li>
 </ul>
-<details><summary>Bash command to run</summary>
-
-    `cat /etc/os-release`
-
-  </details>
-
+<details class="note"><summary>Bash command to run</summary><p><code>cat /etc/os-release</code></p>
+</details>
 <ul>
 <li>Check the CPU model</li>
 </ul>
-<details><summary>Solution</summary>
-
-    `cat /proc/cpuinfo`
-
-  </details>
-
+<details class="note"><summary>Bash command to run</summary><p><code>cat /proc/cpuinfo</code></p>
+</details>
 <ul>
 <li>This is the hardware model... how many cores do you have available ? Which amount of RAM ?</li>
 </ul>
-<details><summary>Solution</summary>
-
-      `htop` will give you your current usage and available cores, or you can do `nproc`
-
-  </details>
-
-<h3 id="google-cloud-shell-web-preview-magic">Google Cloud Shell web preview "magic"<a class="headerlink" href="#google-cloud-shell-web-preview-magic" title="Permanent link">🔗</a></h3>
+<details class="note"><summary>Help</summary><p><code>htop</code> will give you your current usage and available cores, or you can do <code>nproc</code></p>
+</details>
+<h3 id="a-demo-of-cloud-shell-web-preview">A demo of cloud shell web preview<a class="headerlink" href="#a-demo-of-cloud-shell-web-preview" title="Permanent link">🔗</a></h3>
 <p>We will install <a href="https://github.com/cdr/code-server/">Visual Studio Code Server</a>, which is a cloud-based text editor, on Cloud Shell and preview it from your browser.</p>
 <p>There is already a code editor in Google Cloud Shell (based on Theia) but we want to showcase the web preview as well, so we will do it manually,</p>
 <ul>
-<li>Enable <a href="https://cloud.google.com/shell/docs/how-cloud-shell-works#boost_mode">boost mode</a></li>
-<li>Download code-server <code>wget https://github.com/cdr/code-server/releases/download/v3.5.0/code-server-3.5.0-linux-x86_64.tar.gz</code></li>
-<li>What does wget do ?</li>
-<li>Unzip it <code>tar -xzvf code-server-3.5.0-linux-x86_64.tar.gz</code></li>
-<li>What is a tar archive ?</li>
-<li>Launch code server <code>code-server-3.5.0-linux-x86_64/bin</code>, <code>./code-server --port=8080</code> </li>
+<li>You may enable <a href="https://cloud.google.com/shell/docs/how-cloud-shell-works#boost_mode">boost mode</a></li>
+<li>Run <code>curl -fsSL https://code-server.dev/install.sh | sh</code> in your terminal to download &amp; install code server</li>
+<li>Run <code>code-server --port=8080</code> to start code server</li>
+<li>Shut it down (<code>CTRL+C</code>) then</li>
+<li>Fetch your password using <code>cat ~/.config/code-server/config.yaml</code></li>
+<li>Re-run it</li>
 <li><a href="https://cloud.google.com/shell/docs/using-web-preview">Open web preview on port 8080</a> and log in</li>
-<li>Your password is stored on your instance... quit cloud server, find it (<code>cat ~/.config/code-server/config.yaml</code>) and relaunch cloud server</li>
 <li>You should be able to open files, get a terminal from inside a vscode inside your browser inside a VM ... Magic isn't it ?</li>
 </ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
 <p>It is possible that the browser-based method does not work on your machine, there is a <a href="https://cloud.google.com/shell/docs/limitations#private_browsing_and_disabled_third-party_cookies">troubleshooting guide on this</a> (mainly it doesn't like too much privacy on your browser)</p>
 <p>The alternative solution would be to connect to it from your terminal / local shell using the google cloud sdk,</p>
 <p>Here is the documentation for <a href="https://cloud.google.com/sdk/gcloud/reference/alpha/cloud-shell">this</a></p>
-<details><summary>Command to run</summary>
-
-  To connect to your google cloud shell instance and enable web preview, the command to run is
-
-  `gcloud alpha cloud-shell ssh -- -L 8080:localhost:8080`
-
-</details>
-
+<p>Command to run in this case: <code>gcloud alpha cloud-shell ssh -- -L 8080:localhost:8080</code></p>
+</div>
 <h2 id="4-google-colaboratory">4. Google Colaboratory<a class="headerlink" href="#4-google-colaboratory" title="Permanent link">🔗</a></h2>
 <p>Here, you will look at Google Colaboratory, which is a very handy tool for doing data science work (based on jupyter notebooks) on the cloud, using a preconfigured instance (which can access a GPU). You will be able to store data on Google Drive and to share</p>
 <p><strong>I highly recommend using this for Jupyter based AML BE</strong>, but I invite you to discover google colab <em>at home, or during AML BE</em> because it's a useful tool but mastering it is not relevant for our cloud class</p>
@@ -768,33 +766,33 @@
 <ul>
 <li>Open <a href="https://colab.research.google.com/notebooks/intro.ipynb">Google Colab</a></li>
 <li><a href="https://ledatascientist.com/google-colab-le-guide-ultime/">Some intro</a>, <a href="https://towardsdatascience.com/getting-started-with-google-colab-f2fff97f594c">another one</a></li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Question</p>
+<ul>
 <li>Can you describe what it is ?</li>
 <li>Is it IaaS ? PaaS ? SaaS ? why exactly ?</li>
 </ul>
-<details><summary>Colab description</summary>
-
-  Colaboratory, or "Colab" for short, allows you to write and execute Python in your browser, with
-
-      Zero configuration required
-      Free access to GPUs
-      Easy sharing
-
-  It offers a "jupyter notebook - like" interface, and allows to install your own dependencies by running bash commands inside the VM, with connection to google drive, google sheets
-
-  You can manipulate the notebooks from your Google Drive and share it like it was a GDoc document
-
-  It's essentially between SaaS and PaaS, it offers you a development platform without you having to manage anything except your code and your data (which are both data from the cloud provider point of view)
-
-</details>
-
-<h3 id="loading-jupyter-notebooks-interacting-with-google-drive">Loading jupyter notebooks, interacting with google drive<a class="headerlink" href="#loading-jupyter-notebooks-interacting-with-google-drive" title="Permanent link">🔗</a></h3>
-<p><em>please do this at home or during AML BE</em></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Colaboratory, or "Colab" for short, allows you to write and execute Python in your browser, with</p>
 <ul>
-<li>Open a notebook you previously ran on your computer (from AML class), you can <a href="https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipynb">run a notebook on github directly in google colab</a></li>
+<li>Zero configuration required</li>
+<li>Free access to GPUs</li>
+<li>Easy sharing</li>
+</ul>
+<p>It offers a "jupyter notebook - like" interface, and allows to install your own dependencies by running bash commands inside the VM, with connection to google drive, google sheets</p>
+<p>You can manipulate the notebooks from your Google Drive and share it like it was a GDoc document</p>
+<p>It's essentially between SaaS and PaaS, it offers you a development platform without you having to manage anything except your code and your data (which are both data from the cloud provider point of view)</p>
+</div>
+<h3 id="loading-jupyter-notebooks-interacting-with-google-drive">Loading jupyter notebooks, interacting with google drive<a class="headerlink" href="#loading-jupyter-notebooks-interacting-with-google-drive" title="Permanent link">🔗</a></h3>
+<ul>
+<li>Open a notebook you previously ran on your computer (from AML class), you can <a href="https://colab.research.google.com/github/googlecolab/colabtools/blob/master/notebooks/colab-github-demo.ipOther references:ynb">run a notebook on github directly in google colab</a></li>
 <li>Try to run it inside google colab</li>
 <li>Link <a href="https://colab.research.google.com/notebooks/io.ipynb">google colab and google drive</a> and upload something on google drive (like an image) and display in on google colab</li>
 </ul>
-<p>Other references:</p>
+<h3 id="other-nice-usages-of-google-colab">Other nice usages of Google Colab<a class="headerlink" href="#other-nice-usages-of-google-colab" title="Permanent link">🔗</a></h3>
 <ul>
 <li><a href="https://colab.research.google.com/notebooks/markdown_guide.ipynb">Writing markdown to generate reports</a></li>
 <li><a href="https://colab.research.google.com/notebooks/snippets/importing_libraries.ipynb">Installing custom dependencies</a></li>

@@ -390,15 +390,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-bonus-introduction-to-infrastructure-as-code" class="md-nav__link">
-    4. BONUS Introduction to infrastructure as code
+  <a href="#4-introduction-to-infrastructure-as-code" class="md-nav__link">
+    4. Introduction to infrastructure as code
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-bonus-persistent-sessions-with-tmux" class="md-nav__link">
-    5. BONUS - Persistent sessions with TMUX
+  <a href="#5-persistent-sessions-with-tmux" class="md-nav__link">
+    5. Persistent sessions with TMUX
   </a>
   
 </li>
@@ -683,15 +683,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4-bonus-introduction-to-infrastructure-as-code" class="md-nav__link">
-    4. BONUS Introduction to infrastructure as code
+  <a href="#4-introduction-to-infrastructure-as-code" class="md-nav__link">
+    4. Introduction to infrastructure as code
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#5-bonus-persistent-sessions-with-tmux" class="md-nav__link">
-    5. BONUS - Persistent sessions with TMUX
+  <a href="#5-persistent-sessions-with-tmux" class="md-nav__link">
+    5. Persistent sessions with TMUX
   </a>
   
 </li>
@@ -719,7 +719,7 @@
 <p>However, like demonstrated earlier, you can use google cloud shell as the "front end" for GCP to run all gcloud commands from inside this VM</p>
 <p>However you have to have google chrome without too much privacy tools and a good wifi without firewall for it to work perfectly :) </p>
 <p>SSH from the cloud shell should also be possible from google cloud shell, and you will be able to use the web preview from your cloud shell to display a port on another machine (double ssh tunnel !)</p>
-<p>Otherwise for SSHing you will be able to use the web based ssh tools and port forwarding tools of google cloud platform: https://cloud.google.com/compute/docs/ssh-in-browser</p>
+<p>Otherwise for SSHing you will be able to use the web based ssh tools and port forwarding tools of google cloud platform: <a href="https://cloud.google.com/compute/docs/ssh-in-browser">https://cloud.google.com/compute/docs/ssh-in-browser</a></p>
 <h2 id="1-my-first-google-compute-engine-instance">1. My first Google Compute Engine Instance<a class="headerlink" href="#1-my-first-google-compute-engine-instance" title="Permanent link">🔗</a></h2>
 <p>First, we will make our first steps by creating a compute engine instance (a vm) using the console, connecting to it via SSH, interacting with it, uploading some files, and we will shut it down and make the magic happen by resizing it</p>
 <ul>
@@ -873,7 +873,7 @@
 <h3 id="create-a-google-compute-engine-instance-with-a-gpu-using-the-command-line">Create a google compute engine instance with a GPU using the command line<a class="headerlink" href="#create-a-google-compute-engine-instance-with-a-gpu-using-the-command-line" title="Permanent link">🔗</a></h3>
 <p><strong>This is very important for the next workshop</strong></p>
 <p>Instead of using the browser to create this machine, we will be using the <a href="https://cloud.google.com/ai-platform/deep-learning-vm/docs/cli">CLI to create instances</a></p>
-<div class="codehilite"><pre><span></span><code><span class="nb">export</span> <span class="nv">INSTANCE_NAME</span><span class="o">=</span><span class="s2">&quot;fch-dlvm-1&quot;</span> <span class="c1"># RENAME THIS !!!!!!!!!!</span>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">INSTANCE_NAME</span><span class="o">=</span><span class="s2">&quot;fch-dlvm-1&quot;</span> <span class="c1"># RENAME THIS !!!!!!!!!!</span>
 
 gcloud compute instances create <span class="nv">$INSTANCE_NAME</span> <span class="se">\</span>
         --zone<span class="o">=</span><span class="s2">&quot;europe-west4-a&quot;</span> <span class="se">\</span>
@@ -886,7 +886,6 @@ gcloud compute instances create <span class="nv">$INSTANCE_NAME</span> <span cla
         --boot-disk-size<span class="o">=</span>120GB <span class="se">\</span>
         --metadata<span class="o">=</span><span class="s2">&quot;install-nvidia-driver=True&quot;</span>
 </code></pre></div>
-
 <p><strong>If you can't access GPU, remove the line regarding gpu for now, and go and <a href="https://stackoverflow.com/questions/45227064/how-to-request-gpu-quota-increase-in-google-cloud">request a quota increase</a></strong> for your project so that you will be able to access gpus later (request the corresponding GPU)</p>
 <p>In that case, change <code>common-cu-100</code> for <code>common-cpu</code> and remove the metadata line</p>
 <ul>
@@ -923,8 +922,7 @@ gcloud compute instances create <span class="nv">$INSTANCE_NAME</span> <span cla
 <p>You can try to play with the jupyter lab (that has a code editor and terminal capabilities) to get a feel of manipulating a remote instance</p>
 <p>Try to <code>pip3 list</code> to check all dependencies installed !</p>
 <p><strong>DO NOT DELETE THE INSTANCE FOR NOW YOU WILL NEED IT LATER</strong></p>
-<h2 id="4-bonus-introduction-to-infrastructure-as-code">4. BONUS Introduction to infrastructure as code<a class="headerlink" href="#4-bonus-introduction-to-infrastructure-as-code" title="Permanent link">🔗</a></h2>
-<p>If you have finished,</p>
+<h2 id="4-introduction-to-infrastructure-as-code">4. Introduction to infrastructure as code<a class="headerlink" href="#4-introduction-to-infrastructure-as-code" title="Permanent link">🔗</a></h2>
 <ul>
 <li>
 <p><a href="https://cloud.google.com/deployment-manager/docs/quickstart">This tutorial</a> will guide you through google cloud deployment manager, which is a way to deploy google compute engine instances using configuration files</p>
@@ -933,11 +931,11 @@ gcloud compute instances create <span class="nv">$INSTANCE_NAME</span> <span cla
 <p>Don't forget to adapt machine configurations and zone to your use case (see above)</p>
 </li>
 </ul>
-<h2 id="5-bonus-persistent-sessions-with-tmux">5. BONUS - Persistent sessions with TMUX<a class="headerlink" href="#5-bonus-persistent-sessions-with-tmux" title="Permanent link">🔗</a></h2>
-<p>https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/</p>
+<h2 id="5-persistent-sessions-with-tmux">5. Persistent sessions with TMUX<a class="headerlink" href="#5-persistent-sessions-with-tmux" title="Permanent link">🔗</a></h2>
+<p><a href="https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/">https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/</a></p>
 <ul>
 <li>Connect to your instance using SSH</li>
-<li>Question: What happens if you start a long computation and disconnect ? </li>
+<li>Question: What happens if you start a long computation and disconnect ?</li>
 <li>Check that tmux is installed on the remote instance (run <code>tmux</code>). if not <a href="https://computingforgeeks.com/linux-tmux-cheat-sheet/">install it</a></li>
 <li>Follow this tutorial: https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/</li>
 <li>To check you have understood you should be able to:</li>

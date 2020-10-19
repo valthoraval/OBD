@@ -13,17 +13,25 @@ revealOptions:
     height: '100%'
 ---
 
-## Closing Slides
+## Summary, "BE"
 
 <!--v-->
 
-### Purpose of this class
+### Why this class ?
 
-"Classes about tooling are hard" especially at the beginning of the year
+* "General Knowledge" about cloud computing, docker, etc.
+* "Pointers" to look at if you need them later
+* "First experience" in manipulating very useful tools
 
-* "General Knowledge"
-* "Pointers"
-* "First experience" in manipulation
+<!--v-->
+
+### Challenges
+
+* Class about tooling...
+* ... At the beginning of the year...
+* ... it will make sense 💡 ...
+
+... six months from now ! 🔮  <!-- .element: class="fragment" data-fragment-index="1" -->
 
 <!--v-->
 
@@ -42,7 +50,7 @@ Remember the IT matrix from hell ?
 
 <!--v-->
 
-Welcome to the **ISAE HYPERCUBE FROM HELL**
+The 🔥 **ISAE HYPERCUBE FROM HELL** 🔥
 
 Consider the following variables:
 
@@ -67,16 +75,41 @@ That's real life...
 
 <!--v-->
 
-* Cloud Computing is a set of cloud providers renting infrastructure from datacenters
-* They also rent more and more complex services that range from infrastructure to platform
-* "Cloud computing" will be part of your job independently of your role in the data science field
-* Cloud computing can offer flexibility and scalability at the cost of "price" and "security"
+*WIP*
 
 <!--v-->
 
-* Virtualisation is the concept of "abstracting" and "slicing" hardware to run OSs and software on
-* This was an enabler of cloud computer to divide datacenters resources according to demand
-* However cloud computing led to a revolution in "usage" rather than "tech"
+#### SSH Tunnel, Port Forwarding
+
+> In computer networking, **a port is a communication endpoint**. At the software level, within an operating system, a port is a logical construct that identifies a specific process or a type of network service. **A port is identified for each transport protocol and address combination** by a 16-bit unsigned number, known as the port number. The most common transport protocols that use port numbers are the Transmission Control Protocol (TCP) and the User Datagram Protocol (UDP).
+
+[Wikipedia](https://en.wikipedia.org/wiki/Port_(computer_networking))
+
+<!--v-->
+
+#### Examples of protocols & usual ports
+
+Examples
+* SSH on port 22
+* HTTP on port 80
+* HTTPS on port 443
+
+http apps can serve content over specific ports
+
+Example
+* Jupyter default is 8888 (that's why you open http://localhost:8888)
+
+<!--v-->
+
+#### SSH Tunnels
+
+We usually connect to web app using http://{ip}:{port}
+
+😨 but what if the machine is not connected to the internet ?
+
+➡️ Enter SSH with port forwarding
+
+![ssh-tunnel](https://rufflewind.com/img/ssh-port-forwarding/local-port-forwarding-example.png)
 
 <!--s-->
 
@@ -118,7 +151,40 @@ That's real life...
 
 <!--v-->
 
-*WIP*
+#### We are going to
+
+![build-ship-run](https://en.wikitolearn.org/images/en/1/10/Screenshot_from_2018-08-23_17-06-33.png)
+
+using
+
+![gcp](https://thumbor.sd-cdn.fr/y0Eh5N1zXVewX9CW7KK1u05ukuU=/fit-in/1600x988/cdn.sd-cdn.fr/wp-content/uploads/2019/06/google-cloud.png) <!-- .element: height="20%" width="20%" -->
+
+<!--v-->
+
+#### Things you will do
+
+* Connect to a **GCP project** (with multiple people)
+* Create a **Google Compute Engine** instance
+* Connect to it with **SSH**
+* Build a **Docker Image** (using pre-made resources from **Google Cloud Storage**)
+* Push it to a **Container Registry**
+* Pull a teammate's **Image** from the same registry
+* Run the **container** and the app inside it
+* Use **port forwarding** to display the running app in your browser
+
+<!--v-->
+
+#### Team, assemble
+
+![assemble](https://media.giphy.com/media/12fNtUb1WhSqrK/giphy.gif)
+
+Get by groups of 4, cooperate, help each other out
+
+<!--v-->
+
+![readysetgo](https://media.giphy.com/media/l4FB2kRVn9LoXuWJO/giphy.gif)
+
+[BE walkthrough](exercise/4_be.html)
 
 <!--s-->
 

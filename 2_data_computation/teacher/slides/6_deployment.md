@@ -13,7 +13,29 @@ revealOptions:
     height: '100%'
 ---
 
-## Interactive example of deployment of containers on GCP
+## Interactive Demo for Kubernetes
 
 <!--v-->
 
+### What is it
+
+Two examples of **applications** deployed in a **Kubernetes cluster**
+
+* Development environment with jupyter notebook (a la google colab)
+* ML model + companion webapp to interact with it
+
+<!--s-->
+
+### Development environment
+
+<!--v-->
+
+*WIP*
+
+<!--s-->
+
+### ML Model deployed in "production"
+
+<!--v-->
+
+*WIP*

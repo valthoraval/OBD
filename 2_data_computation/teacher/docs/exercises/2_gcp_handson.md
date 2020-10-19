@@ -10,8 +10,7 @@ However you have to have google chrome without too much privacy tools and a good
 
 SSH from the cloud shell should also be possible from google cloud shell, and you will be able to use the web preview from your cloud shell to display a port on another machine (double ssh tunnel !)
 
-Otherwise for SSHing you will be able to use the web based ssh tools and port forwarding tools of google cloud platform: https://cloud.google.com/compute/docs/ssh-in-browser
-
+Otherwise for SSHing you will be able to use the web based ssh tools and port forwarding tools of google cloud platform: <https://cloud.google.com/compute/docs/ssh-in-browser>
 
 ## 1. My first Google Compute Engine Instance
 
@@ -206,20 +205,18 @@ Try to `pip3 list` to check all dependencies installed !
 
 **DO NOT DELETE THE INSTANCE FOR NOW YOU WILL NEED IT LATER**
 
-## 4. BONUS Introduction to infrastructure as code
-
-If you have finished,
+## 4. Introduction to infrastructure as code
 
 * [This tutorial](https://cloud.google.com/deployment-manager/docs/quickstart) will guide you through google cloud deployment manager, which is a way to deploy google compute engine instances using configuration files
 
 * Don't forget to adapt machine configurations and zone to your use case (see above)
 
-## 5. BONUS - Persistent sessions with TMUX
+## 5. Persistent sessions with TMUX
 
-https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
+<https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/>
 
 * Connect to your instance using SSH
-* Question: What happens if you start a long computation and disconnect ? 
+* Question: What happens if you start a long computation and disconnect ?
 * Check that tmux is installed on the remote instance (run `tmux`). if not [install it](https://computingforgeeks.com/linux-tmux-cheat-sheet/)
 * Follow this tutorial: https://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/
 * To check you have understood you should be able to:

@@ -51,7 +51,7 @@ Introduction | | | |
 --- | --- | --- | ---
 [Introduction to tools of Big Data](1_introduction) | 2h | 29/09/2020 | [Global Datasphere](readings/idc_data.pdf)
 
-[Data Computation](2_data_computation) | | | |
+Data Computation | | | |
 --- | --- | --- | ---
 [Cloud Computing & Google Cloud Platform](2_data_computation/site/#cloud-computing-4h) | 2h <br />2h | 07/10/2020 <br /> 14/10/2020| [Readings](2_data_computation/site/7_readings/#about-cloud-computing)
 [Containers](2_data_computation/site/#containers-2h) | 2h| 14/10/2020| [Readings](2_data_computation/site/7_readings/#about-orchestration)

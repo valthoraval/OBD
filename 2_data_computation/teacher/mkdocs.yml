@@ -1,7 +1,9 @@
 site_name: Data Computation Part 1
 site_description: Cloud Computing, Virtualisation, Containers & Orchestration
-strict: true
 site_url: https://supaerodatascience.github.io/OBD/2_data_computation/
+site_dir: ../site/
+strict: false
+use_directory_urls: false
 
 theme:
   name: 'material'
@@ -15,8 +17,6 @@ theme:
 
 repo_name: SupaeroDataScience/OBD
 repo_url: https://github.com/SupaeroDataScience/OBD
-use_directory_urls: false
-site_dir: ../site/
 
 nav:
 - Overview: index.md
@@ -45,6 +45,8 @@ markdown_extensions:
 - codehilite
 - extra
 - attr_list
+- pymdownx.details
+- pymdownx.superfences
 
 plugins:
 - search

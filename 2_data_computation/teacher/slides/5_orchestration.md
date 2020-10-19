@@ -13,11 +13,24 @@ revealOptions:
     height: '100%'
 ---
 
-## Containers Orchestration
+Today
+
+- **Recap**
+- **Class about Containers Orchestration**
+- **Interactive Demo**
+- **BE** (3h)
 
 <!--s-->
 
-### Microservices, REST
+## Containers Orchestration
+
+![orchestra](https://media.giphy.com/media/DPA3NUsVluONq/giphy.gif)
+
+<!--s-->
+
+### Architecturing applications
+
+(Microservices, rest)
 
 <!--v-->
 
