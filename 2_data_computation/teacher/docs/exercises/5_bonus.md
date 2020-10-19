@@ -32,6 +32,6 @@ This project will help you set up your own JupyterHub on a cloud and leverage th
 * Use [Google Kubernetes Engine](https://zero-to-jupyterhub.readthedocs.io/en/latest/google/step-zero-gcp.html) to setup your cluster
 
 !!! info
-    You will use the same method later in the year to [setup a Dask Kubernetes cluster using help](https://docs.dask.org/en/latest/setup/kubernetes-helm.html)
+    You will use the same method later in the year to [setup a Dask Kubernetes cluster using helm](https://docs.dask.org/en/latest/setup/kubernetes-helm.html)
 
 * Give some people the public IP of your cluster so that they can connect to it... try to make it scale !

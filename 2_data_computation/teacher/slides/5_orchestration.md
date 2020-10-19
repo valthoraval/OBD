@@ -28,13 +28,38 @@ Today
 
 <!--s-->
 
-### Architecturing applications
-
-(Microservices, rest)
+### Architecturing (web) applications
 
 <!--v-->
 
-*WIP*
+#### Communicating between applications
+
+![api](https://www.aloi.io/wp-content/uploads/2019/09/api-visual.png) <!-- .element: height="50%" width="50%" -->
+
+
+<!--v-->
+
+#### REST API
+
+Representational state transfer (REST)
+
+![rest](https://images.tutorialedge.net/uploads/rest-api.png) <!-- .element: height="50%" width="50%" -->
+
+<!--v-->
+
+#### Microservices vs "monoliths"
+
+![microservices](https://www.redhat.com/cms/managed-files/monolithic-vs-microservices.png)
+
+PS: [Microservices are hard](https://dwmkerr.com/the-death-of-microservice-madness-in-2018/)
+
+<!--v-->
+
+However, scaling just means... **a lot of containers**
+
+* How do you manage them ?
+* How do you interact with them ?
+* How do you update them ?
 
 <!--s-->
 
@@ -43,10 +68,6 @@ Today
 <!--v-->
 
 <img src="https://devopedia.org/images/article/37/6042.1530784538.jpg" alt="" style="width: 50%; height: 50%; background:none; border:none; box-shadow:none;"/>
-
-<!--s-->
-
-### Ecosystem
 
 <!--v-->
 

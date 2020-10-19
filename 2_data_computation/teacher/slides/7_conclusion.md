@@ -155,6 +155,12 @@ We usually connect to web app using `http://{ip}:{port}`
 
 ![tunnelception](static/img/tunnelception.png)
 
+<!--v-->
+
+#### Remote Development
+
+![remote](https://code.visualstudio.com/assets/docs/remote/containers/architecture-containers.png)
+
 <!--s-->
 
 ### Take-away for Containers

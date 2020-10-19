@@ -1,6 +1,5 @@
 # Orchestration & Kubernetes
 
-
 [Link to slides](lectures/5_orchestration.html)
 
 <iframe

@@ -39,7 +39,7 @@ Intro to container orchestra  features
 Date | Type | Link | Description |
 | --- | --- | --- | --- |
 20/10 | Lecture |  [Microservices, Orchestration, Kubernetes](lectures/5_orchestration.html) | *Learn about webservices, microservices, restful apis, docker compose, container orchestration and kubernetes* |
-20/10 | Interactive | [A development env on Kubernetes](lectures/6_deployment.html) and [Deploying ML models into production](lectures/6_deployment.html) | *Interactive demos of deployment & scalability with Docker and Kubernetes* |
+20/10 | Interactive | [A development env on Kubernetes](lectures/6_deployment.html#/1) and [Deploying ML models into production](lectures/6_deployment.html#/2) | *Interactive demos of deployment & scalability with Docker and Kubernetes* |
 At Home | Bonus Hands-on | [My first kubernetes cluster for a development environment](exercises/5_bonus.md) | *Where we deploy a development environment on Kubernetes* |
 20/10 | Recap | [Important notions about Orchestration](lectures/7_conclusion.html#/3) | *A recap of important notions* |
 
