@@ -36,7 +36,6 @@ Today
 
 ![api](https://www.aloi.io/wp-content/uploads/2019/09/api-visual.png) <!-- .element: height="50%" width="50%" -->
 
-
 <!--v-->
 
 #### REST API
@@ -53,13 +52,40 @@ Representational state transfer (REST)
 
 PS: [Microservices are hard](https://dwmkerr.com/the-death-of-microservice-madness-in-2018/)
 
+<!--s-->
+
+### Scaling up (a little story)
+
 <!--v-->
 
-However, scaling just means... **a lot of containers**
+I have an **awesome** ML model
 
-* How do you manage them ?
-* How do you interact with them ?
-* How do you update them ?
+![model](https://media.geeksforgeeks.org/wp-content/uploads/cat-vs-dog.jpg)
+
+<!--v-->
+
+![package](static/img/packaging.png)
+
+<!--v-->
+
+![serving](https://www.ovh.com/blog/wp-content/uploads/2020/04/548C09AD-B622-411D-B02A-644C7AECDDAB.jpeg)
+
+<!--v-->
+
+In prod now ?
+
+<!--v-->
+
+#### Questions
+
+Suppose I have a large pool of machines available
+
+* How do I **deploy my container** ? <!-- .element: class="fragment" data-fragment-index="1" -->
+* How do I **put the right containers at the right spot** ? <!-- .element: class="fragment" data-fragment-index="2" -->
+* How do I **scale (up and down) to demand** ? <!-- .element: class="fragment" data-fragment-index="3" -->
+* How do I **expose the http endpoints** ? <!-- .element: class="fragment" data-fragment-index="4" -->
+* How do I **manage failure of containers** ? <!-- .element: class="fragment" data-fragment-index="5" -->
+* How do I **update my model without downtime** ? <!-- .element: class="fragment" data-fragment-index="6" -->
 
 <!--s-->
 
@@ -71,32 +97,136 @@ However, scaling just means... **a lot of containers**
 
 <!--v-->
 
+Examples...
+
 - Docker Swarm
+- CoreOS Fleet
 - [Apache Mesos](https://mesos.apache.org/) / [Marathon](https://github.com/mesosphere/marathon)
 
 ... and so many more !
 
-![](https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F996C7D4B5AF43B6C27)
+![ecosystem](https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F996C7D4B5AF43B6C27)
+
+<!--v-->
+
+![kub](https://miro.medium.com/max/1320/1*Mdj9wylSl0wqJ9sB0ENbRA.png)
 
 <!--s-->
 
-### Kubernetes
+### Kubernetes ("Helmsman")
 
-![](https://media.giphy.com/media/l0Iyj8mER3cwNqJ6o/giphy.gif)
+![helm](https://media.giphy.com/media/l0Iyj8mER3cwNqJ6o/giphy.gif)
+
+<!--v-->
+
+Kubernetes (or k8s) comes from Google's internal systems [Borg](https://github.com/SupaeroDataScience/OBD/blob/master/readings/borg.pdf)
+
+It is open source now <https://github.com/kubernetes> and used... everywhere ?
 
 <!--v-->
 
 ### [Kubernetes](https://kubernetes.io/docs/concepts/overview/what-is-kubernetes/)
 
-- Intelligent and balanced scheduling of containers
+![k8s](https://res.cloudinary.com/canonical/image/fetch/f_auto,q_auto,fl_sanitize,w_250,h_195/https://assets.ubuntu.com/v1/767f38a4-kubernetes-stacked-color.svg)
+
+Kubernetes manages your containers on a cluster of machine while taking care of 
+
 - Creation, deletion, and movement of containers
-- Easy scaling of containers
-- Monitoring and self-healing abilities
+- Scheduling (match containers to machines by ressources etc.)
+- Scaling of containers
+- Serving of containers through unified endpoints
+- Monitoring and healing
 
 <!--v-->
 
-![](https://mapr.com/products/kubernetes/assets/containers-in-pods.png)
+😱 😱 😱 😱
+
+![k8s](https://platform9.com/wp-content/uploads/2019/05/kubernetes-constructs-concepts-architecture-1024x800.jpg) <!-- .element: height="40%" width="40%" -->
 
 <!--v-->
 
-[Kubernetes comic !](https://cloud.google.com/kubernetes-engine/kubernetes-comic/)
+🤗 🤗 🤗
+
+![k8s](static/img/k8s.png)  <!-- .element: height="40%" width="40%" -->
+
+<!--v-->
+
+Pods, Nodes
+
+![pods-nodes](https://matthewpalmer.net/kubernetes-app-developer/articles/networking-overview.png) <!-- .element: height="50%" width="50%" -->
+
+<!--v-->
+
+Endpoints
+
+![service](https://storage.googleapis.com/static.ianlewis.org/prod/img/753/endpoints.png) <!-- .element: height="50%" width="50%" -->
+
+<!--v-->
+
+Updating
+
+![rolling](static/img/rolling.png) <!-- .element: height="50%" width="50%" -->
+
+<!--v-->
+
+"Declarative" programming, cloud agnostic
+
+![declarative](https://miro.medium.com/max/1126/1*bwrbghRAwtf6lEVvoJCbyQ.png)
+
+<!--v-->
+
+Welcome to YAML programming
+
+`kubectl apply -f deployment.yaml`
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels:
+    app: nginx
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
+```
+
+<!--v-->
+
+![helm](static/img/helm.png)  <!-- .element: height="50%" width="50%" -->
+
+Example: <https://artifacthub.io/packages/helm/dask/dask>
+
+<!--v-->
+
+GCP + k8s = ❤️‍
+
+![GKE](https://venturebeat.com/wp-content/uploads/2018/05/image11.png?w=1200&strip=all) <!-- .element: height="50%" width="50%" -->
+
+<!--v-->
+
+![sailing](static/img/sailing.png)
+
+[comic](https://cloud.google.com/kubernetes-engine/kubernetes-comic/)
+
+<!--v-->
+
+Play with k8s
+
+<https://www.katacoda.com/courses/kubernetes>
+
+<https://labs.play-with-k8s.com/>
+
+<https://github.com/yogeek/kubernetes-local-development>
