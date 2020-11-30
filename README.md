@@ -57,9 +57,10 @@ Data Computation | | | |
 [Containers](2_data_computation/site/#containers-2h) | 2h| 14/10/2020| [Readings](2_data_computation/site/7_readings/#about-orchestration)
 [Orchestration](2_data_computation#orchestration-deployment-1h) | 1h | 20/10/2020 | [Readings](2_data_computation/site/7_readings/#about-containers) |
 [BE](2_data_computation/site/#final-be-3h) | 3h | 20/10/2020 | *TBD*
-Cluster Computing | 2h | 18/11/2020 | [SLURM](readings/slurm.pdf)
-GPU computing, part 1 | 3h | 01/12/2020 | *TBD* |
-GPU computing, part 2 | 3h | 02/12/2020 | *TBD* |
+Cluster Computing | 2h | TBD| [SLURM](readings/slurm.pdf)
+GPU computing, part 1 | 3h | 01/12/2020 | [GPGPU TP](https://lms.isae.fr/course/view.php?id=1226&section=2) |
+GPU computing, part 2 | 3h | 02/12/2020 | [GPGPU TP](https://lms.isae.fr/course/view.php?id=1226&section=2) |
+
 
 Data Distribution | | | |
 --- | --- | --- | ---
