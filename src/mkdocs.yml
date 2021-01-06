@@ -1,0 +1,59 @@
+site_name: Tools of Big Data
+site_description: Big Data class at ISAE-Supaero as part of the SDD program
+site_url: https://supaerodatascience.github.io/OBD/
+site_dir: site
+strict: false
+use_directory_urls: false
+
+theme:
+  name: 'material'
+  palette:
+    primary: light blue
+    accent: light blue
+  logo: 'https://raw.githubusercontent.com/SupaeroDataScience/OBD/main/src/favicon.ico'
+  favicon: 'https://raw.githubusercontent.com/SupaeroDataScience/OBD/main/src/favicon.ico'
+  features:
+    - toc.autohide
+    - navigation.sections
+
+repo_name: SupaeroDataScience/OBD
+repo_url: https://github.com/SupaeroDataScience/OBD
+
+nav:
+- Overview: index.md
+- Data Computation:
+  - Introduction: 1_1_overview.md
+  - Presentation: 1_1_presentation.md
+  - Cloud Computing:
+    - Lectures: 1_2_cloud.md
+    - TP 1 GCP Initial Setup & First Steps : 1_2_gcp_setup.md
+    - TP 2 GCP Hands On: 1_2_gcp_handson.md
+  - Containers, Docker:
+    - Lecture: 1_3_containers.md
+    - TP: 1_3_docker.md
+  - Orchestration, Deployment, Kubernetes:
+    - Lecture: 1_4_orchestration.md
+    - Interactive Hands On: 1_5_deployment.md
+    - TP: 1_5_bonus.md
+  - Cloud and Docker BE: 1_4_be.md
+  - Conclusion: 1_6_conclusion.md
+  - Reading List: 1_7_readings.md
+- Data Distribution:
+    - Introduction: 2_1_intro.md
+- Databases:
+    - Introduction: 3_1_intro.md
+
+markdown_extensions:
+- markdown.extensions.codehilite:
+    guess_lang: false
+- toc:
+    permalink: 🔗
+- admonition
+- codehilite
+- extra
+- attr_list
+- pymdownx.details
+- pymdownx.superfences
+
+plugins:
+- search
