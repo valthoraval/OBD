@@ -27,6 +27,7 @@ Once you have a Julia Jupyter kernel, follow this **Julia for Pythonistas** note
 ## Functional Programming in Julia
 
 Julia documentation explaining:
+
 + [Functions](https://docs.julialang.org/en/v1/manual/functions/), showing that they are first-class
 + [the `map` function](https://docs.julialang.org/en/v1/base/collections/#Base.map) which is a higher-order function
 + [distributed computing](https://docs.julialang.org/en/v1/manual/distributed-computing/) allowing for transfer of functions between threads or workers
@@ -34,6 +35,7 @@ Julia documentation explaining:
 ## Distributed Data in Julia
 
 Julia's base language supports distributed calculation but there are a few packages which facilitate data processing tasks over distributed data: 
+
 + [DistributedArrays](https://github.com/JuliaParallel/DistributedArrays.jl) - A general Array type which can be distributed over multiple workers.
 + [JuliaDB](https://juliadb.org/) - A data structuring package which automatically handles distributed data storage and computation
 + [Spark.jl](https://github.com/dfdx/Spark.jl) - A Julia interface to Apache Spark. [Related blog post](https://juliacomputing.com/blog/2020/06/julia-spark/).
