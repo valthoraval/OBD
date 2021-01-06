@@ -39,7 +39,12 @@ nav:
   - Conclusion: 1_6_conclusion.md
   - Reading List: 1_7_readings.md
 - Data Distribution:
-    - Introduction: 2_1_intro.md
+  - Introduction: 2_1_overview.md
+  - Functional Programming: 2_2_functional.md
+  - MapReduce and HDFS: 2_3_mapreduce.md
+  - Spark: 2_4_spark.md
+  - Dask on Kubernetes: 2_5_dask.md
+  - Dask project: 2_6_project.md
 - Databases:
     - Introduction: 3_1_intro.md
 

@@ -45,31 +45,28 @@ The class is structured in three parts:
 
 ## Class schedule
 
-Class dates are subject to change. Please refer to Hyerplng for detailed scheduling.
-
 Introduction | | | |
 --- | --- | --- | ---
 [Introduction to tools of Big Data](1_introduction) | 2h | 29/09/2020 | [Global Datasphere](https://github.com/SupaeroDataScience/OBD/tree/master/readings/idc_data.pdf)
 
 Data Computation | | | |
 --- | --- | --- | ---
-[Cloud Computing & Google Cloud Platform](1_1_overview.md) | 2h <br />2h | 07/10/2020 <br /> 14/10/2020| [Https://Github.Com/SupaeroDataScience/OBD/Tree/Master/Readings](1_7_readings.md#about-cloud-computing)
-[Containers](1_3_containers.md) | 2h| 14/10/2020| [Https://Github.Com/SupaeroDataScience/OBD/Tree/Master/Readings](1_7_readings.md#about-orchestration)
-[Orchestration](1_4_orchestration.md) | 1h | 20/10/2020 | [Https://Github.Com/SupaeroDataScience/OBD/Tree/Master/Readings](1_7_readings.md#about-containers) |
+[Cloud Computing & Google Cloud Platform](1_1_overview.md) | 2h <br />2h | 07/10/2020 <br /> 14/10/2020| [Readings](1_7_readings.md#about-cloud-computing)
+[Containers](1_3_containers.md) | 2h| 14/10/2020| [Readings](1_7_readings.md#about-orchestration)
+[Orchestration](1_4_orchestration.md) | 1h | 20/10/2020 | [Readings](1_7_readings.md#about-containers) |
 [Cloud Compute BE](1_4_be.md) | 3h | 20/10/2020 | 
-Cluster Computing | 2h | TBD| [SLURM](https://github.com/SupaeroDataScience/OBD/tree/master/readings/slurm.pdf)
 GPU computing, part 1 | 3h | 01/12/2020 | [GPGPU TP](https://lms.isae.fr/course/view.php?id=1226&section=2) |
 GPU computing, part 2 | 3h | 02/12/2020 | [GPGPU TP](https://lms.isae.fr/course/view.php?id=1226&section=2) |
 
 
-Data Distribution | | | |
---- | --- | --- | ---
-Data distribution | 1h | 06/01/2021 | [Spanner](https://github.com/SupaeroDataScience/OBD/tree/master/readings/spanner.pdf)
-Functional programming | 4h | 06/01/2021 | [Julia](https://github.com/SupaeroDataScience/OBD/tree/master/readings/julia.pdf)
-MapReduce and HDFS | 3h | 19/01/2021 | [MapReduce](https://github.com/SupaeroDataScience/OBD/tree/master/readings/mapreduce.pdf)
-Spark | 3h | 19/01/2021 | [Spark](https://github.com/SupaeroDataScience/OBD/tree/master/readings/spark.pdf)
-PySpark | 3h | 20/01/2021 | [PySpark](https://spark.apache.org/docs/latest/api/python/pyspark.html)
-Dask project | 6h | 27/01/2021 | [Dask](https://github.com/SupaeroDataScience/OBD/tree/master/readings/dask.pdf) <br> [Ray, a distributed computing alternative](https://docs.ray.io/en/latest/whitepaper.html)
+| Data Distribution | | | Readings |
+| --- | --- | --- | --- |
+| [Data distribution](2_1_overview.md) | 1h | 06/01/2021 | [Spanner](https://github.com/SupaeroDataScience/OBD/tree/master/readings/spanner.pdf) |
+| [Functional programming](2_2_functional.md) | 4h | 06/01/2021 | [Julia](https://github.com/SupaeroDataScience/OBD/tree/master/readings/julia.pdf) |
+| [MapReduce and HDFS](2_3_mapreduce.md) | 3h | 19/01/2021 | [MapReduce](https://github.com/SupaeroDataScience/OBD/tree/master/readings/mapreduce.pdf) |
+| [Spark](2_4_spark.md) | 3h | 19/01/2021 | [Spark](https://github.com/SupaeroDataScience/OBD/tree/master/readings/spark.pdf), [PySpark](https://spark.apache.org/docs/latest/api/python/pyspark.html) |
+| [Dask on Kubernetes](2_5_dask.md)| 3h | 20/01/2021 | [Dask documentation](https://docs.dask.org/en/latest/setup/kubernetes.html) |
+| [Dask project](2_6_project.md) | 6h | 27/01/2021 | [Dask](https://github.com/SupaeroDataScience/OBD/tree/master/readings/dask.pdf) |
 
 Databases | | | |
 --- | --- | --- | ---
