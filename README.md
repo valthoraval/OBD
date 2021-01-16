@@ -19,6 +19,8 @@ students will use for data analysis and knowledge extraction using skills
 acquired in the Algorithms of Machine Learning and Digital Economy and Data Uses
 classes.
 
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/guillaumeeb/OBD/master?urlpath=lab)
+
 ## Class structure
 
 The class is structured in three parts:
