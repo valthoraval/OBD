@@ -78,3 +78,9 @@ Databases overview | 2h | 03/02/2021 | [Database Systems](readings/fntdb07-archi
 PostgeSQL TP | 3h | 08/02/2021 | [PostgeSQL](https://www.postgresql.org/docs/manuals/)
 Project overview | 2h | 15/02/2021 |
 Project presentations | 2h | 08/03/2021 |
+
+## Use with Binder
+
+Some of the notebooks from this class (Julia, Spark ...) can be launched with MyBinder:
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/SupaeroDataScience/OBD/master?urlpath=lab)
