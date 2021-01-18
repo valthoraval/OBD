@@ -66,10 +66,11 @@ Data Distribution | | | |
 --- | --- | --- | ---
 Data distribution | 1h | 06/01/2021 | [Spanner](readings/spanner.pdf)
 Functional programming | 4h | 06/01/2021 | [Julia](readings/julia.pdf)
-MapReduce and HDFS | 3h | 19/01/2021 | [MapReduce](readings/mapreduce.pdf)
-Spark | 3h | 19/01/2021 | [Spark](readings/spark.pdf)
-PySpark | 3h | 20/01/2021 | [PySpark](https://spark.apache.org/docs/latest/api/python/pyspark.html)
-Dask project | 6h | 27/01/2021 | [Dask](readings/dask.pdf) <br> [Ray, a distributed computing alternative](https://docs.ray.io/en/latest/whitepaper.html)
+MapReduce, HDFS and Beyond | 3h | 19/01/2021 | [MapReduce](readings/mapreduce.pdf)
+Spark and PySpark | 3h | 19/01/2021 | [Spark](readings/spark.pdf) <br> [PySpark](https://spark.apache.org/docs/latest/api/python/pyspark.html)
+Kubernetes and Helm | 3h | 20/01/2021 | [K8S](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/) <br> [Helm](https://blog.wescale.fr/2018/05/31/introduction-a-helm/)
+Dask Tutorial | 2h | 27/01/2021 | [Dask](readings/dask.pdf) <br> [Ray, a distributed computing alternative](https://docs.ray.io/en/latest/whitepaper.html)
+Dask project | 4h | 27/01/2021 | [Dask ML](https://ml.dask.org/)
 
 Databases | | | |
 --- | --- | --- | ---
