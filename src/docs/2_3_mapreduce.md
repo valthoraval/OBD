@@ -9,4 +9,6 @@ Slides available [on the LMS](https://lms.isae.fr/pluginfile.php/150058/mod_reso
 The second part of this class is an interactive notebook in the Julia language
 covering the MapReduce programming framework, from simple addition queries to matrix factorization.
 
-[Notebook](https://github.com/SupaeroDataScience/OBD/blob/master/notebooks/Introduction%20to%20MapReduce.ipynb)
+[MapReduce notebook](https://github.com/SupaeroDataScience/OBD/blob/master/notebooks/Introduction%20to%20MapReduce.ipynb)
+
+[MapReduce notebook on Colab](https://colab.research.google.com/github/SupaeroDataScience/OBD/blob/master/notebooks/Introduction%20to%20MapReduce.ipynb) (requires adding Julia kernel installation)
