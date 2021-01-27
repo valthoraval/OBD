@@ -8,4 +8,6 @@
 
 [Dask tutorial](https://github.com/dask/dask-tutorial)
 
-The evaluation for this class is a Dask notebook. You should complete the exercises and answer the questions in the notebook, then turn it in through the [LMS](https://lms.isae.fr/mod/assign/view.php?id=69921). You may work with a partner, in this case make sure to specify in your notebook that you worked together.
+[BE notebook](https://github.com/SupaeroDataScience/OBD/blob/master/notebooks/BEDaskMLTaxyCabEmpty.ipynb)
+
+The evaluation for this class is a [Dask notebook](https://github.com/SupaeroDataScience/OBD/blob/master/notebooks/BEDaskMLTaxyCabEmpty.ipynb). You should run this notebook on a Daskhub using Kubernetes, like in the [Dask on Kubernetes class](https://supaerodatascience.github.io/OBD/2_5_dask.html) with instructions in [this notebook](https://github.com/SupaeroDataScience/OBD/blob/master/notebooks/Kubernetes_Daskhub.ipynb). You should complete the exercises and answer the questions in the notebook, then turn it in through the [LMS](https://lms.isae.fr/mod/assign/view.php?id=69921). You may work with a partner, in this case make sure to specify in your notebook that you worked together.
