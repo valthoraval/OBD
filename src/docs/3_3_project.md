@@ -1,10 +1,10 @@
 # Databases Project
 
-The evaluation of the databases class is a presentation of a specific database. You can work in teams of 5 of your choosing.
+The evaluation of the databases class is a presentation of a specific database. You can work in teams of 4 of your choosing.
 
-You are working in a company which is looking to replace a relational DBMS currently in use. Each team should present a feasability study of a specific DBMS, showing its advantages, disadvantages, and use cases.
+You are working in a company which is looking to replace a relational DBMS currently in use. Each team should present a feasability study of a specific DBMS, showing its advantages, disadvantages, and use cases. Two different teams will work on each DBMS. We will organize the subjects on 10/02/2021, which is a work class dedicated to the project.
 
-The DBMS are:
+The DBMSs are:
 
 1. [InfluxDB](https://www.influxdata.com/get-influxdb/), a distributed DBMS optimized for timeseries data
 2. [Riak](http://basho.com/products/), a key/value DBMS inspired Amazon BD.
@@ -17,7 +17,7 @@ The DBMS are:
 Each team should:
 
 + install their DBMS
-+ test the DBMS on a relevant database (data can be found here: https://datasetsearch.research.google.com/,https://www.kaggle.com/datasets)
++ test the DBMS on a relevant database (datasets from [Google](https://datasetsearch.research.google.com/), and [kaggle](https://www.kaggle.com/datasets))
 + compare their DBMS with a relational database system
 + prepare a presentation of their DBMS and example database which presents convincing argument for using this DBMS.
 
