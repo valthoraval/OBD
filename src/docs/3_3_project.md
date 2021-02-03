@@ -5,6 +5,7 @@ The evaluation of the databases class is a presentation of a specific database. 
 You are working in a company which is looking to replace a relational DBMS currently in use. Each team should present a feasability study of a specific DBMS, showing its advantages, disadvantages, and use cases.
 
 The DBMS are:
+
 1. [InfluxDB](https://www.influxdata.com/get-influxdb/), a distributed DBMS optimized for timeseries data
 2. [Riak](http://basho.com/products/), a key/value DBMS inspired Amazon BD.
 3. [HBase](https://hbase.apache.org/), a column-based DBMS inspired by BigTable
@@ -14,6 +15,7 @@ The DBMS are:
 7. [Redis](http://redis.io/), a very efficient key/value DBMS
 
 Each team should:
+
 + install their DBMS
 + test the DBMS on a relevant database (data can be found here: https://datasetsearch.research.google.com/,https://www.kaggle.com/datasets)
 + compare their DBMS with a relational database system

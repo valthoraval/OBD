@@ -72,5 +72,5 @@ Databases | | | |
 --- | --- | --- | ---
 [Databases overview](3_1_databases.md) | 2h | 03/02/2021 | [Database Systems](https://github.com/SupaeroDataScience/OBD/tree/master/readings/fntdb07-architecture.pdf)
 [PostgeSQL TP](3_2_postgres.md) | 3h | 08/02/2021 | [PostgeSQL](https://www.postgresql.org/docs/manuals/)
-[Project work day](3_3_project.md) | 2h | 15/02/2021 |
+[Project work day](3_3_project.md) | 2h | 10/02/2021 |
 [Project presentations](3_3_project.md) | 2h | 08/03/2021 |

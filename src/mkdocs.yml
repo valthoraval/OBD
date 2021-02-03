@@ -48,7 +48,7 @@ nav:
 - Databases:
     - Introduction: 3_1_databases.md
     - PostgreSQL: 3_2_postgres.md
-    - Project: 3_3_porject.md
+    - Project: 3_3_project.md
 
 markdown_extensions:
 - markdown.extensions.codehilite:
