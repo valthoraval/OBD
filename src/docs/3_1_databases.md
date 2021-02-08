@@ -15,3 +15,10 @@ Databases | | | |
 [PostgeSQL TP](3_2_postgres.md) | 3h | 08/02/2021 | [PostgeSQL](https://www.postgresql.org/docs/manuals/)
 [Project work day](3_3_project.md) | 2h | 10/02/2021 |
 [Project presentations](3_3_project.md) | 2h | 08/03/2021 |
+
+## Additional Resources
+
+[Databases introduction (fr)](https://lms.isae.fr/pluginfile.php/72085/mod_resource/content/2/bdd.pdf): includes an explanation of DBMSs, SQL, and PostgreSQL.
+
+[A comprehensive overview of database systems (en)](https://github.com/SupaeroDataScience/OBD/tree/master/readings/fntdb07-architecture.pdf)
+
