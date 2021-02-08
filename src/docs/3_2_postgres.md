@@ -32,7 +32,7 @@ This database contains data from the 1986 football World Cup.
 Download the creation and insertion [scripts](https://github.com/SupaeroDataScience/OBD/tree/master/scripts) and run the scripts in the `mexico` folder.
 
 ```bash
-$ psql -d db-mexico86 mexico86/create-tables-std.sql
+$ psql -d db-mexico86 -f mexico86/create-tables-std.sql
 ```
 
 **Exercise 1.1**: Look at the database creation scripts. What are the tables being created? What are their fields? Which fields are keys? Confirm these values in pgAdmin.
@@ -213,8 +213,8 @@ We'll now use a database which tracks the beers that a group of friends enjoy. C
 
 ```bash
 $ createdb db-beer
-$ psql -d db-beer beer/create-tables-std.sql
-$ psql -d db-beer beer/insert.sql
+$ psql -d db-beer -f beer/create-tables-std.sql
+$ psql -d db-beer -f beer/insert.sql
 ```
 
 **Exercise 2.1**: Look at the database creation scripts. What are the tables being created? What are their fields? Which fields are keys? Confirm these values in pgAdmin.
