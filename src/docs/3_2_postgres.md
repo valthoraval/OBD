@@ -35,19 +35,34 @@ $ psql -d db-mexico86 mexico86/create-tables-std.sql
 
 **Exercise 1.1**: Look at the database creation scripts. What are the tables being created? What are their fields? Which fields are keys? Confirm these values in pgAdmin.
 
-<details><summary>Answer</summary>
+<details><summary>Response</summary>
 
 | Table | Fields |
 | ----  | ------ |
-| Pays  | (<u>nom</u>, poule) |
+| Pays  | (<u>nom</u>, groupe) |
 | Typematch  | (<u>type</u>) |
 | Match  | (<u>paysl, paysv</u>, butsl, butsv, <u>type</u>, date)
 
-  </details>
+</details>
+
+You should be able to make queries now. You can either use PostgreSQL in interactive mode by running 
+
+```
+$ psql -d db-mexico86
+```
+
+or write your solutions in an SQL file and run the file:
+
+```
+$ echo "SELECT groupe FROM pays;" > a.sql
+$ psql -d db-mexico86 -f a.sql
+```
+
+You can also use the Query Editor in pgAdmin for a graphical interface.
   
 **Exercise 1.2**: Write a query which lists the countries participating in the World Cup.
 
-<details><summary>Answer</summary>
+<details><summary>Response</summary>
 
 ```
         nom 
@@ -83,7 +98,7 @@ Portugal
 
 **Exercise 1.3**: Write a query which lists all matches as a pair of countries per match.
 
-<details><summary>Answer</summary>
+<details><summary>Response</summary>
 
 ```
         paysl        |        paysv 
@@ -146,7 +161,7 @@ RFA                 | Argentine
 
 **Exercise 1.4**: Write a query which lists the matches which took place on June 5, 1986.
 
-<details><summary>Answer</summary>
+<details><summary>Response</summary>
 
 ```
         paysl        |   paysv
@@ -161,7 +176,7 @@ France              | URSS
 
 **Exercise 1.5**: Write a query which lists the countries which France played against (hint, France could have played either side).
 
-<details><summary>Answer</summary>
+<details><summary>Response</summary>
 
 ```
 pays
@@ -179,7 +194,7 @@ URSS
 
 **Exercise 1.6**: Write a query which returns the winner of the World Cup
 
-<details><summary>Answer</summary>
+<details><summary>Response</summary>
 
 ```
 pays
@@ -192,20 +207,17 @@ Argentine
 
 ## Beer database
 
-We'll now use a database which tracks the beers that a group of friends enjoy. Create the database and populate it using the provided [scripts]
+We'll now use a database which tracks the beers that a group of friends enjoy. Create the database and populate it using the provided [scripts](https://github.com/SupaeroDataScience/OBD/tree/master/scripts).
 
 ```bash
 $ createdb db-beer
-```
-
-```bash
-$ psql -d beer beer/create-tables-std.sql
-$ psql -d beer beer/insert.sql
+$ psql -d db-beer beer/create-tables-std.sql
+$ psql -d db-beer beer/insert.sql
 ```
 
 **Exercise 2.1**: Look at the database creation scripts. What are the tables being created? What are their fields? Which fields are keys? Confirm these values in pgAdmin.
 
-<details><summary>Answer</summary>
+<details><summary>Response</summary>
 
 Frequente: (<u>buveur, bar</u>)
 
@@ -215,11 +227,11 @@ Aime: (<u>buveur, biere</u>)
 
 </details>
 
-Write queries which respond to the following questions:
+Write queries which respond to the following questions. Hint, understanding [natural joins](https://sql.sh/cours/jointures/natural-join) may help.
 
 **Exercise 2.2** What is the list of bars which serve the beer that Martin likes?
 
-<details><summary>Answer</summary>
+<details><summary>Response</summary>
 
 ```
         bar 
@@ -234,7 +246,7 @@ Write queries which respond to the following questions:
 
 **Exercise 2.3** What is the list of drinkers who go to at least one bar which servers a beer they like?
 
-<details><summary>Answer</summary>
+<details><summary>Response</summary>
 
 ```
  buveur 
@@ -250,7 +262,7 @@ Write queries which respond to the following questions:
 
 **Exercise 2.3** What is the list of drinkers who don't go to any bars which serve the beer they like?
 
-<details><summary>Answer</summary>
+<details><summary>Response</summary>
 
 ```
  buveur 
@@ -261,3 +273,304 @@ Write queries which respond to the following questions:
 ```
 
 </details>
+
+## Complex queries - Mexico database
+
+**Exercise 3.1**: Create a table with an entry for each match which lists the **total** number of goals (scored by either side), the match type, and the date. As we'll use this table later on, create a VIEW called "matchbutsglobal" with this information.
+
+<details><summary>Response</summary>
+
+```
+        paysl        |        paysv        | buts |  type  |    date 
+---------------------+---------------------+------+--------+------------
+ URSS                | Belgique            |    7 | 1/8    | 1986-06-15
+ France              | Italie              |    2 | 1/8    | 1986-06-17
+ Maroc               | Pologne             |    0 | Poule  | 1986-06-02
+ RFA                 | Argentine           |    5 | Finale | 1986-06-29
+ Brésil              | France              |    2 | 1/4    | 1986-06-21
+ Italie              | Argentine           |    2 | Poule  | 1986-06-05
+ Maroc               | Portugal            |    4 | Poule  | 1986-06-11
+ Brésil              | Algérie             |    1 | Poule  | 1986-06-06
+ Paraguay            | Belgique            |    4 | Poule  | 1986-06-11
+ Hongrie             | France              |    3 | Poule  | 1986-06-09
+ Irak                | Belgique            |    3 | Poule  | 1986-06-08
+ Danemark            | RFA                 |    2 | Poule  | 1986-06-13
+ Irlande du Nord     | Espagne             |    3 | Poule  | 1986-06-07
+ Algérie             | Irlande du Nord     |    2 | Poule  | 1986-06-03
+ RFA                 | Mexique             |    0 | 1/4    | 1986-06-21
+ URSS                | Hongrie             |    6 | Poule  | 1986-06-02
+ Mexique             | Paraguay            |    2 | Poule  | 1986-06-07
+ Belgique            | Espagne             |    2 | 1/4    | 1986-06-22
+ Irak                | Mexique             |    1 | Poule  | 1986-06-11
+ Espagne             | Brésil              |    1 | Poule  | 1986-06-01
+ Angleterre          | Maroc               |    0 | Poule  | 1986-06-06
+ Irlande du Nord     | Brésil              |    2 | Poule  | 1986-06-12
+ Maroc               | RFA                 |    1 | 1/8    | 1986-06-17
+ Belgique            | Mexique             |    3 | Poule  | 1986-06-03
+ Bulgarie            | Italie              |    2 | Poule  | 1986-05-31
+ Écosse              | Uruguay             |    0 | Poule  | 1986-06-13
+ Algérie             | Espagne             |    3 | Poule  | 1986-06-12
+ Argentine           | Belgique            |    2 | 1/2    | 1986-06-25
+ Brésil              | Pologne             |    4 | 1/8    | 1986-06-16
+ Danemark            | Uruguay             |    7 | Poule  | 1986-06-08
+ République de Corée | Italie              |    5 | Poule  | 1986-06-10
+ Canada              | France              |    1 | Poule  | 1986-06-01
+ Argentine           | Uruguay             |    1 | 1/8    | 1986-06-16
+ France              | RFA                 |    2 | 1/2    | 1986-06-25
+ France              | URSS                |    2 | Poule  | 1986-06-05
+ Uruguay             | RFA                 |    2 | Poule  | 1986-06-04
+ Angleterre          | Pologne             |    3 | Poule  | 1986-06-11
+ Portugal            | Angleterre          |    1 | Poule  | 1986-06-03
+ Écosse              | Danemark            |    1 | Poule  | 1986-06-04
+ Angleterre          | Paraguay            |    3 | 1/8    | 1986-06-18
+ Hongrie             | Canada              |    2 | Poule  | 1986-06-06
+ Argentine           | République de Corée |    4 | Poule  | 1986-06-02
+ Pologne             | Portugal            |    1 | Poule  | 1986-06-07
+ RFA                 | Écosse              |    3 | Poule  | 1986-06-08
+ Mexique             | Bulgarie            |    2 | 1/8    | 1986-06-15
+ URSS                | Canada              |    2 | Poule  | 1986-06-09
+ Espagne             | Danemark            |    6 | 1/8    | 1986-06-18
+ Paraguay            | Irak                |    1 | Poule  | 1986-06-04
+ Argentine           | Bulgarie            |    2 | Poule  | 1986-06-10
+ Argentine           | Angleterre          |    3 | 1/4    | 1986-06-22
+ République de Corée | Bulgarie            |    2 | Poule  | 1986-06-05
+(51 rows)
+```
+
+</details>
+
+**Exercise 3.2**: Write a query which caluculates the number of goals scored on average in all the matches of the French team.
+
+<details><summary>Response</summary>
+
+```
+    Moyenne buts
+--------------------
+ 2.0000000000000000
+(1 row)
+```
+
+</details>
+
+**Exercise 3.3**: Write a query which calculates the total number of goals scored *only* by the French team.
+
+<details><summary>Response</summary>
+
+```
+ buts 
+------
+    8
+(1 row)
+```
+
+</details>
+
+**Exercise 3.4**: Write a query which caluclates the total number of goals scored in each Poule match. Order the results by group.
+
+<details><summary>Response</summary>
+
+```
+ groupe | sum 
+--------+-----
+ A      |  17
+ B      |  14
+ C      |  16
+ D      |  12
+ E      |  15
+ F      |   9
+(6 rows)
+```
+
+</details>
+
+**Exercise 3.5**: Write a function `vainquer` which takes in the two countries of a match and the match type and which returns the winner. Apply your function to the following pairs:
+
+```
+SELECT * FROM vainqueur('Espagne', 'Danemark', '1/8');
+SELECT * FROM vainqueur('Brésil', 'France', '1/4');
+```
+
+<details><summary>Response</summary>
+
+```
+ vainqueur 
+-----------
+ Espagne
+(1 row)
+
+ vainqueur 
+-----------
+ Match nul
+(1 row)
+```
+
+</details>
+
+**Exercise 3.6**: Write a function `butsparequipe` which returns the total and the average number of points scored by a team. Apply your function to the French team. Bonus points for making the result display the name of the team.
+
+```
+SELECT * FROM butsparequipe('France');
+
+```
+
+<details><summary>Response</summary>
+
+```
+  pays  | total |      moyenne 
+--------+-------+--------------------
+ France |     8 | 1.3333333333333333
+(1 row)
+```
+
+</details>
+
+**Exercise 3.7**: Using the `butsparequipe` function, write a query which lists all countries and the points they scored. 
+
+<details><summary>Response</summary>
+
+```
+        pays         | total 
+---------------------+-------
+ Argentine           |    14
+ Italie              |     5
+ Bulgarie            |     2
+ République de Corée |     4
+ Mexique             |     6
+ Paraguay            |     4
+ Belgique            |    10
+ Irak                |     1
+ URSS                |    12
+ Hongrie             |     2
+ France              |     8
+ Canada              |     0
+ Brésil              |     9
+ Espagne             |    11
+ Irlande du Nord     |     2
+ Algérie             |     1
+ Danemark            |    10
+ RFA                 |     8
+ Uruguay             |     2
+ Écosse              |     1
+ Maroc               |     3
+ Angleterre          |     7
+ Pologne             |     1
+ Portugal            |     2
+(24 rows)
+```
+
+</details>
+
+
+**Exercise 3.8**: Using the `butsparequipe` function, write a query which shows the country which scored the most points and the number of points they scored.
+
+<details><summary>Response</summary>
+
+```
+   pays    | total 
+-----------+-------
+ Argentine |    14
+(1 row)
+```
+
+</details>
+
+## Pull the trigger
+
+In this exercise, we're going to create a [TRIGGER](https://sql.sh/cours/create-trigger), a mechanism which allows for automatically executing actions when an event occurs.
+
+Dans cet exercice, nous allons nous intéresser à la création d’untriggersur une base de données très simple.Rappelons qu’untriggerest un mécanisme permettant d’exécuter des actions lors de l’arrivée d’un événementparticulier (mise-à-jour d’une relation, insertion d’un nouveau tuple etc.).(a) créer une tablerel(nom, valeur)oùnomest une chaîne de caractères etvaleurun entier. On choisiranomcomme clé primaire.(b) insérer 5 tuples dans la table.(c) onsouhaitemaintenantquelorsdel’insertiondenouveauxtupleslamoyenneactuelledesvaleurscontenuesdans la relation ne puisse pas décroître
+
+Create the `db-trigger` database.
+
+```bash
+$ createdb db-trigger
+```
+
+**Exercise 4.1**: Create a table `rel(nom, value)` where `nom` is a string of characters and `value` is an integer. `nom` will be the primary key
+
+<details><summary>Solution</summary>
+
+```
+CREATE TABLE IF NOT EXISTS rel (
+    nom VARCHAR(20),
+    valeur INTEGER,
+    PRIMARY KEY (nom)
+);
+```
+
+</details>
+
+**Exercise 4.2**: Add 5 tuples into the table
+
+<details><summary>Solution</summary>
+
+```
+INSERT INTO rel VALUES
+       ('Alice', 10),
+       ('Bob', 5),
+       ('Carl', 20),
+       ('Denise', 11),
+       ('Esther', 6);
+```
+
+</details>
+
+**Exercise 4.3**: Write a trigger such that, when adding new tuples, the average value of `val` cannot decrease. If a new tuple is added which would decrease the average, an exception should be raised.
+
+The following insertion should work:
+
+```
+INSERT INTO rel VALUES ('Fab', 15);
+
+SELECT * FROM rel;
+```
+
+As we can see, the `(Fab, 15)` tuple was added:
+
+```
+  nom   | valeur 
+--------+--------
+ Alice  |     10
+ Bob    |      5
+ Carl   |     20
+ Denise |     11
+ Esther |      6
+ Fab    |     15
+(6 rows)
+```
+
+
+However, the following insertion should give an exception:
+
+```
+INSERT INTO rel VALUES ('Guy', 2);
+```
+
+<details><summary>Solution</summary>
+
+```
+CREATE OR REPLACE FUNCTION verifier_moyenne()
+                  RETURNS trigger AS $verifier_moyenne$
+    DECLARE
+      moyenne FLOAT;
+      nb      INTEGER;
+    BEGIN
+        moyenne := AVG(valeur) FROM rel;
+        nb := COUNT(*) FROM rel;
+
+        IF ((nb * moyenne + NEW.valeur) / (nb + 1)) < moyenne THEN
+            RAISE EXCEPTION 'problem with insertion: valeur average is decreasing!';
+        END IF;
+
+        RETURN NEW;
+    END;
+$verifier_moyenne$ LANGUAGE plpgsql;
+
+CREATE TRIGGER VerificationMoyenne
+BEFORE INSERT ON rel
+FOR EACH ROW
+EXECUTE PROCEDURE verifier_moyenne();
+```
+
+</details>
+
