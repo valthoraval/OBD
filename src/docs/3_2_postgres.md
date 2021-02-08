@@ -9,21 +9,49 @@ by Christophe Garion, CC BY-NC-SA 2015.
 
 ## Setup
 
-For this session, students should install [PostgreSQL](https://www.postgresql.org/download/) (v9 or higher) and [pgAdmin](https://www.pgadmin.org/) (v4). Follow the installation instructions and make sure you have an initial database setup and the `postgresql` service running on Linux.
+For this session, students should install [PostgreSQL](https://www.postgresql.org/download/) (v9 or higher) and [pgAdmin](https://www.pgadmin.org/) (v4). Follow the installation instructions and make sure you have an initial database setup and the `postgresql` service running.
 
 + [Installation on Arch Linux](https://wiki.archlinux.org/index.php/PostgreSQL)
 + [Installation on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart)
-+ [Installation on Windows](https://www.postgresqltutorial.com/install-postgresql/)
-+ [Installation on Mac OS](https://www.robinwieruch.de/postgres-sql-macos-setup)
++ [Installation on Windows](https://www.postgresqltutorial.com/install-postgresql/) (and add the PostgreSQL binaries to your [path](https://www.pcastuces.com/pratique/astuces/5334.htm))
++ [Installation on Mac OS](https://postgresapp.com/)
 
-
-Additionally, add your login user as a postgresql superuser to enable database creation. Once you've installated and configured PostgreSQL, create the first exercise database:
+Additionally, add your login user as a postgresql superuser to enable database creation with your user:
 
 ```bash
+# bash shell in Linux or OSX
+$ sudo su -l postgres
+[postgres]$ createuser --interactive
+```
+
+Once you've installated and configured PostgreSQL, create the first exercise database:
+
+```bash
+# bash shell in Linux or OSX or windows powershell
 $ createdb db-mexico86
 ```
 
-Confirm with pgAdmin that your database `db-mexico86` was created. You may need to create a server "local" with the host address `127.0.0.1`.
+you can also do this through an SQL shell:
+
+```sql
+# SQL shell
+postgres=# CREATE DATABASE "test-beer";
+```
+
+Confirm with pgAdmin that your database `db-mexico86` was created. If you don't
+have any servers, create one by right-clicking. The host address is `127.0.0.1`
+and the maintenance database and username should be `postgres`.
+
+In pgAdmin, if you are asked for a password and don't know what your password
+is, you can reset the password of the postgres user:
+
+<details><summary>change password</summary>
+
+```sql
+postgres=# ALTER USER postgres WITH PASSWORD "newpassword";
+```
+
+</details>
 
 ## Mexico86 database - simple queries
 
@@ -32,8 +60,11 @@ This database contains data from the 1986 football World Cup.
 Download the creation and insertion [scripts](https://github.com/SupaeroDataScience/OBD/tree/master/scripts) and run the scripts in the `mexico` folder.
 
 ```bash
+# bash shell in Linux or OSX, or windows powershell
 $ psql -d db-mexico86 -f mexico86/create-tables-std.sql
 ```
+
+If that doesn't work, you can copy the script into the Query Tool in pgAdmin.
 
 **Exercise 1.1**: Look at the database creation scripts. What are the tables being created? What are their fields? Which fields are keys? Confirm these values in pgAdmin.
 
@@ -72,7 +103,7 @@ You can also use the Query Editor in pgAdmin for a graphical interface.
 Argentine
 Italie
 Bulgarie
-République de Corée
+Corée
 Mexique
 Paraguay
 Belgique
@@ -106,10 +137,10 @@ Portugal
         paysl        |        paysv 
 ---------------------|---------------------
 Bulgarie            | Italie
-Argentine           | République de Corée
+Argentine           | Corée
 Italie              | Argentine
-République de Corée | Bulgarie
-République de Corée | Italie
+Corée               | Bulgarie
+Corée               | Italie
 Argentine           | Bulgarie
 Belgique            | Mexique
 Paraguay            | Irak
@@ -169,7 +200,7 @@ RFA                 | Argentine
         paysl        |   paysv
 ---------------------|-----------
 Italie              | Argentine
-République de Corée | Bulgarie
+Corée               | Bulgarie
 France              | URSS
 (3 rows)
 ```
@@ -315,7 +346,7 @@ Write queries which respond to the following questions. Hint, understanding [nat
  Argentine           | Belgique            |    2 | 1/2    | 1986-06-25
  Brésil              | Pologne             |    4 | 1/8    | 1986-06-16
  Danemark            | Uruguay             |    7 | Poule  | 1986-06-08
- République de Corée | Italie              |    5 | Poule  | 1986-06-10
+ Corée               | Italie              |    5 | Poule  | 1986-06-10
  Canada              | France              |    1 | Poule  | 1986-06-01
  Argentine           | Uruguay             |    1 | 1/8    | 1986-06-16
  France              | RFA                 |    2 | 1/2    | 1986-06-25
@@ -326,7 +357,7 @@ Write queries which respond to the following questions. Hint, understanding [nat
  Écosse              | Danemark            |    1 | Poule  | 1986-06-04
  Angleterre          | Paraguay            |    3 | 1/8    | 1986-06-18
  Hongrie             | Canada              |    2 | Poule  | 1986-06-06
- Argentine           | République de Corée |    4 | Poule  | 1986-06-02
+ Argentine           | Corée               |    4 | Poule  | 1986-06-02
  Pologne             | Portugal            |    1 | Poule  | 1986-06-07
  RFA                 | Écosse              |    3 | Poule  | 1986-06-08
  Mexique             | Bulgarie            |    2 | 1/8    | 1986-06-15
@@ -335,7 +366,7 @@ Write queries which respond to the following questions. Hint, understanding [nat
  Paraguay            | Irak                |    1 | Poule  | 1986-06-04
  Argentine           | Bulgarie            |    2 | Poule  | 1986-06-10
  Argentine           | Angleterre          |    3 | 1/4    | 1986-06-22
- République de Corée | Bulgarie            |    2 | Poule  | 1986-06-05
+ Corée               | Bulgarie            |    2 | Poule  | 1986-06-05
 (51 rows)
 ```
 
@@ -436,7 +467,7 @@ SELECT * FROM butsparequipe('France');
  Argentine           |    14
  Italie              |     5
  Bulgarie            |     2
- République de Corée |     4
+ Corée               |     4
  Mexique             |     6
  Paraguay            |     4
  Belgique            |    10
@@ -479,8 +510,6 @@ SELECT * FROM butsparequipe('France');
 ## Pull the trigger
 
 In this exercise, we're going to create a [TRIGGER](https://sql.sh/cours/create-trigger), a mechanism which allows for automatically executing actions when an event occurs.
-
-Dans cet exercice, nous allons nous intéresser à la création d’untriggersur une base de données très simple.Rappelons qu’untriggerest un mécanisme permettant d’exécuter des actions lors de l’arrivée d’un événementparticulier (mise-à-jour d’une relation, insertion d’un nouveau tuple etc.).(a) créer une tablerel(nom, valeur)oùnomest une chaîne de caractères etvaleurun entier. On choisiranomcomme clé primaire.(b) insérer 5 tuples dans la table.(c) onsouhaitemaintenantquelorsdel’insertiondenouveauxtupleslamoyenneactuelledesvaleurscontenuesdans la relation ne puisse pas décroître
 
 Create the `db-trigger` database.
 
