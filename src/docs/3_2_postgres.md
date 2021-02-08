@@ -82,60 +82,62 @@ $ psql -d db-mexico86 mexico/create-tables-std.sql
 
 <details><summary>Answer</summary>
 
-            paysl        |        paysv 
-    ---------------------|---------------------
-    Bulgarie            | Italie
-    Argentine           | République de Corée
-    Italie              | Argentine
-    République de Corée | Bulgarie
-    République de Corée | Italie
-    Argentine           | Bulgarie
-    Belgique            | Mexique
-    Paraguay            | Irak
-    Mexique             | Paraguay
-    Irak                | Belgique
-    Irak                | Mexique
-    Paraguay            | Belgique
-    Canada              | France
-    URSS                | Hongrie
-    France              | URSS
-    Hongrie             | Canada
-    URSS                | Canada
-    Hongrie             | France
-    Espagne             | Brésil
-    Algérie             | Irlande du Nord
-    Brésil              | Algérie
-    Irlande du Nord     | Espagne
-    Irlande du Nord     | Brésil
-    Algérie             | Espagne
-    Uruguay             | RFA
-    Écosse              | Danemark
-    Danemark            | Uruguay
-    RFA                 | Écosse
-    Écosse              | Uruguay
-    Danemark            | RFA
-    Maroc               | Pologne
-    Portugal            | Angleterre
-    Angleterre          | Maroc
-    Pologne             | Portugal
-    Angleterre          | Pologne
-    Maroc               | Portugal
-    Brésil              | Pologne
-    France              | Italie
-    Maroc               | RFA
-    Mexique             | Bulgarie
-    Argentine           | Uruguay
-    Angleterre          | Paraguay
-    URSS                | Belgique
-    Espagne             | Danemark
-    Brésil              | France
-    RFA                 | Mexique
-    Argentine           | Angleterre
-    Belgique            | Espagne
-    France              | RFA
-    Argentine           | Belgique
-    RFA                 | Argentine
-    (51 rows)
+```
+        paysl        |        paysv 
+---------------------|---------------------
+Bulgarie            | Italie
+Argentine           | République de Corée
+Italie              | Argentine
+République de Corée | Bulgarie
+République de Corée | Italie
+Argentine           | Bulgarie
+Belgique            | Mexique
+Paraguay            | Irak
+Mexique             | Paraguay
+Irak                | Belgique
+Irak                | Mexique
+Paraguay            | Belgique
+Canada              | France
+URSS                | Hongrie
+France              | URSS
+Hongrie             | Canada
+URSS                | Canada
+Hongrie             | France
+Espagne             | Brésil
+Algérie             | Irlande du Nord
+Brésil              | Algérie
+Irlande du Nord     | Espagne
+Irlande du Nord     | Brésil
+Algérie             | Espagne
+Uruguay             | RFA
+Écosse              | Danemark
+Danemark            | Uruguay
+RFA                 | Écosse
+Écosse              | Uruguay
+Danemark            | RFA
+Maroc               | Pologne
+Portugal            | Angleterre
+Angleterre          | Maroc
+Pologne             | Portugal
+Angleterre          | Pologne
+Maroc               | Portugal
+Brésil              | Pologne
+France              | Italie
+Maroc               | RFA
+Mexique             | Bulgarie
+Argentine           | Uruguay
+Angleterre          | Paraguay
+URSS                | Belgique
+Espagne             | Danemark
+Brésil              | France
+RFA                 | Mexique
+Argentine           | Angleterre
+Belgique            | Espagne
+France              | RFA
+Argentine           | Belgique
+RFA                 | Argentine
+(51 rows)
+```
 
 </details>
 
