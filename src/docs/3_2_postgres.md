@@ -37,13 +37,11 @@ $ psql -d db-mexico86 mexico/create-tables-std.sql
 
 <details><summary>Answer</summary>
 
-```
 | Table | Fields |
 | ----  | ------ |
 | Pays  | (<u>nom</u>, poule) |
 | Typematch  | (<u>type</u>) |
 | Match  | (<u>paysl, paysv</u>, butsl, butsv, <u>type</u>, date)
-```
 
   </details>
   
