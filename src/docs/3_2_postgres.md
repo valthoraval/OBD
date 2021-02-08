@@ -35,13 +35,15 @@ $ psql -d db-mexico86 mexico/create-tables-std.sql
 
 *Exercise 1.* Look at the database creation scripts. What are the tables being created? What are their fields? Which fields are keys? Confirm these values in pgAdmin.
 
-  <details><summary>Answer</summary>
+<details><summary>Answer</summary>
 
-      | Table | Fields |
-      | ----  | ------ |
-      | Pays  | (<u>nom</u>, poule) |
-      | Typematch  | (<u>type</u>) |
-      | Match  | (<u>paysl, paysv</u>, butsl, butsv, <u>type</u>, date)
+```
+| Table | Fields |
+| ----  | ------ |
+| Pays  | (<u>nom</u>, poule) |
+| Typematch  | (<u>type</u>) |
+| Match  | (<u>paysl, paysv</u>, butsl, butsv, <u>type</u>, date)
+```
 
   </details>
   
@@ -49,33 +51,36 @@ $ psql -d db-mexico86 mexico/create-tables-std.sql
 
 <details><summary>Answer</summary>
 
-            nom         
-    ---------------------
-    Argentine
-    Italie
-    Bulgarie
-    République de Corée
-    Mexique
-    Paraguay
-    Belgique
-    Irak
-    URSS
-    Hongrie
-    France
-    Canada
-    Brésil
-    Espagne
-    Irlande du Nord
-    Algérie
-    Danemark
-    RFA
-    Uruguay
-    Écosse
-    Maroc
-    Angleterre
-    Pologne
-    Portugal
-    (24 rows)
+```
+        nom         
+---------------------
+Argentine
+Italie
+Bulgarie
+République de Corée
+Mexique
+Paraguay
+Belgique
+Irak
+URSS
+Hongrie
+France
+Canada
+Brésil
+Espagne
+Irlande du Nord
+Algérie
+Danemark
+RFA
+Uruguay
+Écosse
+Maroc
+Angleterre
+Pologne
+Portugal
+(24 rows)
+```
+
 </details>
 
 *3.* Write a query which lists all matches as a pair of countries per match.
@@ -145,12 +150,14 @@ RFA                 | Argentine
 
 <details><summary>Answer</summary>
 
-            paysl        |   paysv
-    ---------------------|-----------
-    Italie              | Argentine
-    République de Corée | Bulgarie
-    France              | URSS
-    (3 rows)
+```
+        paysl        |   paysv
+---------------------|-----------
+Italie              | Argentine
+République de Corée | Bulgarie
+France              | URSS
+(3 rows)
+```
 
 </details>
 
@@ -158,15 +165,17 @@ RFA                 | Argentine
 
 <details><summary>Answer</summary>
 
-    pays
-    ---------
-    Brésil
-    Canada
-    Hongrie
-    Italie
-    RFA
-    URSS
-    (6 rows)
+```
+pays
+---------
+Brésil
+Canada
+Hongrie
+Italie
+RFA
+URSS
+(6 rows)
+```
 
 </details>
 
@@ -174,10 +183,12 @@ RFA                 | Argentine
 
 <details><summary>Answer</summary>
 
-    pays
-    -----------
-    Argentine
-    (1 row)
+```
+pays
+-----------
+Argentine
+(1 row)
+```
 
 </details>
 
