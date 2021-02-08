@@ -37,11 +37,11 @@ $ psql -d db-mexico86 mexico86/create-tables-std.sql
 
 <details><summary>Response</summary>
 
-| Table | Fields |
-| ----  | ------ |
-| Pays  | (<u>nom</u>, groupe) |
-| Typematch  | (<u>type</u>) |
-| Match  | (<u>paysl, paysv</u>, butsl, butsv, <u>type</u>, date)
+Pays: (<u>nom</u>, groupe)
+<br/>
+Typematch: (<u>type</u>)
+<br/>
+Match: (<u>paysl, paysv</u>, butsl, butsv, <u>type</u>, date)
 
 </details>
 
@@ -220,9 +220,9 @@ $ psql -d db-beer beer/insert.sql
 <details><summary>Response</summary>
 
 Frequente: (<u>buveur, bar</u>)
-
+<br/>
 Sert: (<u>bar, biere</u>)
-
+<br/>
 Aime: (<u>buveur, biere</u>)
 
 </details>
