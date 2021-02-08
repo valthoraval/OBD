@@ -14,6 +14,8 @@ For this session, students should install [PostgreSQL](https://www.postgresql.or
 + [Installation on Arch Linux](https://wiki.archlinux.org/index.php/PostgreSQL)
 + [Installation on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart)
 + [Installation on Windows](https://www.postgresqltutorial.com/install-postgresql/)
++ [Installation on Mac OS](https://www.robinwieruch.de/postgres-sql-macos-setup)
+
 
 Additionally, add your login user as a postgresql superuser to enable database creation. Once you've installated and configured PostgreSQL, create the first exercise database:
 
