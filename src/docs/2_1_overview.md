@@ -2,10 +2,10 @@
 
 ## Overview
 
-[Link to slides](lectures/2_1_overview.html)
+[Link to slides](slides/2_1_overview.html)
 
 <iframe
-  src="lectures/2_1_overview.html"
+  src="slides/2_1_overview.html"
   style="width:100%; height:600px;"
 ></iframe>
 

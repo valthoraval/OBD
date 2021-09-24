@@ -2,10 +2,10 @@
 
 ## Functional Programming for Distributed Data
 
-[Link to slides](lectures/2_2_functional_programming.html)
+[Link to slides](slides/2_2_functional_programming.html)
 
 <iframe
-  src="lectures/2_2_functional_programming.html"
+  src="slides/2_2_functional_programming.html"
   style="width:100%; height:600px;"
 ></iframe>
 
