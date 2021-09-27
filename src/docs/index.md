@@ -47,14 +47,14 @@ The class is structured in three parts:
 
 Introduction | | | Readings |
 --- | --- | --- | ---
-[Introduction to Big Data](0_0_introduction.md) | 2h | 27/09/2021 | [Global Datasphere](https://github.com/SupaeroDataScience/OBD/tree/master/readings/idc_data.pdf)
+[Introduction to Big Data](slides/0_0_intro.md) | 2h | 27/09/2021 | [Global Datasphere](https://github.com/SupaeroDataScience/OBD/tree/master/readings/idc_data.pdf)
 
 Databases | | | |
 --- | --- | --- | ---
 [Databases overview](0_1_databases.md) | 2h | 27/09/2021 | [Databases and SQL](https://github.com/SupaeroDataScience/OBD/tree/master/readings/fntdb07-architecture.pdf)
 [PostgeSQL TP](0_2_postgres.md) | 3h | 29/09/2021 | [PostgeSQL](https://www.postgresql.org/docs/manuals/)
-[Databases Project](0_3_project.md) | 2h | 06/10/2021 |
-[Project presentations](0_3_project.md) | 2h | 02/11/2021 |
+[Databases Project](0_3_project.md) | 3h | 06/10/2021 |
+[Project presentations](0_3_project.md) | 3h | 02/11/2021 |
 
 Data Computation | | | Readings |
 --- | --- | --- | ---
