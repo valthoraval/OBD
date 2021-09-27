@@ -47,18 +47,18 @@ The class is structured in three parts:
 
 Introduction | | | Readings |
 --- | --- | --- | ---
-[Introduction to Big Data](0_0_intro.md) | 2h | 27/09/2021 | [Global Datasphere](https://github.com/SupaeroDataScience/OBD/raw/master/readings/idc_data.pdf)
+[Introduction to Big Data](0_0_intro.md) | 2h | 27/09/2021 | [Global Datasphere](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/idc_data.pdf)
 
 Data Storage | | | |
 --- | --- | --- | ---
-[Databases overview](0_1_databases.md) | 2h | 27/09/2021 | [Databases and SQL](https://github.com/SupaeroDataScience/OBD/raw/master/readings/fntdb07-architecture.pdf)
+[Databases overview](0_1_databases.md) | 2h | 27/09/2021 | [Databases and SQL](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/fntdb07-architecture.pdf)
 [PostgeSQL TP](0_2_postgres.md) | 3h | 29/09/2021 | [PostgeSQL](https://www.postgresql.org/docs/manuals/)
 [Databases Project](0_3_project.md) | 3h | 06/10/2021 |
 [Project presentations](0_3_project.md) | 3h | 02/11/2021 |
 
 Data Computation | | | Readings |
 --- | --- | --- | ---
-[Cloud Computing & Google Cloud Platform](1_1_overview.md) | 3h | 18/01/2022 | [Readings](1_7_readings.md#about-cloud-computing)
+[Cloud Computing & Google Cloud Platform](1_1_overview.md) | 3h | 18/01/2022 | [Readings](1_7_readings.md#about-cloud-computing) |
 [Containers](1_3_containers.md) | 2h| 19/01/2022 | [Readings](1_7_readings.md#about-orchestration)
 [Orchestration](1_4_orchestration.md) | 1h | 19/01/2022 | [Readings](1_7_readings.md#about-containers) |
 [Cloud Compute BE](1_4_be.md) | 6h | 25/01/2022 | 
@@ -66,8 +66,9 @@ Data Computation | | | Readings |
 
 | Data Distribution | | | Readings |
 | --- | --- | --- | --- |
-| [Hadoop and MapReduce](2_3_mapreduce.md) | 3h | 08/02/2022 | [MapReduce](https://github.com/SupaeroDataScience/OBD/raw/master/readings/mapreduce.pdf) |
-| [Spark](2_4_spark.md) | 3h | 08/02/2022 | [Spark](https://github.com/SupaeroDataScience/OBD/raw/master/readings/spark.pdf), [PySpark](https://spark.apache.org/docs/latest/api/python/pyspark.html) |
+| [Hadoop and MapReduce](2_3_mapreduce.md) | 3h | 08/02/2022 | [MapReduce](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/mapreduce.pdf) | 
+| [Spark](2_4_spark.md) | 3h | 08/02/2022 | [Spark](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/spark.pdf),
+[PySpark](https://spark.apache.org/docs/latest/api/python/pyspark.html) |
 | [Dask on Kubernetes](2_5_dask.md)| 3h | 14/02/2022 | [Dask documentation](https://docs.dask.org/en/latest/setup/kubernetes.html) |
-| [Dask project](2_6_project.md) | 6h | 16/02/2022 | [Dask](https://github.com/SupaeroDataScience/OBD/raw/master/readings/dask.pdf) |
+| [Dask project](2_6_project.md) | 6h | 16/02/2022 | [Dask](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/dask.pdf) |
 

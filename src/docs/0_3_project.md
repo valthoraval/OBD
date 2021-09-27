@@ -21,6 +21,6 @@ Each team should:
 + compare their DBMS with a relational database system
 + prepare a presentation of their DBMS and example database which presents convincing argument for using this DBMS.
 
-A good example from previous years is [here](https://github.com/SupaeroDataScience/OBD/raw/master/readings/mongodb.pdf). This was in the form of a report, but currently a report is not required, just the oral presentation.
+A good example from previous years is [here](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/mongodb.pdf). This was in the form of a report, but currently a report is not required, just the oral presentation.
 
 Presentations will take place on 02/11/2021. You should upload your presentation materials to the LMS before midnight on 01/11/2021.
