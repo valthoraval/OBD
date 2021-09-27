@@ -7,11 +7,6 @@ In this first class, we introduce the basics of database management systems and 
 
 [Slides](https://github.com/SupaeroDataScience/OBD/raw/master/readings/bdd_sql.pdf)
 
-<iframe
-  src="https://github.com/SupaeroDataScience/OBD/raw/master/readings/bdd_sql.pdf"
-  style="width:100%; height:600px;"
-></iframe>
-
 In the upcoming classes, students will need to install DBMSs on their local machines. For the [next class](0_2_postgres.md), students should install PostgreSQL.
 
 
