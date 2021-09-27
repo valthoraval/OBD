@@ -9,12 +9,17 @@ by Christophe Garion, CC BY-NC-SA 2015.
 
 ## Setup
 
+Before class, please install PostgreSQL and pgAdmin.
+
+### PostgreSQL installation
+
 For this session, students should install [PostgreSQL](https://www.postgresql.org/download/) (v9 or higher) and [pgAdmin](https://www.pgadmin.org/) (v4). Follow the installation instructions and make sure you have an initial database setup and the `postgresql` service running.
 
-+ [Installation on Arch Linux](https://wiki.archlinux.org/index.php/PostgreSQL)
 + [Installation on Ubuntu](https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-20-04-quickstart)
-+ [Installation on Windows](https://www.postgresqltutorial.com/install-postgresql/) (and add the PostgreSQL binaries to your [path](https://www.pcastuces.com/pratique/astuces/5334.htm))
 + [Installation on Mac OS](https://postgresapp.com/)
++ [Installation on Arch Linux](https://wiki.archlinux.org/index.php/PostgreSQL)
++ [Installation on Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/tutorials/wsl-database)
++ [Installation on Windows](https://www.postgresqltutorial.com/install-postgresql/) (and add the PostgreSQL binaries to your [path](https://www.pcastuces.com/pratique/astuces/5334.htm))
 
 Additionally, add your login user as a postgresql superuser to enable database creation with your user:
 
@@ -23,6 +28,12 @@ Additionally, add your login user as a postgresql superuser to enable database c
 $ sudo su -l postgres
 [postgres]$ createuser --interactive
 ```
+
+### pgAdmin
+
+You can do all exercises directly through the `psql` shell for this class. However, it is useful to have a graphical confirmation of the database configuration. pgAdmin is one of many front-ends for Postgres. Install it by following the instructions on the [pgAdmin](https://www.pgadmin.org/) site.
+
+## Setup - database creation
 
 Once you've installated and configured PostgreSQL, create the first exercise database:
 
