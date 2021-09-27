@@ -20,8 +20,10 @@ repo_name: SupaeroDataScience/OBD
 repo_url: https://github.com/SupaeroDataScience/OBD
 
 nav:
-- Overview: index.md
-- Databases:
+- Overview:
+    - Syllabus: index.md
+    - Presentation: 0_0_intro.md
+- Data Storage:
     - Introduction: 0_1_databases.md
     - PostgreSQL: 0_2_postgres.md
     - Project: 0_3_project.md

@@ -2,7 +2,7 @@
 
 The evaluation of the databases class is a presentation of a specific database. You can work in teams of 4 of your choosing.
 
-You are working in a company which is looking to replace a relational DBMS currently in use. Each team should present a feasability study of a specific DBMS, showing its advantages, disadvantages, and use cases. Two different teams will work on each DBMS. We will organize the subjects on 10/02/2021, which is a work class dedicated to the project.
+You are working in a company which is looking to replace a relational DBMS currently in use. Each team should present a feasability study of a specific DBMS, showing its advantages, disadvantages, and use cases. Two different teams will work on each DBMS. We will organize the subjects on 06/10/2021, which is a work class dedicated to the project.
 
 The DBMSs are:
 
@@ -21,4 +21,6 @@ Each team should:
 + compare their DBMS with a relational database system
 + prepare a presentation of their DBMS and example database which presents convincing argument for using this DBMS.
 
-Presentations will take place on March 8th. You should upload your presentation materials to the LMS before midnight on March 7th.
+A good example from previous years is [here](https://github.com/SupaeroDataScience/OBD/raw/master/readings/mongodb.pdf). This was in the form of a report, but currently a report is not required, just the oral presentation.
+
+Presentations will take place on 02/11/2021. You should upload your presentation materials to the LMS before midnight on 01/11/2021.
