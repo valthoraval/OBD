@@ -46,7 +46,7 @@ you can also do this through an SQL shell:
 
 ```sql
 # SQL shell
-postgres=# CREATE DATABASE "test-beer";
+postgres=# CREATE DATABASE "db-mexico86";
 ```
 
 Confirm with pgAdmin that your database `db-mexico86` was created. If you don't
@@ -68,7 +68,14 @@ postgres=# ALTER USER postgres WITH PASSWORD "newpassword";
 
 This database contains data from the 1986 football World Cup. 
 
-Download the creation and insertion [scripts](https://github.com/SupaeroDataScience/OBD/tree/master/scripts) and run the scripts in the `mexico` folder.
+You can download the database creation script individually:
+```bash
+$ wget https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/scripts/mexico86/create-tables-std.sql
+```
+
+Or git clone the class repository and navigate to the creation and insertion [scripts](https://github.com/SupaeroDataScience/OBD/tree/master/scripts).
+
+Once you have the scripts, run the database creation script in the `mexico` folder.
 
 ```bash
 # bash shell in Linux or OSX, or windows powershell
