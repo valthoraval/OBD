@@ -59,9 +59,9 @@ Data Storage | | | |
 Data Computation | | | Readings |
 --- | --- | --- | ---
 [Cloud Computing & Google Cloud Platform](1_1_overview.md) | 3h | 18/01/2022 | [Readings](1_7_readings.md#about-cloud-computing) |
-[Containers](1_3_containers.md) | 2h| 19/01/2022 | [Readings](1_7_readings.md#about-orchestration)
-[Orchestration](1_4_orchestration.md) | 1h | 19/01/2022 | [Readings](1_7_readings.md#about-containers) |
-[Cloud Compute BE](1_4_be.md) | 6h | 25/01/2022 | 
+[Containers](1_3_containers.md) | 3h| 19/01/2022 | [Readings](1_7_readings.md#about-orchestration)
+[Cloud Compute BE](1_4_be.md) | 3h | 25/01/2022 | 
+[Deployement](1_4_orchestration.md) | 3h | 25/01/2022 | [Readings](1_7_readings.md#about-containers) |
 [GPU computing](1_5_gpu.md) | 3h <br/> 3h | 01/02/2022 <br/> 02/02/2022 | [GPGPU TP](https://lms.isae.fr/course/view.php?id=1226&section=2) |
 
 | Data Distribution | | | Readings |
