@@ -1,6 +1,6 @@
 # Introduction
 
-[Link to slides](slides/1_7_conclusion.html)
+[Link to slides](slides/1_6_conclusion.html)
 
 <iframe
   src="slides/1_7_conclusion.html"

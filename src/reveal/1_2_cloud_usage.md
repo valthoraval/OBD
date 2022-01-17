@@ -153,6 +153,24 @@ resources:
 
 <!--v-->
 
+#### Doctolib (2021)
+
+![doctolib](https://miro.medium.com/max/700/0*PMcEcSFsRKEm_4yG)
+
+[source](https://medium.com/doctolib/monday-july-12-at-doctolib-a-retrospective-9ac15c46ac19)
+
+<!--v-->
+
+#### Facebook (2021)
+
+How everything can go wrong...
+
+![](https://upload.wikimedia.org/wikipedia/commons/2/26/Facebook-outage-traffic-dropoff_%28cropped%29.png)
+
+https://blog.cloudflare.com/october-2021-facebook-outage/
+
+<!--v-->
+
 #### Links
 
 <http://highscalability.com>

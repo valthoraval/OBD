@@ -13,6 +13,12 @@ revealOptions:
     height: '100%'
 ---
 
+![icebreaker](https://i.imgur.com/wLSuwQQ.gif)
+
+https://ahaslides.com/OBD211
+
+<--v-->
+
 ## Cloud Computing, Containers & Orchestration
 
 by a data scientist, for data scientists
@@ -20,12 +26,6 @@ by a data scientist, for data scientists
 **ISAE-SUPAERO, SDD, October 2020**
 
 Florient CHOUTEAU
-
-<!--v-->
-
-If you want the slides go [here](...)
-
-Repository with exercises [here](...)
 
 <!--v-->
 <!-- .slide: data-background="http://i.giphy.com/90F8aUepslB84.gif" -->
@@ -39,7 +39,7 @@ This is awesome ! Stop using powerpoint !
 
 <!--v-->
 
-### Who ? 
+### Who ?
 
 <img src="static/img/ads_logo.jpg" alt="" width="128px" height="128px" style="background:none; border:none; box-shadow:none;"/>
 
@@ -51,19 +51,9 @@ Any question ? contact me on slack !
 
 <!--v-->
 
-![](https://i.imgur.com/wLSuwQQ.gif)
-
-<!--v-->
-
-[https://app.sli.do/event/g9ujolnw/](https://app.sli.do/event/g9ujolnw/)
-
-![](static/img/slido.png)
-
-<!--v-->
-
 ### Objectives of this class
 
-> Introduction to global concepts of cloud computing, virtualisation, etc. from a **user** point of view
+Introduction to global concepts of cloud computing, virtualisation, etc. from a **user** point of view
 
 <!--v-->
 
@@ -95,12 +85,14 @@ I am not a Cloud Engineer, or a Devops,  ... <!-- .element: class="fragment" dat
 - You have a rough idea of what Google Cloud Platform can offer you <!-- .element: class="fragment" data-fragment-index="2" -->
 - You can connect to and manipulate remote machines <!-- .element: class="fragment" data-fragment-index="3" -->
 - You know the basics of containerisation and docker <!-- .element: class="fragment" data-fragment-index="4" -->
-- You have a rough idea of what is "Kubernetes" <!-- .element: class="fragment" data-fragment-index="5" -->
+- And you have applied them to deploy your model into "production" <!-- .element: class="fragment" data-fragment-index="5" -->
+- You have a rough idea of the problematic of orchestration <!-- .element: class="fragment" data-fragment-index="6" -->
 
 <!--v-->
 
 ### Schedule
 
-- 07/10: 2h - Intro to Cloud Computing & GCP
-- 14/10: 4h - GCP (cont.), Containers & Docker
-- 20/10: 4h - Docker (cont.), K8s
+- 18/01: 3h - Intro to Cloud Computing & GCP
+- 19/01: 3h - Containers & Docker
+- 25/01: 3h - BE Docker & GCP
+- 25/01: 3h - BE Deployment & Orchestration

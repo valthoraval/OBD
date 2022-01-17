@@ -51,9 +51,9 @@ Google Cloud Platform datacenters locations
 
 <!--v-->
 
-> The cloud is a real physical place - accessed over the internet - where a service is performed for you or where your stuff is stored. Your stuff is stoed in the cloud, not on your device because the cloud is not on any device; the cloud lives in datacenters. A program running on your device accesses the cloud over the internet. The cloud is infinite, accessible from anywhere, at any time
+> The cloud is a real physical place - accessed over the internet - where a service is performed for you or where your stuff is stored. Your stuff is stored in the cloud, not on your device because the cloud is not on any device; the cloud lives in datacenters. A program running on your device accesses the cloud over the internet. The cloud is infinite, accessible from anywhere, at any time
 
-Todd Hoff in "Explain the Cloud like I'm 10"
+**Todd Hoff in "Explain the Cloud like I'm 10"**
 
 <!--s-->
 
@@ -177,13 +177,19 @@ http://blog.b3k.us/2009/01/25/ec2-origins.html
 
 Let's sell it !
 
-![](https://fchouteau.github.io/isae-practical-gcp/static/img/ec2.png)
+![](static/img/ec2.png)
 
 <!--v-->
 
 #### How does Amazon can offer free shipping to everybody
 
-![](https://zdnet1.cbsistatic.com/hub/i/2019/01/31/90cc9931-483b-4512-b94c-20777c1e9694/122bf253e0610093f41ce36f3ce220e7/amazon2.png)
+![](https://cdn.geekwire.com/wp-content/uploads/2016/10/amznwoaws-630x369.png)
+
+<!--v-->
+
+#### How does Amazon can offer free shipping to everybody
+
+![](https://image.cnbcfm.com/api/v1/image/106834258-1612301202728-20210202_aws_revenue_growth.png?v=1612301235)
 
 <!--s-->
 
@@ -235,7 +241,7 @@ Examples
 
 <!--v-->
 
-🐓
+🐓🧀🐸🇫🇷
 
 <img src="https://www.comptoir-hardware.com/images/stories/_logos/ovhcloud.png" alt="" width="20%" height="20%" style="background:none; border:none; box-shadow:none;"/>
 
@@ -244,6 +250,16 @@ Examples
 <img src="https://fr.outscale.com/wp-content/uploads/2018/08/3DS_OUTSCALE_Dark-Blue_RGB.png" alt="" width="20%" height="20%" style="background:none; border:none; box-shadow:none;"/>
 
 <img src="https://cloud.orange.com/ui/app/static/assets/brand/logo_header_login.png" alt="" width="20%" height="20%" style="background:none; border:none; box-shadow:none;"/>
+
+OVH est entré en bourse en 2021
+
+<!--v-->
+
+🐓🧀🐸🇫🇷
+
+[Thales Cloud Souverain](https://thales-group.prezly.com/thales-et-google-cloud-annoncent-un-partenariat-strategique-pour-developper-conjointement-un--cloud-de-confiance--en-france#)
+
+[OVH x Google Cloud](https://corporate.ovhcloud.com/fr/newsroom/news/ovhcloud-and-google-cloud-announce-strategic-partnership-co-build-trusted-cloud-solution-europe/)
 
 <!--v-->
 
@@ -260,3 +276,18 @@ https://www.data-infrastructure.eu/GAIAX/
 <!--v-->
 
 ![france](https://i2.wp.com/datacenter-magazine.fr/contenus/uploads/2020/03/CORE_MARKESS_PRG_OPE_19-20_COMPETITIVE_ENVIRONMENT_PRESSE_MARS-2020.png?resize=600%2C340&ssl=1)
+
+<!--s-->
+
+### Cloud Computing & Environment
+
+<img src="https://images-www.scaleway.com/wp-content/uploads/2020/10/22094354/Comparatif-DC-RVB-website-2048x1751.jpg" alt="" width="50%" height="50%" style="background:none; border:none; box-shadow:none;"/>
+
+<!--v-->
+
+I am not competent to say anything about this. Some sources
+
+- The Shift Project : https://theshiftproject.org/article/deployer-la-sobriete-numerique-rapport-shift/
+- Scaleway : https://www.scaleway.com/fr/leadership-environnemental/
+- Google : https://cloud.google.com/sustainability
+- Earth.org : https://earth.org/environmental-impact-of-cloud-computing/

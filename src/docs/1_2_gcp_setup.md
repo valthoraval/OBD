@@ -46,8 +46,12 @@ Then you can configure the [google cloud sdk](https://cloud.google.com/sdk/docs/
 
 ### Connect to google cloud shell
 
+![](https://lh3.googleusercontent.com/bADt-LplQDbOD3LLXc8nB4zC5GUjV0MCieIWXOUd7j7gaHL2uDuPuZt3kYdl_KoclG4OHTQp26k=e14-w1502)
+
+* Go to [https://shell.cloud.google.com/](https://shell.cloud.google.com/)
 * Follow [this guide](https://cloud.google.com/shell/docs/using-cloud-shell) for connecting to google cloud shell using the browser
-* If this doesn't work on your machine for whichever reason, there is a workaround which requires having installed the `google-cloud-sdOther references:k`
+* If this doesn't work on your machine for whichever reason, there is a workaround which requires having installed the `google-cloud-sdk`
+
 
 ### Explore google cloud shell
 
@@ -79,7 +83,7 @@ There is already a code editor in Google Cloud Shell (based on Theia) but we wan
 
 * You may enable [boost mode](https://cloud.google.com/shell/docs/how-cloud-shell-works#boost_mode)
 * Run `curl -fsSL https://code-server.dev/install.sh | sh` in your terminal to download & install code server
-* Run `code-server --port=8080` to start code server
+* Run `code-server --port=8080` to start code server, it will auto generate a password
 * Shut it down (`CTRL+C`) then
 * Fetch your password using `cat ~/.config/code-server/config.yaml`
 * Re-run it
@@ -95,7 +99,16 @@ There is already a code editor in Google Cloud Shell (based on Theia) but we wan
 
     Command to run in this case: `gcloud alpha cloud-shell ssh -- -L 8080:localhost:8080`
 
-## 4. Google Colaboratory
+!!! why are we using cloud shell ?
+    * Cloud Shell is basically a managed VM with the google cloud SDK configured
+    * It even has some [nice tools](https://cloud.google.com/shell/docs/how-cloud-shell-works#tools) installed such as docker so you can use it for the next workshops
+    * The huge bonus is that it streams through your web browser so it can bypass ISAE-EDU blocking of ssh 
+    * However, it may have some stability issues
+
+## 4. Optional - Google Colaboratory
+
+!!! abstract
+    Previous versions of this class happened before the ML Class so there was an introduction to google collab. You should have extensively used this tool before, so skip this :)
 
 Here, you will look at Google Colaboratory, which is a very handy tool for doing data science work (based on jupyter notebooks) on the cloud, using a preconfigured instance (which can access a GPU). You will be able to store data on Google Drive and to share
 

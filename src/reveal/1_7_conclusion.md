@@ -13,7 +13,7 @@ revealOptions:
     height: '100%'
 ---
 
-## Summary, "BE"
+## Wrapup
 
 <!--v-->
 
@@ -213,6 +213,14 @@ containers is not magic
 
 <!--s-->
 
+### Take-away for Deployment
+
+<!--v-->
+
+**WIP**
+
+<!--s-->
+
 ### Take-away for Orchestration
 
 <!--v-->
@@ -236,47 +244,6 @@ Read this [comic](https://cloud.google.com/kubernetes-engine/kubernetes-comic/)
 
 <!--s-->
 
-### "BE"
-
-<!--v-->
-
-#### We are going to
-
-![build-ship-run](https://en.wikitolearn.org/images/en/1/10/Screenshot_from_2018-08-23_17-06-33.png)
-
-using
-
-![gcp](https://thumbor.sd-cdn.fr/y0Eh5N1zXVewX9CW7KK1u05ukuU=/fit-in/1600x988/cdn.sd-cdn.fr/wp-content/uploads/2019/06/google-cloud.png) <!-- .element: height="20%" width="20%" -->
-
-<!--v-->
-
-#### Things you will do
-
-* Connect to a **GCP project** (with multiple people)
-* Create a **Google Compute Engine** instance
-* Connect to it with **SSH**
-* Build a **Docker Image** (using pre-made resources from **Google Cloud Storage**)
-* Push it to a **Container Registry**
-* Pull a teammate's **Image** from the same registry
-* Run the **container** and the app inside it
-* Use **port forwarding** to display the running app in your browser
-
-<!--v-->
-
-#### Team, assemble
-
-![assemble](https://media.giphy.com/media/12fNtUb1WhSqrK/giphy.gif)
-
-Get by groups of 4, cooperate, help each other out
-
-<!--v-->
-
-![readysetgo](https://media.giphy.com/media/l4FB2kRVn9LoXuWJO/giphy.gif)
-
-[BE walkthrough](../exercise/4_be.html)
-
-<!--s-->
-
-## The End (in 3h)
+## The End
 
 ![end](https://media.giphy.com/media/l49FqlUguNsGDNCGk/giphy.gif)

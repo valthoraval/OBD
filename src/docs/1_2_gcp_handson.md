@@ -8,7 +8,7 @@ However, like demonstrated earlier, you can use google cloud shell as the "front
 
 However you have to have google chrome without too much privacy tools and a good wifi without firewall for it to work perfectly :) 
 
-SSH from the cloud shell should also be possible from google cloud shell, and you will be able to use the web preview from your cloud shell to display a port on another machine (double ssh tunnel !)
+SSH from the cloud shell should also be possible, and you will be able to use the web preview from your cloud shell to display a port on another machine (double ssh tunnel !)
 
 Otherwise for SSHing you will be able to use the web based ssh tools and port forwarding tools of google cloud platform: <https://cloud.google.com/compute/docs/ssh-in-browser>
 
@@ -30,6 +30,9 @@ First, we will make our first steps by creating a compute engine instance (a vm)
 * **DO NOT SHUT IT DOWN** for now
 
 ### Connecting to SSH
+
+!!! warning
+    If you can't SSH to the machine, use cloud shell to SSH to the machine
 
 * Connect to ssh from google cloud shell or your terminal to the machine
 
@@ -147,9 +150,7 @@ Google Cloud Platform comes with a set of services targeted at data scientists c
 * What are "Deep Learning VMs" ? Try to use your own words
 * What would be the alternative if you wanted to get a machine with the same installation ?
 
-### Create a google compute engine instance with a GPU using the command line
-
-**This is very important for the next workshop**
+### Create a google compute engine instance using the command line
 
 Instead of using the browser to create this machine, we will be using the [CLI to create instances](https://cloud.google.com/ai-platform/deep-learning-vm/docs/cli)
 
@@ -158,37 +159,26 @@ export INSTANCE_NAME="fch-dlvm-1" # RENAME THIS !!!!!!!!!!
 
 gcloud compute instances create $INSTANCE_NAME \
         --zone="europe-west4-a" \
-        --image-family="common-cu100" \
+        --image-family="common-cpu" \
         --image-project=deeplearning-platform-release \
         --maintenance-policy=TERMINATE \
-        --accelerator="type=nvidia-tesla-p100,count=1" \
         --scopes="storage-rw" \
-        --machine-type="n1-standard-8" \
-        --boot-disk-size=120GB \
-        --metadata="install-nvidia-driver=True"
+        --machine-type="n1-standard-2" \
+        --boot-disk-size=120GB
 ```
-
-**If you can't access GPU, remove the line regarding gpu for now, and go and [request a quota increase](https://stackoverflow.com/questions/45227064/how-to-request-gpu-quota-increase-in-google-cloud)** for your project so that you will be able to access gpus later (request the corresponding GPU)
-
-In that case, change `common-cu-100` for `common-cpu` and remove the metadata line
 
 * Notice the similarities between the first VM you created and this one,
 * What changed ?
 * If you want to learn more about compute images, image families etc... [go here](https://cloud.google.com/ai-platform/deep-learning-vm/docs/concepts-images)
 * Metadata command is a bit of magic provided by google to automatically install GPU drivers (very useful !)
 
-### Connect to ssh to this machine and query the gpu
+### Connect to ssh to this machine
 
 * Connect to your instance using the gcloud cli & ssh
-* To query if there is a GPU recognized, you have to run `nvidia-smi`
 
-### Shut it down, remove the gpu and restart it
+!!! warning
+    If you can't SSH to the machine, use cloud shell to SSH to the machine, then the web preview on port 8080
 
-This time you have to EDIT the VM and remove the GPU instead of resizing the number of CPUs
-
-### Connect back to the VM
-
-* Relaunch the previous VM and connect to it using ssh
 * This time, you will [forward some ports](https://cloud.google.com/ai-platform/deep-learning-vm/docs) as well
   <details><summary>Solution</summary>
  TOC
@@ -203,7 +193,7 @@ You can try to play with the jupyter lab (that has a code editor and terminal ca
 
 Try to `pip3 list` to check all dependencies installed !
 
-**DO NOT DELETE THE INSTANCE FOR NOW YOU WILL NEED IT LATER**
+* Shutdown the instance, or delete it. You may need it for later part of the workshops however, if you don't use cloud shell
 
 ## 4. Introduction to infrastructure as code
 

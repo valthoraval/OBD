@@ -13,12 +13,21 @@ revealOptions:
     height: '100%'
 ---
 
-Today
+This class
 
-- **Recap**
-- **Class about Containers Orchestration**
-- **Interactive Demo** (maybe ?)
-- **BE** (3h)
+- **Lecture about Containers Deployment**
+- **Deploy your model in production BE**
+- **Quick intro to Orchestration**
+- **Concluding slides**
+
+<!--s-->
+
+## Containers Deployment & Multi applications
+
+<!--v-->
+
+- **Lecture about Containers Deployment**
+- **Deploy your model in production BE**
 
 <!--s-->
 
@@ -26,7 +35,7 @@ Today
 
 ![orchestra](https://media.giphy.com/media/DPA3NUsVluONq/giphy.gif)
 
-<!--s-->
+<!--v-->
 
 ### Architecturing (web) applications
 
@@ -52,7 +61,7 @@ Representational state transfer (REST)
 
 PS: [Microservices are hard](https://dwmkerr.com/the-death-of-microservice-madness-in-2018/)
 
-<!--s-->
+<!--v-->
 
 ### Scaling up (a little story)
 
@@ -80,14 +89,14 @@ In prod now ?
 
 Suppose I have a large pool of machines available
 
-* How do I **deploy my container** ? <!-- .element: class="fragment" data-fragment-index="1" -->
-* How do I **put the right containers at the right spot** ? <!-- .element: class="fragment" data-fragment-index="2" -->
-* How do I **scale (up and down) to demand** ? <!-- .element: class="fragment" data-fragment-index="3" -->
-* How do I **expose the http endpoints** ? <!-- .element: class="fragment" data-fragment-index="4" -->
-* How do I **manage failure of containers** ? <!-- .element: class="fragment" data-fragment-index="5" -->
-* How do I **update my model without downtime** ? <!-- .element: class="fragment" data-fragment-index="6" -->
+* How do I **deploy my container ?** <!-- .element: class="fragment" data-fragment-index="1" -->
+* How do I **put the right containers at the right spot ?** <!-- .element: class="fragment" data-fragment-index="2" -->
+* How do I **scale (up and down) to demand ?** <!-- .element: class="fragment" data-fragment-index="3" -->
+* How do I **expose the http endpoints ?** <!-- .element: class="fragment" data-fragment-index="4" -->
+* How do I **manage failure of containers ?** <!-- .element: class="fragment" data-fragment-index="5" -->
+* How do I **update my model without downtime** <!-- .element: class="fragment" data-fragment-index="6" -->
 
-<!--s-->
+<!--v-->
 
 ### Scheduling & Orchestration
 
@@ -230,3 +239,55 @@ Play with k8s
 <https://labs.play-with-k8s.com/>
 
 <https://github.com/yogeek/kubernetes-local-development>
+
+<!--s-->
+
+## Interactive Demo for Kubernetes
+
+<!--v-->
+
+### What is it
+
+Two examples of **applications** deployed in a **Kubernetes cluster**
+
+* Development environment with jupyter notebook (a la google colab)
+* ML model + companion webapp to interact with it
+
+<!--v-->
+
+### Development environment
+
+<!--v-->
+
+*WIP*
+
+<!--v-->
+
+### ML Model deployed in "production"
+
+<!--v-->
+
+*WIP*
+
+<!--s-->
+
+### Take-away for Orchestration
+
+<!--v-->
+
+Orchestration is the "management" part of Containers
+
+It tries to answer the following questions
+
+* How do I **deploy my container** ?
+* How do I **put the right containers at the right spot** ?
+* How do I **scale (up and down) to demand** ?
+* How do I **expose the http endpoints** ?
+* How do I **manage failure of containers** ? 
+* How do I **update my model without downtime** ?
+
+<!--v-->
+
+Kubernetes is **one** of the solutions (the hardest) available to you
+
+Read this [comic](https://cloud.google.com/kubernetes-engine/kubernetes-comic/) 
