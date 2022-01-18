@@ -17,13 +17,13 @@ revealOptions:
 
 https://ahaslides.com/OBD211
 
-<--v-->
+<!--v-->
 
 ## Cloud Computing, Containers & Orchestration
 
 by a data scientist, for data scientists
 
-**ISAE-SUPAERO, SDD, October 2020**
+**ISAE-SUPAERO, SDD, January 2021**
 
 Florient CHOUTEAU
 

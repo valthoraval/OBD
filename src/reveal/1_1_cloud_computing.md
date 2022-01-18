@@ -120,6 +120,18 @@ Hardware visualisation: Server Example
 
 <!--v-->
 
+#### Hypervisor : KVM example (Kernel Virtual Machine)
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Kernel-based_Virtual_Machine.svg/400px-Kernel-based_Virtual_Machine.svg.png)
+
+<!--v-->
+
+#### Nested Hypervisors : Google COmpute Engine
+
+![](https://cloud.google.com/compute/images/nested-virtualization-diagram.svg)
+
+<!--v-->
+
 #### Consequence
 
 ![more ram](https://i.kym-cdn.com/photos/images/newsfeed/000/038/431/Technologically-Impaired-Duck-Where-can-I-download--More-RAM8.jpg)
