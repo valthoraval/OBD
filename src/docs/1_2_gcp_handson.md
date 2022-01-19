@@ -20,14 +20,24 @@ First, we will make our first steps by creating a compute engine instance (a vm)
 
 ### Creating my VM using the console
 
-* Follow [this codelab](https://codelabs.developers.google.com/codelabs/cloud-create-a-vm) to create your VM
-* Create the following instance
-  * type: n1-standard-2
-  * zone: europe-west4-a (the netherlands)
+* Create your VM from the google cloud interface : Go to this link https://cloud.google.com/compute/docs/instances/create-start-instance#startinstanceconsole and follow the "CONSOLE" instruction
+
+* Create an instance with the following parameters
+  * type: n1-standard-1
+  * zone: europe-west4-a/b/c/d (the netherlands) or europe-west1-(b,c,d) Belgium
   * os: ubuntu 20.04
   * boot disk size: 10 Gb
-* Name it however you see fit
+* Give it a name of your choice (that you can remember)
 * **DO NOT SHUT IT DOWN** for now
+
+Note : If you were using the command line :
+
+```bash
+gcloud compute instances create {name} --project={your-project} --zone={your-zone} \
+  --machine-type=n1-standard-1 \
+  --image=ubuntu-2004-focal-v20220110 \
+  --image-project=ubuntu-os-cloud
+```
 
 ### Connecting to SSH
 
@@ -78,7 +88,7 @@ First, we will make our first steps by creating a compute engine instance (a vm)
 
 * Shutdown the VM (from the web browser), check the previous codelab to see how to do it
 * Select it and click on EDIT
-* Change the machine type to `n1-standard-4` ([link to documentation](https://cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance))
+* Change the machine type to `n1-standard-2` ([link to documentation](https://cloud.google.com/compute/docs/instances/changing-machine-type-of-stopped-instance))
 * Relaunch it, reconnect to it and try to list the CPUs & RAM amount again
 
 Magic isn't it ? 
@@ -88,6 +98,7 @@ Note: If you had any files and specific configuration, they would still be here 
 ### Transfering files from the computer to this machine
 
 * We will use the terminal to transfer some files ***from** your computer **to** this machine,
+* If you use cloud shell you can do it as well : create a dummy file in cloud shell
 
 * Follow [this link](https://cloud.google.com/compute/docs/instances/transfer-files#transfergcloud) to learn how to use the gcloud cli tool to transfer files to your instance
  TOC
@@ -139,6 +150,8 @@ What if we want to do the same from the VM ?
 
 * You can delete the VM as well, we will not use it
 
+**DELETE THE INSTANCE NOW**
+
 ## 3. Google Compute Engine from the CLI and "deep learning VMs"
 
 Here we will use the google cloud sdk to create a more complex VM with a pre-installed image and connect to its jupyter server
@@ -170,7 +183,6 @@ gcloud compute instances create $INSTANCE_NAME \
 * Notice the similarities between the first VM you created and this one,
 * What changed ?
 * If you want to learn more about compute images, image families etc... [go here](https://cloud.google.com/ai-platform/deep-learning-vm/docs/concepts-images)
-* Metadata command is a bit of magic provided by google to automatically install GPU drivers (very useful !)
 
 ### Connect to ssh to this machine
 
@@ -220,3 +232,5 @@ Try to `pip3 list` to check all dependencies installed !
   * Your process should still be here !
 
 Congratulations :)
+
+**DELETE ALL THE INSTANCES YOU CREATED NOW**
