@@ -93,6 +93,10 @@ If you had to remember only one thing
 
 <!--v-->
 
+![cloud](https://www.catapultsystems.com/wp-content/uploads/2020/03/pizza-model-vert.jpeg)  <!-- .element: height="50%" width="50%" -->
+
+<!--v-->
+
 ![cloud](https://cdn.statcdn.com/Infographic/images/normal/18819.jpeg) <!-- .element: height="50%" width="50%" -->
 
 <!--v-->
@@ -147,6 +151,21 @@ We usually connect to web app using `http://{ip}:{port}`
 
 <!--v-->
 
+#### Google Cloud Shell & SSH
+
+* Some of you did Local Machine --(ssh via web)--> Google Cloud Shell --(ssh)--> VM
+* We basically use the cloud shell (connection via web) to bypass the network restriction, then connect to SSH
+
+![tunnelception](static/img/tunnelception2.png)
+
+<!--v-->
+
+#### Remote Development
+
+![remote](https://code.visualstudio.com/assets/docs/remote/containers/architecture-containers.png)
+
+<!--v-->
+
 #### Tunnel-Ception
 
 * Some of you did Local Machine --(ssh)--> VM --(docker)--> container
@@ -154,12 +173,6 @@ We usually connect to web app using `http://{ip}:{port}`
 * What happens when you go to `http://localhost:8080` in this case ?
 
 ![tunnelception](static/img/tunnelception.png)
-
-<!--v-->
-
-#### Remote Development
-
-![remote](https://code.visualstudio.com/assets/docs/remote/containers/architecture-containers.png)
 
 <!--s-->
 

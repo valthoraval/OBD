@@ -339,18 +339,12 @@ app = Flask(__name__)
 
 # list of cat images
 images = [
-   "http://img.buzzfeed.com/buzzfeed-static/static/2013-10/enhanced/webdr05/15/9/anigif_enhanced-buzz-26388-1381844103-11.gif",
-    "http://img.buzzfeed.com/buzzfeed-static/static/2013-10/enhanced/webdr01/15/9/anigif_enhanced-buzz-31540-1381844535-8.gif",
-    "http://img.buzzfeed.com/buzzfeed-static/static/2013-10/enhanced/webdr05/15/9/anigif_enhanced-buzz-26390-1381844163-18.gif",
-    "http://img.buzzfeed.com/buzzfeed-static/static/2013-10/enhanced/webdr06/15/10/anigif_enhanced-buzz-1376-1381846217-0.gif",
-    "http://img.buzzfeed.com/buzzfeed-static/static/2013-10/enhanced/webdr03/15/9/anigif_enhanced-buzz-3391-1381844336-26.gif",
-    "http://img.buzzfeed.com/buzzfeed-static/static/2013-10/enhanced/webdr06/15/10/anigif_enhanced-buzz-29111-1381845968-0.gif",
-    "http://img.buzzfeed.com/buzzfeed-static/static/2013-10/enhanced/webdr03/15/9/anigif_enhanced-buzz-3409-1381844582-13.gif",
-    "http://img.buzzfeed.com/buzzfeed-static/static/2013-10/enhanced/webdr02/15/9/anigif_enhanced-buzz-19667-1381844937-10.gif",
-    "http://img.buzzfeed.com/buzzfeed-static/static/2013-10/enhanced/webdr05/15/9/anigif_enhanced-buzz-26358-1381845043-13.gif",
-    "http://img.buzzfeed.com/buzzfeed-static/static/2013-10/enhanced/webdr06/15/9/anigif_enhanced-buzz-18774-1381844645-6.gif",
-    "http://img.buzzfeed.com/buzzfeed-static/static/2013-10/enhanced/webdr06/15/9/anigif_enhanced-buzz-25158-1381844793-0.gif",
-    "http://img.buzzfeed.com/buzzfeed-static/static/2013-10/enhanced/webdr03/15/10/anigif_enhanced-buzz-11980-1381846269-1.gif"
+   "https://storage.googleapis.com/fchouteau-isae-cloud/gifs/gif1.gif",
+   "https://storage.googleapis.com/fchouteau-isae-cloud/gifs/gif2.gif",
+   "https://storage.googleapis.com/fchouteau-isae-cloud/gifs/gif3.gif",
+   "https://storage.googleapis.com/fchouteau-isae-cloud/gifs/gif4.gif",
+   "https://storage.googleapis.com/fchouteau-isae-cloud/gifs/gif5.gif",
+   "https://storage.googleapis.com/fchouteau-isae-cloud/gifs/gif6.gif",
     ]
 
 @app.route('/')
@@ -367,7 +361,8 @@ if __name__ == "__main__":
 In order to install the Python modules required for our app, we need to create a file called **requirements.txt** and add the following line to that file:
 
 ```
-Flask==0.10.1
+flask
+typer
 ```
 
 #### templates/index.html
@@ -398,7 +393,6 @@ Create a directory called `templates` and create an **index.html** file in that 
     <div class="container">
       <h4>Cat Gif of the day</h4>
       <img src="{{url}}" />
-      <p><small>Courtesy: <a href="http://www.buzzfeed.com/copyranter/the-best-cat-gif-post-in-the-history-of-cat-gifs">Buzzfeed</a></small></p>
     </div>
   </body>
 </html>
@@ -416,13 +410,13 @@ A [Dockerfile](https://docs.docker.com/engine/reference/builder/) is a text file
   We'll start by specifying our base image, using the `FROM` keyword:
 
   ```
-  FROM alpine:3.5
+  FROM alpine:3.15
   ```
 
 2. The next step usually is to write the commands of copying the files and installing the dependencies. But first we will install the Python pip package to the alpine linux distribution. This will not just install the pip package but any other dependencies too, which includes the python interpreter. Add the following [RUN](https://docs.docker.com/engine/reference/builder/#run) command next:
 
   ```
-  RUN apk add --update py2-pip
+  RUN apk add --update py3-pip
   ```
 
 3. Let's add the files that make up the Flask Application.
@@ -450,7 +444,7 @@ A [Dockerfile](https://docs.docker.com/engine/reference/builder/) is a text file
 5. The last step is the command for running the application which is simply - `python ./app.py`. Use the [CMD](https://docs.docker.com/engine/reference/builder/#cmd) command to do that:
 
   ```
-  CMD ["python", "/usr/src/app/app.py"]
+  CMD ["python3", "/usr/src/app/app.py"]
   ```
 
   The primary purpose of `CMD` is to tell the container which command it should run by default when it is started.
@@ -461,14 +455,14 @@ A [Dockerfile](https://docs.docker.com/engine/reference/builder/) is a text file
 
   ```
   # our base image
-  FROM alpine:3.5
+  FROM alpine:3.15
 
   # Install python and pip
-  RUN apk add --update py2-pip
+  RUN apk add --update py3-pip
 
   # install Python modules needed by the Python app
   COPY requirements.txt /usr/src/app/
-  RUN pip install --no-cache-dir -r /usr/src/app/requirements.txt
+  RUN pip3 install --no-cache-dir -r /usr/src/app/requirements.txt
 
   # copy files required for the app to run
   COPY app.py /usr/src/app/
@@ -478,7 +472,7 @@ A [Dockerfile](https://docs.docker.com/engine/reference/builder/) is a text file
   EXPOSE 5000
 
   # run the application
-  CMD ["python", "/usr/src/app/app.py"]
+  CMD ["python3", "/usr/src/app/app.py"]
   ```
 
 ### 2.3.3 Build the image
@@ -600,7 +594,70 @@ publishing ports by means of the `-p` flag when using `$ docker run`.
 
 >**Note:** If you want to learn more about Dockerfiles, check out [Best practices for writing Dockerfiles](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/).
 
-## 3. Containers Registry
+## 3. Running CLI apps packaged in docker while mounting volumes
+
+Instead of serving web app you can also run applications, like command line interfaces or training scripts, packaged in docker. It is very useful to deliver packaged apps with specific installation to other users. This is often used when you want to package your machine learning environment to run training in distributed fashion.
+
+Usually you just edit config files in an external editor and pass it to the docker
+
+* Let's modify the `app.py` in 2. with the following
+
+```python
+import typer
+from typing import Optional
+from pathlib import Path
+
+app = typer.Typer()
+
+
+@app.command()
+def hello(name: str):
+    typer.echo(f"Hello {name}")
+
+@app.command()
+def run_config(config: Optional[Path] = typer.Option(None)):
+    if config is None:
+        typer.echo("No config file")
+        raise typer.Abort()
+    if config.is_file():
+        text = config.read_text()
+        typer.echo(f"Config file contents:\n{text}")
+    elif config.is_dir():
+        typer.echo("Config is a directory, will use all its config files")
+    elif not config.exists():
+        typer.echo("The config doesn't exist")
+
+if __name__ == "__main__":
+    app()
+
+```
+
+With your terminal you would call it using `python app.py hello {my name}` or `python app.py run-config {my config}`
+
+* Modify the dockerfile : 
+  * Replace `CMD ["python3", "/usr/src/app/app.py"]`
+  * By `ENTRYPOINT ["python3", "/usr/src/app/app.py"]`
+
+* Rebuild your docker image (maybe git it another name)
+
+* Now to run the CLI you just have to `docker run --rm {your image} {your args}`. Try it with `docker run {...} hello {your name}`
+
+In order to pass a config file, or data to your docker, you need to make it available to your docker. To do that, we have to [mount volumes](https://docs.docker.com/storage/volumes/)
+
+Create a dummy config file (`config.txt`) in another folder (ex: `config/`) then mount it when you run the docker:
+
+```
+docker run --rm \
+  -v /home/${USER}/configs:/home/configs \
+  --workdir /home/ \
+  {your image} \
+  run-config {path to your config in DOCKER, eg /home/configs/config.txt}
+```
+
+Note that since you mounted volumes, you must pass the **path in the docker** to your config file for it to work
+
+
+## 4. Containers Registry
 
 Remember Container Registries ? Here as [some explainers](https://blogs.vmware.com/cloudnative/2017/06/21/what-is-a-container-registry/)
 
@@ -627,9 +684,9 @@ However, it requires naming the image in a specific fashion: `eu.gcr.io/${PROJEC
 
 * Go to container registry https://console.cloud.google.com/gcr, you should see your docker image :)
 
-## 4.  Data Science Standardized Environment
+## 5.  Data Science Standardized Environment
 
-### 4.1 Intro
+### 5.1 Intro
 
 Those of us who work on a team know how hard it is to create a standardize development environment. Or if you have ever updated a dependency and had everything break, you understand the importance of keeping development environments isolated.
 
@@ -641,19 +698,19 @@ The benefits of this workflow are that we can:
 * Spin up a container to onboard new employees
 * Build an automated testing pipeline to confirm upgrade dependencies do not break code
 
-### 4.2 Kaggle Docker Image
+### 5.2 Kaggle Docker Image
 
 For this exercise we will use [Kaggle Docker Image](https://medium.com/@kaggleteam/how-to-get-started-with-data-science-in-containers-6ed48cb08266) which is a fully configured docker image that can be used as a data science container
 
 Take a look at the documentation and [the repository](https://github.com/Kaggle/docker-python)
 
-### 4.3 Get the algorithm in ML git in your Virtual Machine
+### 5.3 Get the algorithm in ML git in your Virtual Machine
 
 * From your vm, run `git clone https://github.com/erachelson/MLclass.git`, this should setup your AML class inside your VM
 
 * Using code-server is not mandatory now
 
-### 4.4 Mounting volumes and ports
+### 5.4 Mounting volumes and ports
 
 Now let's run the image. This container has a jupyter notebook accessible from port 8080 so we will need to map the host port 8888 (the one accessible from the ssh tunnel) to the docker port 8080, we will use [port forwarding](https://docs.docker.com/config/containers/container-networking/)
 
@@ -680,7 +737,7 @@ You should now see a jupyter lab with mlclass accessible if you connect your bro
 
 So basically, we mapped the ports local 8888 to vm 8888 and vm 8888 to docker 8080
 
-## 5. Bonus - Using Google Cloud Tools for Docker
+## 6. Bonus - Using Google Cloud Tools for Docker
 
 Using cloud shell you should be able to do the Hello World Dockerfile exercise except that instead of using docker build you use Google Cloud Build
 
@@ -694,12 +751,12 @@ Example command :`gcloud builds submit --tag eu.gcr.io/$PROJECT_ID/{image}:{tag}
 !!! example
     Try to build the hello world app
 
-## 6. Bonus - Docker Compose
+## 7. Bonus - Docker Compose
 
 <https://hackernoon.com/practical-introduction-to-docker-compose-d34e79c4c2b6>
 
 <https://github.com/docker/labs/blob/master/beginner/chapters/votingapp.md>
 
-## 7. Bonus - Going further
+## 8. Bonus - Going further
 
 <https://container.training/>

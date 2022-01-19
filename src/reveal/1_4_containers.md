@@ -77,7 +77,7 @@ revealOptions:
 
 <!--v-->
 
-![](https://image.slidesharecdn.com/docker101november2016-161205192653/95/docker-101-nov-2016-13-638.jpg)
+![](https://image.slidesharecdn.com/docker101november2016-161205192653/95/docker-101-nov-2016-13-638.jpg) <!-- .element: height="60%" width="60%" -->
 
 <!--s-->
 
@@ -122,6 +122,12 @@ Docker is some fancy tech over linux kernel capabilities (containers)
 But Docker is available on [Windows and MacOS](https://www.docker.com/products/docker-desktop) !
 
 ![desktop](https://www.docker.com/sites/default/files/d8/styles/role_icon/public/2020-01/DesktopAction%402.png?itok=fSjduwO7)
+
+<!--v-->
+
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--KO9goPOF--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/p6v8jzajfg7sgcy7d8fs.png)  <!-- .element: height="40%" width="40%" -->
+
+https://www.youtube.com/c/AurelieVache/videos
 
 <!--s-->
 
