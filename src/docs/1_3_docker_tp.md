@@ -4,9 +4,11 @@
 
 We will discover the basics of docker and you will be able to manipulate your first images and containers !
 
-First, you should be inside jupyter lab using the google cloud deep learning VM created previously
+Two solutions to do that : 
 
-It's possible to do this from google cloud shell using code-server as well but you will be limited in disk space later on
+1) You are inside sing the google cloud deep learning VM created previously
+
+2) **It's also possible to do this from google cloud shell ([shell.cloud.google.com](shell.cloud.google.com))** as well but you will be limited in disk space later on : Skip 5. if that is the case.
 
 Why only two of these ? That's because both have git and docker installed and installing docker is a pain.
 
@@ -14,7 +16,7 @@ If you are running linux on your laptop you may [install docker](https://docs.do
 
 Otherwise... don't ;)
 
-**FIRST** if you are using the deep learning vm
+If you are using the deep learning vm
 
 Disconnect from your instance and relaunch it while mapping 8888 as well. You should have the vm jupyter's lab on 8080, and 8888 free
 
@@ -481,7 +483,7 @@ Now that you have your `Dockerfile`, you can build your image. The `docker build
 
 The `docker build` command is quite simple - it takes an optional tag name with the `-t` flag, and the location of the directory containing the `Dockerfile` - the `.` indicates the current directory:
 
-`docker build -t myfirstapp:1.0`
+`docker build -t myfirstapp:1.0 .`
 
 ```
 $ docker build -t myfirstapp:1.0 .
@@ -707,8 +709,6 @@ Take a look at the documentation and [the repository](https://github.com/Kaggle/
 ### 5.3 Get the algorithm in ML git in your Virtual Machine
 
 * From your vm, run `git clone https://github.com/erachelson/MLclass.git`, this should setup your AML class inside your VM
-
-* Using code-server is not mandatory now
 
 ### 5.4 Mounting volumes and ports
 

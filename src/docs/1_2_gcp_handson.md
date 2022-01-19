@@ -20,7 +20,7 @@ First, we will make our first steps by creating a compute engine instance (a vm)
 
 ### Creating my VM using the console
 
-* Create your VM from the google cloud interface : Go to this link https://cloud.google.com/compute/docs/instances/create-start-instance#startinstanceconsole and follow the "CONSOLE" instruction
+* Create your VM from the google cloud interface : Go to [this link](https://cloud.google.com/compute/docs/instances/create-start-instance#startinstanceconsole) and follow the "CONSOLE" instruction
 
 * Create an instance with the following parameters
   * type: n1-standard-1
