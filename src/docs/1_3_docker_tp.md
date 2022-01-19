@@ -205,6 +205,15 @@ $ docker port static-site
 80/tcp -> 0.0.0.0:32773
 ```
 
+**if you are on a distant machine and you have mapped 8888:localhost:8888, you have to run 
+
+```bash
+$ docker run --name static-site-2 -e AUTHOR="Your Name" -d -p 8888:80 dockersamples/static-site
+```
+to be able to connect to localhost:8888 and see the website
+
+if you are on cloud shell, open the web preview on 8888
+
 If you are running [Docker for Mac](https://docs.docker.com/docker-for-mac/), [Docker for Windows](https://docs.docker.com/docker-for-windows/), or Docker on Linux, you can open `http://localhost:[YOUR_PORT_FOR 80/tcp]`. For our example this is `http://localhost:32773`.
 
 If you are using Docker Machine on Mac or Windows, you can find the hostname on the command line using `docker-machine` as follows (assuming you are using the `default` machine).
@@ -658,7 +667,6 @@ docker run --rm \
 
 Note that since you mounted volumes, you must pass the **path in the docker** to your config file for it to work
 
-
 ## 4. Containers Registry
 
 Remember Container Registries ? Here as [some explainers](https://blogs.vmware.com/cloudnative/2017/06/21/what-is-a-container-registry/)
@@ -675,7 +683,7 @@ However, it requires naming the image in a specific fashion: `eu.gcr.io/${PROJEC
 
 * Use the [docker cli to tag](https://cloud.google.com/container-registry/docs/pushing-and-pulling#tag_the_local_image_with_the_registry_name) your previous myfirstapp image to the right namespace
 
-`docker tag myfirstapp eu.gcr.io/{PROJECT_ID}/myfirstapp:1.0`
+`docker tag myfirstapp eu.gcr.io/{PROJECT_ID}/{a-unique-name-describing-your-app}:1.0`
 
 * Upload it on container registry `docker push [HOSTNAME]/[PROJECT-ID]/[IMAGE]:[TAG]`
 
