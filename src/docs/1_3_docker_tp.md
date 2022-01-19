@@ -643,7 +643,7 @@ if __name__ == "__main__":
 
 ```
 
-With your terminal you would call it using `python app.py hello {my name}` or `python app.py run-config {my config}`
+With your terminal you would call it using `python app.py hello {my name}` or `python app.py run-config --config-file {my config}`
 
 * Modify the dockerfile : 
   * Replace `CMD ["python3", "/usr/src/app/app.py"]`
@@ -662,7 +662,7 @@ docker run --rm \
   -v /home/${USER}/configs:/home/configs \
   --workdir /home/ \
   {your image} \
-  run-config {path to your config in DOCKER, eg /home/configs/config.txt}
+  run-config --config-file {path to your config in DOCKER, eg /home/configs/config.txt}
 ```
 
 Note that since you mounted volumes, you must pass the **path in the docker** to your config file for it to work
