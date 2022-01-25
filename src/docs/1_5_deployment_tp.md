@@ -453,43 +453,43 @@ detections = parse_predictions(predictions, classes)
     def predict(inputs: Input) -> Result:
         global MODELS
 
-    # get correct model
-    model_name = inputs.model
-
-    if model_name not in MODEL_NAMES:
-        raise HTTPException(status_code=400, detail="wrong model name, choose between {}".format(MODEL_NAMES))
-
-    # check load
-    if MODELS.get(model_name) is None:
-        MODELS[model_name] = load_model(model_name)
-
-    model = MODELS.get(model_name)
-
-    # Get Image
-    # Decode image
-    try:
-        image = inputs.image.encode("utf-8")
-        image = base64.b64decode(image)
-        image = Image.open(io.BytesIO(image))
-    except:
-        raise HTTPException(status_code=400, detail="File is not an image")
-    # Convert from RGBA to RGB *to avoid alpha channels*
-    if image.mode == "RGBA":
-        image = image.convert("RGB")
-
-    # Inference
-    t0 = time.time()
-    predictions = model(image, size=640)  # includes NMS
-    t1 = time.time()
-    classes = predictions.names
-
-    # Post processing
-    predictions = predictions.xyxy[0].numpy()
-    detections = [parse_prediction(prediction=pred, classes=classes) for pred in predictions]
-
-    result = Result(detections=detections, time=round(t1 - t0, 3), model=model_name)
-
-    return result
+        # get correct model
+        model_name = inputs.model
+    
+        if model_name not in MODEL_NAMES:
+            raise HTTPException(status_code=400, detail="wrong model name, choose between {}".format(MODEL_NAMES))
+    
+        # check load
+        if MODELS.get(model_name) is None:
+            MODELS[model_name] = load_model(model_name)
+    
+        model = MODELS.get(model_name)
+    
+        # Get Image
+        # Decode image
+        try:
+            image = inputs.image.encode("utf-8")
+            image = base64.b64decode(image)
+            image = Image.open(io.BytesIO(image))
+        except:
+            raise HTTPException(status_code=400, detail="File is not an image")
+        # Convert from RGBA to RGB *to avoid alpha channels*
+        if image.mode == "RGBA":
+            image = image.convert("RGB")
+    
+        # Inference
+        t0 = time.time()
+        predictions = model(image, size=640)  # includes NMS
+        t1 = time.time()
+        classes = predictions.names
+    
+        # Post processing
+        predictions = predictions.xyxy[0].numpy()
+        detections = [parse_prediction(prediction=pred, classes=classes) for pred in predictions]
+    
+        result = Result(detections=detections, time=round(t1 - t0, 3), model=model_name)
+    
+        return result
     ```
 
 ### Construire le docker
@@ -1053,16 +1053,6 @@ Utilisation (exemple)
 !!! note:
     Le test mode servait pour un ancien BE. Si vous avez tout fait dans l'ordre vous ne devriez pas en avoir besoin
 
-### Tester son application localement
-
-- installer les dépendances (`pip install -r requirements.txt`)
-- `streamlit run app.py`, qui créée l'application interactive sur le port 8501 de la machine (ip:8501)
-- Si vous mettez l'application à jour, le serveur de développement se relance automatiquement
-
-Si vous avez terminé le docker 1 vous devriez pouvoir faire des prédictions,
-
-Sinon le "dummy request" devrait fonctionner
-
 ### Construire le docker
 
 ```bash
@@ -1080,6 +1070,8 @@ docker run --rm -p 8501:8501 eu.gcr.io/${PROJECT_ID}/{your app name}:{your versi
 ```
 
 Vous pouvez vous rendre sur l'ip de la machine sur le port 8501
+
+Indiquez l'ip de la machine port 8000 à gauche
 
 ### Pousser le docker sur google container registry
 
