@@ -62,7 +62,8 @@ Data Computation | | | Readings |
 [Containers](1_1_overview.md) | 3h| 19/01/2022 | [Readings](1_7_readings.md#about-containers)
 [Cloud Compute BE](1_1_overview.md) | 3h | 25/01/2022 | 
 [Deployement, BE 2, Orchestration](1_1_overview.md) | 3h | 25/01/2022 | [Readings](1_7_readings.md#about-orchestration) |
-[GPU computing](1_5_gpu.md) | 3h <br/> 3h | 01/02/2022 <br/> 02/02/2022 | [GPGPU TP](https://lms.isae.fr/course/view.php?id=1226&section=2) |
+GPU computing | 3h <br/> 3h | 01/02/2022 <br/> 02/02/2022 | [GPGPU TP](https://lms.isae.fr/course/view.php?id=1226&section=2) |
+Quiz and Recap | 2h | 02/02/2022 |
 
 | Data Distribution | | | Readings |
 | --- | --- | --- | --- |
