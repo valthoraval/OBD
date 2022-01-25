@@ -38,10 +38,9 @@ nav:
     - TP: 1_3_docker_tp.md
   - Google Cloud and Docker BE: 1_4_be.md
   - Deployment & Orchestration:
-    - Lecture - Deployment & Intro to Orchestration: 1_5_deployment.md
+    - Lectures: 1_5_deployment.md
     - TP - Deployment: 1_5_deployment_tp.md
     - TP (at home) - Kubenertes Intro: 1_5_kub_intro.md
-    - Interactive Demo - Orchestration: 1_5_kub_bonus.md
   - Conclusion: 1_6_conclusion.md
   - Reading List: 1_7_readings.md
 - Data Distribution:

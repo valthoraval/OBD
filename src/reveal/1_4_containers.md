@@ -13,7 +13,7 @@ revealOptions:
     height: '100%'
 ---
 
-<!--v-->
+![icebreaker](https://i.imgur.com/wLSuwQQ.gif)
 
 https://ahaslides.com/OBD212
 

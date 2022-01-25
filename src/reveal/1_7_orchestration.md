@@ -1,5 +1,5 @@
 ---
-title: Orchestration K8s
+title: Orchestration (intro)
 theme: evo
 highlightTheme: zenburn
 separator: <!--s-->
@@ -13,75 +13,13 @@ revealOptions:
     height: '100%'
 ---
 
-This class
-
-- **Lecture about Containers Deployment**
-- **Deploy your model in production BE**
-- **Quick intro to Orchestration**
-- **Concluding slides**
-
-<!--s-->
-
-## Containers Deployment & Multi applications
-
-<!--v-->
-
-- **Lecture about Containers Deployment**
-- **Deploy your model in production BE**
-
-<!--s-->
-
 ## Containers Orchestration
 
 ![orchestra](https://media.giphy.com/media/DPA3NUsVluONq/giphy.gif)
 
 <!--v-->
 
-### Architecturing (web) applications
-
-<!--v-->
-
-#### Communicating between applications
-
-![api](https://www.aloi.io/wp-content/uploads/2019/09/api-visual.png) <!-- .element: height="50%" width="50%" -->
-
-<!--v-->
-
-#### REST API
-
-Representational state transfer (REST)
-
-![rest](https://images.tutorialedge.net/uploads/rest-api.png) <!-- .element: height="50%" width="50%" -->
-
-<!--v-->
-
-#### Microservices vs "monoliths"
-
-![microservices](https://www.redhat.com/cms/managed-files/monolithic-vs-microservices.png)
-
-PS: [Microservices are hard](https://dwmkerr.com/the-death-of-microservice-madness-in-2018/)
-
-<!--v-->
-
-### Scaling up (a little story)
-
-<!--v-->
-
-I have an **awesome** ML model
-
-![model](https://media.geeksforgeeks.org/wp-content/uploads/cat-vs-dog.jpg)
-
-<!--v-->
-
-![package](static/img/packaging.png)
-
-<!--v-->
-
-![serving](https://www.ovh.com/blog/wp-content/uploads/2020/04/548C09AD-B622-411D-B02A-644C7AECDDAB.jpeg)
-
-<!--v-->
-
-In prod now ?
+You just deployed your ML model in production **on one machine** <!-- .element: class="fragment" data-fragment-index="1" -->
 
 <!--v-->
 
@@ -89,7 +27,7 @@ In prod now ?
 
 Suppose I have a large pool of machines available
 
-* How do I **deploy my container ?** <!-- .element: class="fragment" data-fragment-index="1" -->
+* How do I **deploy my container on all machines ?** <!-- .element: class="fragment" data-fragment-index="1" -->
 * How do I **put the right containers at the right spot ?** <!-- .element: class="fragment" data-fragment-index="2" -->
 * How do I **scale (up and down) to demand ?** <!-- .element: class="fragment" data-fragment-index="3" -->
 * How do I **expose the http endpoints ?** <!-- .element: class="fragment" data-fragment-index="4" -->
@@ -98,15 +36,34 @@ Suppose I have a large pool of machines available
 
 <!--v-->
 
-### Scheduling & Orchestration
+### Orchestration
+
+<img src="https://devopedia.org/images/article/37/6042.1530784538.jpg" alt="" style="width: 40%; height: 40%; background:none; border:none; box-shadow:none;"/>
 
 <!--v-->
 
-<img src="https://devopedia.org/images/article/37/6042.1530784538.jpg" alt="" style="width: 50%; height: 50%; background:none; border:none; box-shadow:none;"/>
+#### Orchestration
+
+- containers are a lightweight mechanism for isolating an application's environment
+- specify the system configuration and libraries to install
+- avoid conflicts with other applications
+- each application as a container image which can be executed reliably on any machine
+- place multiple workloads on the same physical machine or distributed over many machines
+- orchestration for fail cases of containers or machines
+- allow for updates without downtime by creating new containers
 
 <!--v-->
 
-Examples...
+### Orchestration Design Principles
+
+- **Declarative** - describe ideal system state
+- **Distributed** - use multiple machines for scale & properly use each machine resources
+- **Microservice** - decouple applications into individual services
+- **Immutable** - Change image versions, not instances
+
+<!--v-->
+
+### Examples...
 
 - Docker Swarm
 - CoreOS Fleet
@@ -127,6 +84,8 @@ Examples...
 ![helm](https://media.giphy.com/media/l0Iyj8mER3cwNqJ6o/giphy.gif)
 
 <!--v-->
+
+![borg](https://s3-eu-west-1.amazonaws.com/risingstack-resources/History+of+Kubernetes/borg-omega-and-kubernetes.jpg) <!-- .element: height="30%" width="30%" -->
 
 Kubernetes (or k8s) comes from Google's internal systems [Borg](https://github.com/SupaeroDataScience/OBD/blob/master/readings/borg.pdf)
 
@@ -160,6 +119,12 @@ Kubernetes manages your containers on a cluster of machine while taking care of
 
 <!--v-->
 
+Pods
+
+![pods](https://www.jeremyjordan.me/content/images/2019/11/deployment_spec.png)  <!-- .element: height="50%" width="50%" -->
+
+<!--v-->
+
 Pods, Nodes
 
 ![pods-nodes](https://matthewpalmer.net/kubernetes-app-developer/articles/networking-overview.png) <!-- .element: height="50%" width="50%" -->
@@ -184,7 +149,15 @@ Updating
 
 <!--v-->
 
-Welcome to YAML programming
+"Declarative" programming : Welcome to YAML
+
+`kubectl apply -f deployment.yaml`
+
+![declarative](https://www.jeremyjordan.me/content/images/2019/11/deployment_spec.png)
+
+<!--v-->
+
+"Declarative" programming : Welcome to YAML
 
 `kubectl apply -f deployment.yaml`
 
@@ -239,55 +212,3 @@ Play with k8s
 <https://labs.play-with-k8s.com/>
 
 <https://github.com/yogeek/kubernetes-local-development>
-
-<!--s-->
-
-## Interactive Demo for Kubernetes
-
-<!--v-->
-
-### What is it
-
-Two examples of **applications** deployed in a **Kubernetes cluster**
-
-* Development environment with jupyter notebook (a la google colab)
-* ML model + companion webapp to interact with it
-
-<!--v-->
-
-### Development environment
-
-<!--v-->
-
-*WIP*
-
-<!--v-->
-
-### ML Model deployed in "production"
-
-<!--v-->
-
-*WIP*
-
-<!--s-->
-
-### Take-away for Orchestration
-
-<!--v-->
-
-Orchestration is the "management" part of Containers
-
-It tries to answer the following questions
-
-* How do I **deploy my container** ?
-* How do I **put the right containers at the right spot** ?
-* How do I **scale (up and down) to demand** ?
-* How do I **expose the http endpoints** ?
-* How do I **manage failure of containers** ? 
-* How do I **update my model without downtime** ?
-
-<!--v-->
-
-Kubernetes is **one** of the solutions (the hardest) available to you
-
-Read this [comic](https://cloud.google.com/kubernetes-engine/kubernetes-comic/) 

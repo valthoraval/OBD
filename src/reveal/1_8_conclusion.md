@@ -81,7 +81,7 @@ If you had to remember only one thing
 
 <!--v-->
 
-![vm](http://localhost:1948/static/img/virtualization.png) <!-- .element: height="50%" width="50%" -->
+![vm](static/img/virtualization.png) <!-- .element: height="50%" width="50%" -->
 
 <!--v-->
 
@@ -103,7 +103,7 @@ If you had to remember only one thing
 
 Cloud, technical evolution, usage revolution
 
-![petcattle](http://localhost:1948/static/img/pet-vs-cattle.png)
+![petcattle](static/img/pet-vs-cattle.png)
 
 <!--v-->
 
@@ -160,9 +160,15 @@ We usually connect to web app using `http://{ip}:{port}`
 
 <!--v-->
 
-#### Remote Development
+#### Remote Development : Your future daily routine
 
 ![remote](https://code.visualstudio.com/assets/docs/remote/containers/architecture-containers.png)
+
+<!--v-->
+
+#### CodeSpaces
+
+![Codespaces](https://github.githubassets.com/images/modules/site/social-cards/codespaces-ga.png)
 
 <!--v-->
 
@@ -206,12 +212,18 @@ containers is not magic
 
 <!--v-->
 
-* Containerisation is the step beyond virtualization
-* Containers are used to package software in a standardized way
+containers for data science
+
+![mlsystems](https://ml-ops.org/img/mlops-phasen.jpg)  <!-- .element: height="50%" width="50%" -->
+
+<!--v-->
+
+* Containers are a **lightweight** (vs virtualisation) mechanism for isolating an application's environment
+* Containers are used to package software in a standardized way, and avoid conflicts with other apps
 * Docker Images share underlying OS & can share dependencies
 * Unlike VM, you don't pre-allocate resources with containers (due to kernel sharing)
 * Images are 'Classes', Containers are 'Objects'
-* Docker Hubs enable collaboration
+* Docker Registry / Hubs enable collaboration
 
 <!--v-->
 
@@ -230,7 +242,9 @@ containers is not magic
 
 <!--v-->
 
-**WIP**
+- You can use docker to package & a ML model
+- Usually we make "webapps" that communicate through "rest APIs"
+- [streamlit](https://streamlit.io) will be very useful later
 
 <!--s-->
 
