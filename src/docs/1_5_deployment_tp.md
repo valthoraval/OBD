@@ -96,7 +96,6 @@ On se propose ici de wrapper 3 versions du modèle (S,M,L) qui sont 3 versions +
 ### Déroulement
 
 - Transformer un notebook de prédiction en “WebApp” en remplissant `app.stub.py` et en le renommant en `app.py`
-- Tester sa webapp localement
 - Packager l'application sous forme d'une image docker
 - Tester son image docker localement
 - Uploader le docker sur Google Container Registry
@@ -493,14 +492,6 @@ detections = parse_predictions(predictions, classes)
     return result
     ```
 
-### Tester son application
-
-Dans un terminal, vous pouvez faire `uvicorn app:app --reload` pour lancer la webbapp FastAPI qui sert le modèle,
-
-Ensuite vous pouvez lancer le notebook tests pour vérifier que tout fonctionne correctement
-
-Ensuite vous pouvez passer à l'étape suivante
-
 ### Construire le docker
 
 ```bash
@@ -510,7 +501,7 @@ docker build -t eu.gcr.io/${PROJECT_ID}/{you rname}{your app name}:{your version
 
 ### Tester le docker
 
-Au lieu de faire `uvicorn`, vous pouvez lancer le docker localement et le tester de la même façon avec le notebook
+Vous pouvez lancer le docker localement et le tester  avec le notebook
 
 ```bash
 PROJECT_ID=$(gcloud config get-value project 2> /dev/null)
@@ -552,7 +543,6 @@ Créer une application "compagnon" qui permet de faire des requêtes à un modè
 ### Déroulement
 
 - Remplir `app.stub.py`, le renommer en `app.py` en remplissant les bons champs (s'aider des notebooks dans `app/`) et en créant des jolies visualisations
-- Tester sa webapp localement (il y a un mode test)
 - Packager l'application sous forme d'une image docker
 - Tester son image docker localement
 - Uploader le docker sur Google Container Registry
