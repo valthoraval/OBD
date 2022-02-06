@@ -62,15 +62,13 @@ GPU computing, part 1 | 3h | 01/12/2020 | [GPGPU TP](https://lms.isae.fr/course/
 GPU computing, part 2 | 3h | 02/12/2020 | [GPGPU TP](https://lms.isae.fr/course/view.php?id=1226&section=2) |
 
 
-Data Distribution | | | |
---- | --- | --- | ---
-Data distribution | 1h | 06/01/2021 | [Spanner](readings/spanner.pdf)
-Functional programming | 4h | 06/01/2021 | [Julia](readings/julia.pdf)
-MapReduce, HDFS and Beyond | 3h | 19/01/2021 | [MapReduce](readings/mapreduce.pdf)
-Spark and PySpark | 3h | 19/01/2021 | [Spark](readings/spark.pdf) <br> [PySpark](https://spark.apache.org/docs/latest/api/python/pyspark.html)
-Kubernetes and Helm | 3h | 20/01/2021 | [K8S](https://kubernetes.io/fr/docs/concepts/overview/what-is-kubernetes/) <br> [Helm](https://blog.wescale.fr/2018/05/31/introduction-a-helm/)
-Dask Tutorial | 2h | 27/01/2021 | [Dask](readings/dask.pdf) <br> [Ray, a distributed computing alternative](https://docs.ray.io/en/latest/whitepaper.html)
-Dask project | 4h | 27/01/2021 | [Dask ML](https://ml.dask.org/)
+| Data Distribution | | | Readings |
+| --- | --- | --- | --- |
+| [Hadoop and MapReduce](2_3_mapreduce.md) | 3h | 08/02/2022 | [MapReduce](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/mapreduce.pdf) |
+| [Spark](2_4_spark.md) | 4h | 08/02/2022 | [Spark](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/spark.pdf) [PySpark](https://spark.apache.org/docs/latest/api/python/pyspark.html) |
+| [Dask on Kubernetes](2_5_dask.md)| 3h | 14/02/2022 | [Dask documentation](https://docs.dask.org/en/latest/setup/kubernetes.html) |
+| [Dask project](2_6_project.md) | 6h | 16/02/2022 | [Dask](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/dask.pdf) |
+
 
 Databases | | | |
 --- | --- | --- | ---
