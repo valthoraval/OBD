@@ -1,5 +1,7 @@
 # Functional Programming
 
+_This section of the course is not given this year_.
+
 ## Functional Programming for Distributed Data
 
 [Link to slides](slides/2_2_functional_programming.html)
@@ -8,7 +10,6 @@
   src="slides/2_2_functional_programming.html"
   style="width:100%; height:600px;"
 ></iframe>
-
 
 ## Introduction to Julia
 
@@ -39,3 +40,12 @@ Julia's base language supports distributed calculation but there are a few packa
 + [DistributedArrays](https://github.com/JuliaParallel/DistributedArrays.jl) - A general Array type which can be distributed over multiple workers.
 + [JuliaDB](https://juliadb.org/) - A data structuring package which automatically handles distributed data storage and computation
 + [Spark.jl](https://github.com/dfdx/Spark.jl) - A Julia interface to Apache Spark. [Related blog post](https://juliacomputing.com/blog/2020/06/julia-spark/).
+
+## Map Reduce Exercise
+
+The second part of this class is an interactive notebook in the Julia language
+covering the MapReduce programming framework, from simple addition queries to a grep example.
+
+[MapReduce notebook](https://github.com/SupaeroDataScience/OBD/blob/master/notebooks/Introduction%20to%20MapReduce.ipynb)
+
+[MapReduce notebook on Colab](https://colab.research.google.com/github/SupaeroDataScience/OBD/blob/master/notebooks/Introduction%20to%20MapReduce.ipynb) (requires adding Julia kernel installation)
