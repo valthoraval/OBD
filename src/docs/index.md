@@ -25,10 +25,11 @@ The class is structured in three parts:
 
 ### Data storage
 
-  In the first 10 hours of the course, state-of-the-art databases will be
-  presented. Students will install and demonstrate the advantages of different
-  databases to their peers as a graded project.
-
+  In the first 10 hours of the course, the history of data storage from single
+  databased management systems to distributed filesystems will be presented. For
+  evaluation, students will install and compare traditional SQL DBMS with a
+  NoSQL DBMS.
+  
 ### Data computation
 
   20 hours on the computing platforms used in the data ecosystem. We will
@@ -45,31 +46,26 @@ The class is structured in three parts:
 
 ## Class schedule
 
-Introduction | | | Readings |
---- | --- | --- | ---
-[Introduction to Big Data](0_0_intro.md) | 2h | 27/09/2021 | [Global Datasphere](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/idc_data.pdf)
-
 Data Storage | | | |
 --- | --- | --- | ---
-[Databases overview](0_1_databases.md) | 2h | 27/09/2021 | [Databases and SQL](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/fntdb07-architecture.pdf)
-[PostgeSQL TP](0_2_postgres.md) | 3h | 29/09/2021 | [PostgeSQL](https://www.postgresql.org/docs/manuals/)
-[Databases Project](0_3_project.md) | 3h | 06/10/2021 |
-[Project presentations](0_3_project.md) | 3h | 02/11/2021 |
+[Methods and Tools of Big Data](0_0_intro.md) | 10h | 26/09/2022<br>27/09/2022<br>28/09/2022 | [
+[Databases](0_1_databases.md) | 3h | 12/10/2022 | []
+[PostgeSQL TP](0_2_postgres.md) | 3h | 26/10/2022 | [PostgeSQL](https://www.postgresql.org/docs/manuals/)
 
 Data Computation | | | Readings |
 --- | --- | --- | ---
-[Cloud Computing & Google Cloud Platform](1_1_overview.md) | 3h | 18/01/2022 | [Readings](1_7_readings.md#about-cloud-computing) |
-[Containers](1_1_overview.md) | 3h| 19/01/2022 | [Readings](1_7_readings.md#about-containers)
-[Cloud Compute BE](1_1_overview.md) | 3h | 25/01/2022 | 
-[Deployement, BE 2, Orchestration](1_1_overview.md) | 3h | 25/01/2022 | [Readings](1_7_readings.md#about-orchestration) |
-GPU computing | 3h <br/> 3h | 01/02/2022 <br/> 02/02/2022 | [GPGPU TP](https://lms.isae.fr/course/view.php?id=1226&section=2) |
-Quiz and Recap | 2h | 02/02/2022 |
+[Cloud Computing & Google Cloud Platform](1_1_overview.md) | 3h | 23/01/2023 | [Readings](1_7_readings.md#about-cloud-computing) |
+[Containers](1_1_overview.md) | 3h| 24/01/2022 | [Readings](1_7_readings.md#about-containers)
+[Cloud Compute BE](1_1_overview.md) | 3h | 31/01/2022 | 
+GPU computing | 6h | 01/02/2023 |
+[Deployement, BE 2, Orchestration](1_1_overview.md) | 3h | 06/02/2023 | [Readings](1_7_readings.md#about-orchestration) |
+Quiz and Recap | 2h | 13/02/2023 |
 
 | Data Distribution | | | Readings |
 | --- | --- | --- | --- |
-| [Hadoop and MapReduce](2_3_mapreduce.md) | 3h | 08/02/2022 | [MapReduce](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/mapreduce.pdf) |
-| [Spark](2_4_spark.md) | 4h | 08/02/2022 | [Spark](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/spark.pdf) [PySpark](https://spark.apache.org/docs/latest/api/python/pyspark.html) |
-| [Dask on Kubernetes](2_5_dask.md)| 3h | 14/02/2022 | [Dask documentation](https://docs.dask.org/en/latest/setup/kubernetes.html) |
-| [Dask project](2_6_project.md) | 6h | 16/02/2022 | [Dask](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/dask.pdf) |
+| [Hadoop and MapReduce](2_3_mapreduce.md) | 3h | 07/02/2023 | [MapReduce](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/mapreduce.pdf) |
+| [Spark](2_4_spark.md) | 4h | 07/02/2023 | [Spark](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/spark.pdf) [PySpark](https://spark.apache.org/docs/latest/api/python/pyspark.html) |
+| [Dask on Kubernetes](2_5_dask.md)| 3h | 14/02/2023 | [Dask documentation](https://docs.dask.org/en/latest/setup/kubernetes.html) |
+| [Dask project](2_6_project.md) | 6h | 08/03/2023 | [Dask](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/dask.pdf) |
 
 
