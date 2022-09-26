@@ -48,7 +48,7 @@ The class is structured in three parts:
 
 Data Storage | | | Readings |
 --- | --- | --- | ---
-[Methods and Tools of Big Data](0_0_intro.md) | 10h | 26/09/2022<br>27/09/2022<br>28/09/2022 | [Slides](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/Cours__Methodes_Outils_Big_Data_A3_Sept_2022_AH.pdf)
+[Methods and Tools for Big Data](0_0_intro.md) | 10h | 26/09/2022<br>27/09/2022<br>28/09/2022 | [Slides](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/Cours__Methodes_Outils_Big_Data_A3_Sept_2022_AH.pdf)
 [Databases](0_1_databases.md) | 3h | 12/10/2022 | [Databases introduction (fr)](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/bdd.pdf)
 [PostgeSQL TP](0_2_postgres.md) | 3h | 26/10/2022 | [PostgeSQL](https://www.postgresql.org/docs/manuals/)
 
