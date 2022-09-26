@@ -1,4 +1,5 @@
-# Methods and Tools for Big Data
+# Evolution of Data Management Systems
+## Fundamental Concepts, Methods and Applications
 
 In this three part class, students will cover the history of data management systems, from file systems to databases to distributed cloud storage.
 
