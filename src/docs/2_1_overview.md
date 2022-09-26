@@ -22,9 +22,6 @@ By the end of this module, participants will be able to:
 - Deploy a Big Data Processing Platform on the Cloud
 - Implement the distribution of data wrangling/cleaning and training machine learning algorithms using PyData stack, Jupyter notebooks and Dask
 
-## Quizz
-
-I'll try to propose some quizz to be sure you're following!
 
 ## Program
 
