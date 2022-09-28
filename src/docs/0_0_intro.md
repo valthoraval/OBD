@@ -33,3 +33,4 @@ In this three part class, students will cover the history of data management sys
 + [Systems for integrating heterogeneous and distributed
 data](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/Systeme_integration_MO_Big_Data_Sept_2022_AH.pdf)
 + [Integration Systems complement](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/Complements_SI_MO_Big_Data_AH.pdf)
++ [MapReduce examples](https://raw.githubusercontent.com/SupaeroDataScience/OBD/master/readings/Program_Examples_MapReduce_A3_AH_Sept_2022.pdf)
